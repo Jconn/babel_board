@@ -1,0 +1,1 @@
+(fp_lib_table (version 7) (lib (name "Babel_IR") (type "KiCad") (uri "${KIPRJMOD}/Babel_IR.pretty") (options "") (descr "Adafruit-derived sensor footprint")) (lib (name "Babel") (type "KiCad") (uri "${KIPRJMOD}/../Babel.pretty") (options "") (descr "Shared card edge")))

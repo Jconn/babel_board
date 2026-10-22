@@ -1,0 +1,4310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/johnconn/projects/babel/hardware/radio/babel-radio.kicad_sch</source>
+    <date>2026-10-18T22:04:37</date>
+    <tool>Eeschema 10.0.7</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>babel-radio.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/">
+      <title_block>
+        <title>PROCESSOR / DISPLAY / RECOVERY</title>
+        <company/>
+        <rev>C-DRAFT</rev>
+        <date>2026-10-18</date>
+        <source>host.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/">
+      <title_block>
+        <title>USB-C / BATTERY POWER PATH</title>
+        <company/>
+        <rev>C-DRAFT</rev>
+        <date>2026-10-18</date>
+        <source>usb_charge.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/">
+      <title_block>
+        <title>3.3 V BUCK-BOOST / SYSTEM POWER</title>
+        <company/>
+        <rev>C-DRAFT</rev>
+        <date>2026-10-18</date>
+        <source>regulator.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/">
+      <title_block>
+        <title>DAUGHTER POWER / HARDWARE ENABLE GATING</title>
+        <company/>
+        <rev>C-DRAFT</rev>
+        <date>2026-10-18</date>
+        <source>port_power.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/">
+      <title_block>
+        <title>CARD EDGE / SEPARATE NVM AND SENSOR BUSES</title>
+        <company/>
+        <rev>C-DRAFT</rev>
+        <date>2026-10-18</date>
+        <source>port_bus.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="7" name="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/">
+      <title_block>
+        <title>USB-C PERMISSION / INPUT AND DATA GATING</title>
+        <company/>
+        <rev>C-DRAFT</rev>
+        <date>2026-10-18</date>
+        <source>usb_policy.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="8" name="/BATTERY STARTUP / EXTERNAL CHARGING ONLY/" tstamps="/707740f3-e20e-508d-b5ef-28a3beaddfe1/">
+      <title_block>
+        <title>BATTERY STARTUP / EXTERNAL CHARGING ONLY</title>
+        <company/>
+        <rev>C-DRAFT</rev>
+        <date>2026-10-18</date>
+        <source>charge_guard.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>1uF / EN delay</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>c2b72b74-4d8e-5397-a592-601a4b7ce573</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>22uF / 10V / U1</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>56d0d179-9402-5b95-baf9-e5ff41e155f3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>100nF / U1</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>73211b99-db39-56ad-b69d-06821a1c73ea</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>10uF / display</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>6ea60333-b611-51b4-bee0-0edcf5b9d039</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>B8B-PH-K-S / OLED cable</value>
+      <footprint>Connector_JST:JST_PH_B8B-PH-K_1x08_P2.00mm_Vertical</footprint>
+      <datasheet>https://learn.adafruit.com/adafruit-grayscale-1-5-128x128-oled-display/pinouts</datasheet>
+      <fields>
+        <field name="Footprint">Connector_JST:JST_PH_B8B-PH-K_1x08_P2.00mm_Vertical</field>
+        <field name="Datasheet">https://learn.adafruit.com/adafruit-grayscale-1-5-128x128-oled-display/pinouts</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="CONN8" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>74324bc9-a0e7-54ce-9c70-5125fd00cfb3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>UART RECOVERY / 3.3V ONLY</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="CONN6" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>d46c7978-6826-541e-88cc-888e94ed3a01</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>388454ae-cc66-5fd3-8c36-d338a5d76b91</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>6b8f8231-54dc-55c1-9f36-b69dbf804c0d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>e8efb531-e0df-5b3c-9d31-1e971523dedf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>fa2ecdaa-7787-5419-bd17-fed4b0ceceee</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>0188acbb-6d2d-5284-b234-2264cc76bd4b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R120">
+      <value>0R / source tuning near U1</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>054b854c-4554-5124-a225-96b7aa855385</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R121">
+      <value>0R / source tuning near U1</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>d23a3306-61d4-5e80-83d3-8aa715123371</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R122">
+      <value>0R / source tuning near U1</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>1ac12666-d871-5ba8-8b6c-f86d4d62934f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R123">
+      <value>0R / source tuning near U1</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>6cb13023-c890-5264-a127-9d0589b4fab8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW1">
+      <value>B3U-1000P / RESET</value>
+      <footprint>Button_Switch_SMD:SW_SPST_B3U-1000P</footprint>
+      <fields>
+        <field name="Footprint">Button_Switch_SMD:SW_SPST_B3U-1000P</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="SW" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>8401177d-8698-5794-b7df-0b0f529a3742</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW2">
+      <value>B3U-1000P / BOOT</value>
+      <footprint>Button_Switch_SMD:SW_SPST_B3U-1000P</footprint>
+      <fields>
+        <field name="Footprint">Button_Switch_SMD:SW_SPST_B3U-1000P</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="SW" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>9ac49ed4-264a-59fe-937e-37fdba83c487</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW3">
+      <value>B3U-1000P / USER / HOLD</value>
+      <footprint>Button_Switch_SMD:SW_SPST_B3U-1000P</footprint>
+      <fields>
+        <field name="Footprint">Button_Switch_SMD:SW_SPST_B3U-1000P</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="SW" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>97b0d314-0af5-587d-b575-65c1452ef870</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>ESP32-S3-WROOM-1-N8R8</value>
+      <footprint>RF_Module:ESP32-S3-WROOM-1</footprint>
+      <datasheet>https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf</datasheet>
+      <fields>
+        <field name="Footprint">RF_Module:ESP32-S3-WROOM-1</field>
+        <field name="Datasheet">https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="WROOM" description=""/>
+      <property name="Sheetname" value="PROCESSOR / DISPLAY / RECOVERY"/>
+      <property name="Sheetfile" value="host.kicad_sch"/>
+      <sheetpath names="/PROCESSOR / DISPLAY / RECOVERY/" tstamps="/2482a2c3-7e10-543f-9a59-43835772a0df/"/>
+      <tstamps>c1ecb4ea-8be7-522a-b549-372d2e9fe0ec</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+            <pin num="21"/>
+            <pin num="22"/>
+            <pin num="23"/>
+            <pin num="24"/>
+            <pin num="25"/>
+            <pin num="26"/>
+            <pin num="27"/>
+            <pin num="28"/>
+            <pin num="29"/>
+            <pin num="30"/>
+            <pin num="31"/>
+            <pin num="32"/>
+            <pin num="33"/>
+            <pin num="34"/>
+            <pin num="35"/>
+            <pin num="36"/>
+            <pin num="37"/>
+            <pin num="38"/>
+            <pin num="39"/>
+            <pin num="40"/>
+            <pin num="41"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>1uF / 16V / input</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>5bed6aff-a1db-57a7-9a4c-8df1899be8ea</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>4.7uF / 10V / BAT</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>3f2efd99-3f4d-5d55-b1f0-a010838d2e61</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>4.7uF / 10V / OUT</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>122a7ed8-6555-5730-8994-61adf84530f8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D3">
+      <value>SMBJ6.0A / VBUS TVS</value>
+      <footprint>Diode_SMD:D_SMB</footprint>
+      <fields>
+        <field name="Footprint">Diode_SMD:D_SMB</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="DIODE" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>a8d27442-dd36-53e8-bfdd-73a66ca0e185</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F1">
+      <value>046701.5NR / 1.5A fast fuse</value>
+      <footprint>Fuse:Fuse_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Fuse:Fuse_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>67425505-c460-5ea6-9763-7067000c5ef1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J4">
+      <value>USB4105-GF-A</value>
+      <footprint>Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal</footprint>
+      <datasheet>https://gct.co/files/drawings/usb4105.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal</field>
+        <field name="Datasheet">https://gct.co/files/drawings/usb4105.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="USB_C" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>5c19942a-c431-5d85-9a3c-ff22ec76b176</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="A1"/>
+            <pin num="A4"/>
+            <pin num="A5"/>
+            <pin num="A6"/>
+            <pin num="A7"/>
+            <pin num="A8"/>
+            <pin num="A9"/>
+            <pin num="A12"/>
+            <pin num="B1"/>
+            <pin num="B4"/>
+            <pin num="B5"/>
+            <pin num="B6"/>
+            <pin num="B7"/>
+            <pin num="B8"/>
+            <pin num="B9"/>
+            <pin num="B12"/>
+            <pin num="SH"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J5">
+      <value>B3B-PH-K-S / Jauch 251555</value>
+      <footprint>Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical</footprint>
+      <datasheet>https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/5702/LP523450JU%20251555.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical</field>
+        <field name="Datasheet">https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/5702/LP523450JU%20251555.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="CONN3" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>548b5fdc-2d18-5ffb-9fe4-758474731660</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>22R / near U1</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>d8752ad0-7acd-5178-802a-0acbc3a6cbc0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>22R / near U1</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>65b30c0b-883f-5f9e-a718-7415631061e8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>5d0bf6ce-1eef-5181-bb4a-f7264e65fa4d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>a9891ca5-f00f-5585-a82a-985bc8cfe5c5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>5.36k 1% / 166mA</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>2759d9b6-d605-5824-8b6c-972b6732c88e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R13">
+      <value>1.78k 1% / 904mA</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>613c6ff6-c7bb-5dc5-a492-762dae7a177f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R15">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>aa8e4db7-bbe6-5658-ad53-fc5c9436718d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R16">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>e1c07613-a6de-5900-9529-a0a41878b89b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>TPD2E2U06DCKR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-323_SC-70</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="ESD2" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>b606a97b-2f1b-591f-a2d3-d4b14daff4d8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>BQ24079RGTR / POWER PATH ONLY</value>
+      <footprint>Package_DFN_QFN:VQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/bq24074.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_DFN_QFN:VQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/bq24074.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="BQ24079" description=""/>
+      <property name="Sheetname" value="USB-C / BATTERY POWER PATH"/>
+      <property name="Sheetfile" value="usb_charge.kicad_sch"/>
+      <sheetpath names="/USB-C / BATTERY POWER PATH/" tstamps="/2fbac7dd-734b-581e-a970-889c4a21b1be/"/>
+      <tstamps>71cc1593-c9db-5798-88b6-3dc9f2813b82</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>100nF / VAUX</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>81cc2401-0769-5d0f-ab64-c9ac9a4d59f9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>10uF / 25V X7S</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>4d107b83-bff5-5375-b513-39ccc63e7147</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>10uF / 25V X7S</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>ad2a5626-0cf0-5e90-8f66-d1392cefe2f4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>10uF / 25V close</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>908bed50-4e57-553a-a177-13936b0ad614</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C12">
+      <value>22uF / 16V X6S</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>8b05331e-9ba0-5da8-8a68-313ba21b4f7a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C13">
+      <value>22uF / 16V X6S</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>6cbd22f1-47ba-5f1e-98a3-527147638f9c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C14">
+      <value>22uF / 16V X6S</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>d60ea70a-975e-5c6f-b9b0-8c9ed7de08ff</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C15">
+      <value>10uF / 25V close</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>a1222c6f-2b64-5bc2-b32d-8ffcce77a2f4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L1">
+      <value>1.5uH / XFL4020-152MEC</value>
+      <footprint>Inductor_SMD:L_Coilcraft_XxL4020</footprint>
+      <datasheet>https://www.coilcraft.com/pdfs/xfl4020.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Inductor_SMD:L_Coilcraft_XxL4020</field>
+        <field name="Datasheet">https://www.coilcraft.com/pdfs/xfl4020.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="L" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>9a32164f-f828-586f-8474-5bd9c65a02b7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R17">
+      <value>470k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>b6a5af4c-e32e-5cde-8aef-401233faf10f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R18">
+      <value>150k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>f7ebd3d0-b526-5988-8d4a-11a27266bfde</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R19">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>ca50ab65-dc51-596f-9eba-d0e1d5bed685</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R20">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>9e8c1c54-90ef-568a-9158-781bf3dd2e26</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW4">
+      <value>JS102011SAQN / SYSTEM</value>
+      <footprint>Button_Switch_SMD:SW_SPDT_CK_JS102011SAQN</footprint>
+      <fields>
+        <field name="Footprint">Button_Switch_SMD:SW_SPDT_CK_JS102011SAQN</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="SLIDE" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>8feada2c-e5bf-511e-85d2-39ede440f156</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U4">
+      <value>TPS63070RNMR</value>
+      <footprint>Babel:TPS63070_RNM0015A</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps63070.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Babel:TPS63070_RNM0015A</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps63070.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="TPS63070" description=""/>
+      <property name="Sheetname" value="3.3 V BUCK-BOOST / SYSTEM POWER"/>
+      <property name="Sheetfile" value="regulator.kicad_sch"/>
+      <sheetpath names="/3.3 V BUCK-BOOST / SYSTEM POWER/" tstamps="/7b0f6242-604d-5ba9-9024-f27e5d34f70b/"/>
+      <tstamps>fce9445d-e25a-5ced-a81d-a0ebf921c930</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C16">
+      <value>100nF / U5</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>c5f6940a-c4a9-5049-bd6a-b8f0502dd954</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C17">
+      <value>100nF / U6</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>ff23545e-51c9-57c6-a8ee-b8286ac6f768</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C18">
+      <value>100nF / U7</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>001cc1f6-3437-5593-862b-dda5e14d35e6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C19">
+      <value>100nF / U8</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>ea8cb3f3-92ef-5162-b1a8-f4519b436a0b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C20">
+      <value>100nF / U9</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>870f973a-8d50-5626-809d-21994bab76df</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C21">
+      <value>100nF / U10</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>1984b594-8a0e-50be-bf2e-27e20bca09f3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C22">
+      <value>1uF / input</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>6bcef861-dbda-51e6-a77c-371782c99129</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C23">
+      <value>1uF / output</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>6e018862-c37b-50be-9e91-e319f7b7a714</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R21">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>bb90f9ff-682e-564a-990c-0d43e653602d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R22">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>27449963-3c7d-5f20-9410-6624b00f5a24</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R23">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>5eb179c7-7c62-5f57-8582-459ab5c94b36</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R24">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>2903804f-5b8a-5543-81ad-d24897b32abe</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R25">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>3f3bf592-54dd-5783-aa36-d71adab109ef</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R26">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>864dd611-9ab7-5604-b163-d408c9141202</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R27">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>1d3cdb4d-ac34-5311-b660-d939acf6a1e2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R28">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>1770bfbd-882a-591d-b72c-f6a4ba88eb4b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R29">
+      <value>226k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>c3ad739d-dd4b-5254-9875-c131adda2e9c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R30">
+      <value>10k / discharge</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>de5d066a-3323-593c-9c29-77de08567fd3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U5">
+      <value>SN74LVC1G04DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="NOT" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>4bf6f1be-c53b-5372-806a-2ff8f5c1bd2a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U6">
+      <value>SN74LVC1G08DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="AND" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>dc00cdec-9c02-5c41-be5e-4bd88265b0ab</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U7">
+      <value>SN74LVC1G08DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="AND" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>71e9cff7-2b10-5efe-8c84-991e4582e142</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U8">
+      <value>SN74LVC1G04DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="NOT" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>7bb64cf4-7739-5a3b-b97b-e0fb8404beb6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U9">
+      <value>SN74LVC1G08DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="AND" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>a4661ad4-3fe9-5ec8-b498-39c9442e60f7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U10">
+      <value>SN74LVC1G04DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="NOT" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>f1ec6048-daa1-5024-837d-3f20fd29ff68</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U11">
+      <value>TPS2553DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps2553.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps2553.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="TPS2553" description=""/>
+      <property name="Sheetname" value="DAUGHTER POWER / HARDWARE ENABLE GATING"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/DAUGHTER POWER / HARDWARE ENABLE GATING/" tstamps="/ccf6c8cb-ca87-5c5d-99a4-878975338285/"/>
+      <tstamps>9c70106a-c98a-5d26-8541-d7b568f5620a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C24">
+      <value>100nF / U12</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>1cd9562e-a23c-518f-a359-161c551aa531</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C25">
+      <value>100nF / U13</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>1c668a25-07f7-5cac-964f-a26237e43d53</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C26">
+      <value>100nF / U14</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>673c166a-797d-5ef4-a1f7-ec41a8d3946a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>MEC1-110-02-L-D-NP-A</value>
+      <footprint>Babel:MEC1_110_02_NP_A_Socket</footprint>
+      <datasheet>https://suddendocs.samtec.com/prints/mec1-1xx-xx-xx-d-xx-xx-footprint.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Babel:MEC1_110_02_NP_A_Socket</field>
+        <field name="Datasheet">https://suddendocs.samtec.com/prints/mec1-1xx-xx-xx-d-xx-xx-footprint.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="CONN20" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>1dca1e38-f012-5837-9e34-d4100454c157</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R31">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>eaea5f39-cf45-5065-8f10-93b486633199</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R32">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>ca4728b9-b19b-573d-94c3-3d7e320b51b6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R33">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>79bc8953-e613-5d94-a1d6-d884adebe413</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R34">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>1bd77cb3-36c5-5848-a1a5-b91ad4097b9c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R35">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>606dc0bc-d57e-5025-b916-3e6df31e7be1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R36">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>79678f4f-4450-5b4e-9b1a-6ce9fc193cc6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R37">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>760318af-eff4-5db8-b709-b591ce5f35f3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R38">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>e90fb757-bda5-5967-9279-90cc8c96ef7f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U12">
+      <value>SN74CB3Q3245PWR</value>
+      <footprint>Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74cb3q3245.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74cb3q3245.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="BUS8" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>da8acdda-73be-543b-89e9-840a92c37f4d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="18"/>
+            <pin num="17"/>
+            <pin num="16"/>
+            <pin num="15"/>
+            <pin num="14"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="11"/>
+            <pin num="19"/>
+            <pin num="20"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U13">
+      <value>SN74CB3Q3245PWR</value>
+      <footprint>Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74cb3q3245.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74cb3q3245.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="BUS8" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>e6866a9c-c1f1-56c9-a9b3-494cd9b23bde</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="18"/>
+            <pin num="17"/>
+            <pin num="16"/>
+            <pin num="15"/>
+            <pin num="14"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="11"/>
+            <pin num="19"/>
+            <pin num="20"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U14">
+      <value>SN74CB3Q3245PWR</value>
+      <footprint>Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74cb3q3245.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74cb3q3245.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="BUS8" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>2384d32e-6fa8-55ee-a13b-cbe92c5425d6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="18"/>
+            <pin num="17"/>
+            <pin num="16"/>
+            <pin num="15"/>
+            <pin num="14"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="11"/>
+            <pin num="19"/>
+            <pin num="20"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U30">
+      <value>TPD2E2U06DCKR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-323_SC-70</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="ESD2" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>ff488d21-41eb-5e3a-8f41-739f89982dad</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U31">
+      <value>TPD2E2U06DCKR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-323_SC-70</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="ESD2" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>28306d0d-bf8e-59cf-a247-8f062648a829</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U32">
+      <value>TPD2E2U06DCKR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-323_SC-70</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="ESD2" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>bd45a03d-7a5c-50c8-8d17-7959053b407f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U33">
+      <value>TPD2E2U06DCKR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-323_SC-70</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="ESD2" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>efc515ab-3789-522a-99d5-79167dc6d9e4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U34">
+      <value>TPD2E2U06DCKR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-323_SC-70</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="ESD2" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>2653f0bd-148f-5c9c-ba99-a88e4549ec9c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U35">
+      <value>TPD2E2U06DCKR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-323_SC-70</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="ESD2" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>64ec4217-f347-553b-9b57-d7e3cf89884d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U36">
+      <value>TPD2E2U06DCKR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-323_SC-70</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="ESD2" description=""/>
+      <property name="Sheetname" value="CARD EDGE / SEPARATE NVM AND SENSOR BUSES"/>
+      <property name="Sheetfile" value="port_bus.kicad_sch"/>
+      <sheetpath names="/CARD EDGE / SEPARATE NVM AND SENSOR BUSES/" tstamps="/1e67ca66-f0b2-5390-9e2e-547bbd24bedd/"/>
+      <tstamps>a6cb14e1-fc6a-55ac-8f59-7e6dbc5a0a34</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C100">
+      <value>2.2uF / 16V / LDO IN</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>1f97fb4d-9a1c-5d45-99e5-93bd92ea2cc4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C101">
+      <value>2.2uF / 10V / LDO OUT</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>6221f707-952b-58b7-8668-5ef41e64fda4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C102">
+      <value>100nF / U15</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>680cf14d-906f-5380-91ca-17784e9f13c9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C103">
+      <value>100nF / U17</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>4dbf78ac-30a4-5853-a191-ba6bb6386c24</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C104">
+      <value>100nF / U19</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>63360264-7d35-50ad-a4bb-d8080c2d1fd9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C109">
+      <value>27nF / slew ~2.2ms at 5V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>1a2dc68d-eaf6-5b18-a516-87bdaa9f965f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R100">
+      <value>887k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>e20912dd-2060-5f8b-b43d-e98288530c7c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R101">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>cd6d9e99-b099-5eb0-ae4b-c5427ca0171b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R102">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>53a7cf31-00e9-50a0-8eca-712f082746af</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U15">
+      <value>TUSB320LAIRWBR</value>
+      <footprint>Package_DFN_QFN:Texas_X2QFN-12_1.6x1.6mm_P0.4mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tusb320lai.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_DFN_QFN:Texas_X2QFN-12_1.6x1.6mm_P0.4mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tusb320lai.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="CC" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>e9c0d5ec-a49f-52e1-8e24-4348cc28fd19</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U16">
+      <value>TPS70933DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps709.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps709.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="LDO" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>58acad1f-b554-53f8-81a8-c5edb4cc8f20</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U17">
+      <value>SN74LVC1G04DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="NOT" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>2ee9b5a6-db80-5e3b-a238-a67e9efbe0bd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U18">
+      <value>TPS22810DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps22810.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps22810.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="LOAD_SWITCH" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>21362c31-93f9-5931-92c1-b60763bb2f81</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U19">
+      <value>TS3USB221ARSER</value>
+      <footprint>Package_DFN_QFN:Texas_UQFN-10_1.5x2mm_P0.5mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/ts3usb221a.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_DFN_QFN:Texas_UQFN-10_1.5x2mm_P0.5mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/ts3usb221a.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="USB_SWITCH" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>b7c63470-cf5d-5b66-83a8-f307e6107937</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U24">
+      <value>TPD2E2U06DCKR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-323_SC-70</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="ESD2" description=""/>
+      <property name="Sheetname" value="USB-C PERMISSION / INPUT AND DATA GATING"/>
+      <property name="Sheetfile" value="usb_policy.kicad_sch"/>
+      <sheetpath names="/USB-C PERMISSION / INPUT AND DATA GATING/" tstamps="/8ea32909-86ac-5f88-9396-64a9cdac964d/"/>
+      <tstamps>e1013e22-cd9d-5fc2-8512-c3ec39a20f2c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C108">
+      <value>100nF / U21</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="C" description=""/>
+      <property name="Sheetname" value="BATTERY STARTUP / EXTERNAL CHARGING ONLY"/>
+      <property name="Sheetfile" value="charge_guard.kicad_sch"/>
+      <sheetpath names="/BATTERY STARTUP / EXTERNAL CHARGING ONLY/" tstamps="/707740f3-e20e-508d-b5ef-28a3beaddfe1/"/>
+      <tstamps>e27d703e-d884-5ac4-b8e7-98ea297fab57</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <fields>
+        <field name="Footprint">Diode_SMD:D_SOD-123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="DIODE" description=""/>
+      <property name="Sheetname" value="BATTERY STARTUP / EXTERNAL CHARGING ONLY"/>
+      <property name="Sheetfile" value="charge_guard.kicad_sch"/>
+      <sheetpath names="/BATTERY STARTUP / EXTERNAL CHARGING ONLY/" tstamps="/707740f3-e20e-508d-b5ef-28a3beaddfe1/"/>
+      <tstamps>31bd2370-f021-53c3-a401-7d01a4ea6d6a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D2">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <fields>
+        <field name="Footprint">Diode_SMD:D_SOD-123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="DIODE" description=""/>
+      <property name="Sheetname" value="BATTERY STARTUP / EXTERNAL CHARGING ONLY"/>
+      <property name="Sheetfile" value="charge_guard.kicad_sch"/>
+      <sheetpath names="/BATTERY STARTUP / EXTERNAL CHARGING ONLY/" tstamps="/707740f3-e20e-508d-b5ef-28a3beaddfe1/"/>
+      <tstamps>8077b780-2a75-5516-82a3-e1beb720ccbe</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R111">
+      <value>732k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="BATTERY STARTUP / EXTERNAL CHARGING ONLY"/>
+      <property name="Sheetfile" value="charge_guard.kicad_sch"/>
+      <sheetpath names="/BATTERY STARTUP / EXTERNAL CHARGING ONLY/" tstamps="/707740f3-e20e-508d-b5ef-28a3beaddfe1/"/>
+      <tstamps>de865bc2-7a83-5597-aed9-d05790c0592f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R112">
+      <value>100k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="BATTERY STARTUP / EXTERNAL CHARGING ONLY"/>
+      <property name="Sheetfile" value="charge_guard.kicad_sch"/>
+      <sheetpath names="/BATTERY STARTUP / EXTERNAL CHARGING ONLY/" tstamps="/707740f3-e20e-508d-b5ef-28a3beaddfe1/"/>
+      <tstamps>3bd2d8e4-5c8f-5cbf-9765-f0bf0055d7fc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R113">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="BATTERY STARTUP / EXTERNAL CHARGING ONLY"/>
+      <property name="Sheetfile" value="charge_guard.kicad_sch"/>
+      <sheetpath names="/BATTERY STARTUP / EXTERNAL CHARGING ONLY/" tstamps="/707740f3-e20e-508d-b5ef-28a3beaddfe1/"/>
+      <tstamps>fff3e5e7-6f81-537d-83f8-655e9fea1ac3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R114">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="R" description=""/>
+      <property name="Sheetname" value="BATTERY STARTUP / EXTERNAL CHARGING ONLY"/>
+      <property name="Sheetfile" value="charge_guard.kicad_sch"/>
+      <sheetpath names="/BATTERY STARTUP / EXTERNAL CHARGING ONLY/" tstamps="/707740f3-e20e-508d-b5ef-28a3beaddfe1/"/>
+      <tstamps>f39a84d4-1c58-565c-9a63-ab49b9b0a91a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U21">
+      <value>TPS3700DDCR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps3700.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps3700.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_Radio" part="WINDOW" description=""/>
+      <property name="Sheetname" value="BATTERY STARTUP / EXTERNAL CHARGING ONLY"/>
+      <property name="Sheetfile" value="charge_guard.kicad_sch"/>
+      <sheetpath names="/BATTERY STARTUP / EXTERNAL CHARGING ONLY/" tstamps="/707740f3-e20e-508d-b5ef-28a3beaddfe1/"/>
+      <tstamps>f2d9800a-d7e3-5d9c-8c7b-7e8d27b7ae1c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Babel_Radio" part="AND">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AND</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="input"/>
+        <pin num="2" name="B" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="Y" type="output"/>
+        <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="BQ24079">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BQ24079</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="TS" type="input"/>
+        <pin num="2" name="BAT" type="passive"/>
+        <pin num="3" name="BAT" type="passive"/>
+        <pin num="4" name="CE_N" type="input"/>
+        <pin num="5" name="EN2" type="input"/>
+        <pin num="6" name="EN1" type="input"/>
+        <pin num="7" name="PGOOD_N" type="open_collector"/>
+        <pin num="8" name="VSS" type="power_in"/>
+        <pin num="9" name="CHG_N" type="open_collector"/>
+        <pin num="10" name="OUT" type="power_out"/>
+        <pin num="11" name="OUT" type="passive"/>
+        <pin num="12" name="ILIM" type="passive"/>
+        <pin num="13" name="IN" type="power_in"/>
+        <pin num="14" name="TMR" type="passive"/>
+        <pin num="15" name="SYSOFF" type="input"/>
+        <pin num="16" name="ISET" type="passive"/>
+        <pin num="17" name="EP" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="BUS8">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BUS8</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="passive"/>
+        <pin num="2" name="A1" type="bidirectional"/>
+        <pin num="3" name="A2" type="bidirectional"/>
+        <pin num="4" name="A3" type="bidirectional"/>
+        <pin num="5" name="A4" type="bidirectional"/>
+        <pin num="6" name="A5" type="bidirectional"/>
+        <pin num="7" name="A6" type="bidirectional"/>
+        <pin num="8" name="A7" type="bidirectional"/>
+        <pin num="9" name="A8" type="bidirectional"/>
+        <pin num="10" name="GND" type="power_in"/>
+        <pin num="11" name="B8" type="bidirectional"/>
+        <pin num="12" name="B7" type="bidirectional"/>
+        <pin num="13" name="B6" type="bidirectional"/>
+        <pin num="14" name="B5" type="bidirectional"/>
+        <pin num="15" name="B4" type="bidirectional"/>
+        <pin num="16" name="B3" type="bidirectional"/>
+        <pin num="17" name="B2" type="bidirectional"/>
+        <pin num="18" name="B1" type="bidirectional"/>
+        <pin num="19" name="OE_N" type="input"/>
+        <pin num="20" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="C">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="CC">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CC</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="CC1" type="passive"/>
+        <pin num="2" name="CC2" type="passive"/>
+        <pin num="3" name="PORT" type="input"/>
+        <pin num="4" name="VBUS_DET" type="input"/>
+        <pin num="5" name="ADDR" type="input"/>
+        <pin num="6" name="OUT3" type="open_collector"/>
+        <pin num="7" name="OUT1" type="open_collector"/>
+        <pin num="8" name="OUT2" type="open_collector"/>
+        <pin num="9" name="ID" type="open_collector"/>
+        <pin num="10" name="GND" type="power_in"/>
+        <pin num="11" name="EN_N" type="input"/>
+        <pin num="12" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="CONN20">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CONN20</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+        <pin num="11" name="11" type="passive"/>
+        <pin num="12" name="12" type="passive"/>
+        <pin num="13" name="13" type="passive"/>
+        <pin num="14" name="14" type="passive"/>
+        <pin num="15" name="15" type="passive"/>
+        <pin num="16" name="16" type="passive"/>
+        <pin num="17" name="17" type="passive"/>
+        <pin num="18" name="18" type="passive"/>
+        <pin num="19" name="19" type="passive"/>
+        <pin num="20" name="20" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="CONN3">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CONN3</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="CONN6">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CONN6</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="CONN8">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CONN8</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="DIODE">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">DIODE</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="ESD2">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ESD2</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IO1" type="passive"/>
+        <pin num="2" name="IO2" type="passive"/>
+        <pin num="3" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="L">
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="LDO">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LDO</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="NC" type="passive"/>
+        <pin num="5" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="LOAD_SWITCH">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LOAD_SWITCH</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="ON" type="input"/>
+        <pin num="4" name="CT" type="passive"/>
+        <pin num="5" name="QOD" type="passive"/>
+        <pin num="6" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="NOT">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">NOT</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="passive"/>
+        <pin num="2" name="A" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="Y" type="output"/>
+        <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="R">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="SLIDE">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SLIDE</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="ON" type="passive"/>
+        <pin num="2" name="COMMON" type="passive"/>
+        <pin num="3" name="OFF" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="SW">
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="TPS2553">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS2553</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="FAULT_N" type="open_collector"/>
+        <pin num="5" name="ILIM" type="passive"/>
+        <pin num="6" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="TPS63070">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS63070</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="PS_SYNC" type="input"/>
+        <pin num="2" name="PG" type="open_collector"/>
+        <pin num="3" name="VAUX" type="passive"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="FB" type="input"/>
+        <pin num="6" name="FB2" type="passive"/>
+        <pin num="7" name="VOUT" type="power_out"/>
+        <pin num="8" name="VOUT" type="passive"/>
+        <pin num="9" name="L2" type="passive"/>
+        <pin num="10" name="PGND" type="power_in"/>
+        <pin num="11" name="L1" type="passive"/>
+        <pin num="12" name="VIN" type="power_in"/>
+        <pin num="13" name="VIN" type="power_in"/>
+        <pin num="14" name="EN" type="input"/>
+        <pin num="15" name="VSEL" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="USB_C">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">USB_C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="A1" name="A1" type="passive"/>
+        <pin num="A4" name="A4" type="passive"/>
+        <pin num="A5" name="A5" type="passive"/>
+        <pin num="A6" name="A6" type="passive"/>
+        <pin num="A7" name="A7" type="passive"/>
+        <pin num="A8" name="A8" type="passive"/>
+        <pin num="A9" name="A9" type="passive"/>
+        <pin num="A12" name="A12" type="passive"/>
+        <pin num="B1" name="B1" type="passive"/>
+        <pin num="B4" name="B4" type="passive"/>
+        <pin num="B5" name="B5" type="passive"/>
+        <pin num="B6" name="B6" type="passive"/>
+        <pin num="B7" name="B7" type="passive"/>
+        <pin num="B8" name="B8" type="passive"/>
+        <pin num="B9" name="B9" type="passive"/>
+        <pin num="B12" name="B12" type="passive"/>
+        <pin num="SH" name="SH" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="USB_SWITCH">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">USB_SWITCH</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1D_PLUS" type="passive"/>
+        <pin num="2" name="1D_MINUS" type="passive"/>
+        <pin num="3" name="2D_PLUS" type="passive"/>
+        <pin num="4" name="2D_MINUS" type="passive"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="OE_N" type="input"/>
+        <pin num="7" name="D_MINUS" type="passive"/>
+        <pin num="8" name="D_PLUS" type="passive"/>
+        <pin num="9" name="S" type="input"/>
+        <pin num="10" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="WINDOW">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">WINDOW</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="OUTA" type="open_collector"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="INA_PLUS" type="input"/>
+        <pin num="4" name="INB_MINUS" type="input"/>
+        <pin num="5" name="VDD" type="power_in"/>
+        <pin num="6" name="OUTB" type="open_collector"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_Radio" part="WROOM">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">WROOM</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="3V3" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="GPIO4" type="bidirectional"/>
+        <pin num="5" name="GPIO5" type="bidirectional"/>
+        <pin num="6" name="GPIO6" type="bidirectional"/>
+        <pin num="7" name="GPIO7" type="bidirectional"/>
+        <pin num="8" name="GPIO15" type="bidirectional"/>
+        <pin num="9" name="GPIO16" type="bidirectional"/>
+        <pin num="10" name="GPIO17" type="bidirectional"/>
+        <pin num="11" name="GPIO18" type="bidirectional"/>
+        <pin num="12" name="GPIO8" type="bidirectional"/>
+        <pin num="13" name="GPIO19" type="bidirectional"/>
+        <pin num="14" name="GPIO20" type="bidirectional"/>
+        <pin num="15" name="GPIO3" type="bidirectional"/>
+        <pin num="16" name="GPIO46" type="bidirectional"/>
+        <pin num="17" name="GPIO9" type="bidirectional"/>
+        <pin num="18" name="GPIO10" type="bidirectional"/>
+        <pin num="19" name="GPIO11" type="bidirectional"/>
+        <pin num="20" name="GPIO12" type="bidirectional"/>
+        <pin num="21" name="GPIO13" type="bidirectional"/>
+        <pin num="22" name="GPIO14" type="bidirectional"/>
+        <pin num="23" name="GPIO21" type="bidirectional"/>
+        <pin num="24" name="GPIO47" type="bidirectional"/>
+        <pin num="25" name="GPIO48" type="bidirectional"/>
+        <pin num="26" name="GPIO45" type="bidirectional"/>
+        <pin num="27" name="GPIO0" type="bidirectional"/>
+        <pin num="28" name="GPIO35" type="bidirectional"/>
+        <pin num="29" name="GPIO36" type="bidirectional"/>
+        <pin num="30" name="GPIO37" type="bidirectional"/>
+        <pin num="31" name="GPIO38" type="bidirectional"/>
+        <pin num="32" name="GPIO39" type="bidirectional"/>
+        <pin num="33" name="GPIO40" type="bidirectional"/>
+        <pin num="34" name="GPIO41" type="bidirectional"/>
+        <pin num="35" name="GPIO42" type="bidirectional"/>
+        <pin num="36" name="GPIO44" type="bidirectional"/>
+        <pin num="37" name="GPIO43" type="bidirectional"/>
+        <pin num="38" name="GPIO2" type="bidirectional"/>
+        <pin num="39" name="GPIO1" type="bidirectional"/>
+        <pin num="40" name="GND" type="power_in"/>
+        <pin num="41" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Babel_Radio">
+      <uri>${KIPRJMOD}/Babel_Radio.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="BAT_OK" class="Default">
+      <node ref="D1" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R113" pin="2" pintype="passive"/>
+      <node ref="U21" pin="1" pinfunction="OUTA_1" pintype="open_collector"/>
+    </net>
+    <net code="2" name="BAT_SENSE" class="Default">
+      <node ref="R111" pin="2" pintype="passive"/>
+      <node ref="R112" pin="1" pintype="passive"/>
+      <node ref="U21" pin="3" pinfunction="INA_PLUS_3" pintype="input"/>
+    </net>
+    <net code="3" name="BOOT_N" class="Default">
+      <node ref="J3" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="SW2" pin="1" pintype="passive"/>
+      <node ref="U1" pin="27" pinfunction="GPIO0_27" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="BUTTON_N" class="Default">
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="SW3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="39" pinfunction="GPIO1_39" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="CC1" class="Default">
+      <node ref="J4" pin="A5" pinfunction="A5_A5" pintype="passive"/>
+      <node ref="U15" pin="1" pinfunction="CC1_1" pintype="passive"/>
+      <node ref="U24" pin="1" pinfunction="IO1_1" pintype="passive"/>
+    </net>
+    <net code="6" name="CC2" class="Default">
+      <node ref="J4" pin="B5" pinfunction="B5_B5" pintype="passive"/>
+      <node ref="U15" pin="2" pinfunction="CC2_2" pintype="passive"/>
+      <node ref="U24" pin="2" pinfunction="IO2_2" pintype="passive"/>
+    </net>
+    <net code="7" name="CC_HIGH_N" class="Default">
+      <node ref="R101" pin="2" pintype="passive"/>
+      <node ref="U15" pin="7" pinfunction="OUT1_7" pintype="open_collector"/>
+      <node ref="U17" pin="2" pinfunction="A_2" pintype="input"/>
+      <node ref="U19" pin="6" pinfunction="OE_N_6" pintype="input"/>
+    </net>
+    <net code="8" name="CC_VBUS_DET" class="Default">
+      <node ref="R100" pin="2" pintype="passive"/>
+      <node ref="U15" pin="4" pinfunction="VBUS_DET_4" pintype="input"/>
+    </net>
+    <net code="9" name="CHG_ILIM" class="Default">
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="U3" pin="12" pinfunction="ILIM_12" pintype="passive"/>
+    </net>
+    <net code="10" name="CHG_ISET" class="Default">
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="U3" pin="16" pinfunction="ISET_16" pintype="passive"/>
+    </net>
+    <net code="11" name="CHG_N" class="Default">
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="U3" pin="9" pinfunction="CHG_N_9" pintype="open_collector"/>
+    </net>
+    <net code="12" name="CHIP_EN" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="J3" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="EN_3" pintype="input"/>
+    </net>
+    <net code="13" name="DEBUG_RX" class="Default">
+      <node ref="J3" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="U1" pin="36" pinfunction="GPIO44_36" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="DEBUG_TX" class="Default">
+      <node ref="J3" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="U1" pin="37" pinfunction="GPIO43_37" pintype="bidirectional"/>
+    </net>
+    <net code="15" name="GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C100" pin="2" pintype="passive"/>
+      <node ref="C101" pin="2" pintype="passive"/>
+      <node ref="C102" pin="2" pintype="passive"/>
+      <node ref="C103" pin="2" pintype="passive"/>
+      <node ref="C104" pin="2" pintype="passive"/>
+      <node ref="C108" pin="2" pintype="passive"/>
+      <node ref="C109" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C15" pin="2" pintype="passive"/>
+      <node ref="C16" pin="2" pintype="passive"/>
+      <node ref="C17" pin="2" pintype="passive"/>
+      <node ref="C18" pin="2" pintype="passive"/>
+      <node ref="C19" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C20" pin="2" pintype="passive"/>
+      <node ref="C21" pin="2" pintype="passive"/>
+      <node ref="C22" pin="2" pintype="passive"/>
+      <node ref="C23" pin="2" pintype="passive"/>
+      <node ref="C24" pin="2" pintype="passive"/>
+      <node ref="C25" pin="2" pintype="passive"/>
+      <node ref="C26" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J1" pin="19" pinfunction="19_19" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J1" pin="20" pinfunction="20_20" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J4" pin="A1" pinfunction="A1_A1" pintype="passive"/>
+      <node ref="J4" pin="A12" pinfunction="A12_A12" pintype="passive"/>
+      <node ref="J4" pin="B1" pinfunction="B1_B1" pintype="passive"/>
+      <node ref="J4" pin="B12" pinfunction="B12_B12" pintype="passive"/>
+      <node ref="J4" pin="SH" pinfunction="SH_SH" pintype="passive"/>
+      <node ref="J5" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="R102" pin="2" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R112" pin="2" pintype="passive"/>
+      <node ref="R114" pin="2" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+      <node ref="R22" pin="2" pintype="passive"/>
+      <node ref="R23" pin="2" pintype="passive"/>
+      <node ref="R24" pin="2" pintype="passive"/>
+      <node ref="R25" pin="2" pintype="passive"/>
+      <node ref="R29" pin="2" pintype="passive"/>
+      <node ref="R30" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="2" pintype="passive"/>
+      <node ref="SW2" pin="2" pintype="passive"/>
+      <node ref="SW3" pin="2" pintype="passive"/>
+      <node ref="SW4" pin="3" pinfunction="OFF_3" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GND_1" pintype="power_in"/>
+      <node ref="U1" pin="40" pinfunction="GND_40" pintype="power_in"/>
+      <node ref="U1" pin="41" pinfunction="GND_41" pintype="power_in"/>
+      <node ref="U10" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U11" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U12" pin="10" pinfunction="GND_10" pintype="power_in"/>
+      <node ref="U13" pin="10" pinfunction="GND_10" pintype="power_in"/>
+      <node ref="U14" pin="10" pinfunction="GND_10" pintype="power_in"/>
+      <node ref="U15" pin="10" pinfunction="GND_10" pintype="power_in"/>
+      <node ref="U15" pin="11" pinfunction="EN_N_11" pintype="input"/>
+      <node ref="U15" pin="3" pinfunction="PORT_3" pintype="input"/>
+      <node ref="U16" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U17" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U18" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U19" pin="5" pinfunction="GND_5" pintype="power_in"/>
+      <node ref="U19" pin="9" pinfunction="S_9" pintype="input"/>
+      <node ref="U2" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U21" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U21" pin="4" pinfunction="INB_MINUS_4" pintype="input"/>
+      <node ref="U24" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U3" pin="1" pinfunction="TS_1" pintype="input"/>
+      <node ref="U3" pin="14" pinfunction="TMR_14" pintype="passive"/>
+      <node ref="U3" pin="15" pinfunction="SYSOFF_15" pintype="input"/>
+      <node ref="U3" pin="17" pinfunction="EP_17" pintype="power_in"/>
+      <node ref="U3" pin="6" pinfunction="EN1_6" pintype="input"/>
+      <node ref="U3" pin="8" pinfunction="VSS_8" pintype="power_in"/>
+      <node ref="U30" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U31" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U32" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U33" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U34" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U35" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U36" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U4" pin="10" pinfunction="PGND_10" pintype="power_in"/>
+      <node ref="U4" pin="15" pinfunction="VSEL_15" pintype="input"/>
+      <node ref="U4" pin="4" pinfunction="GND_4" pintype="power_in"/>
+      <node ref="U5" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U6" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U7" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U8" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U9" pin="3" pinfunction="GND_3" pintype="power_in"/>
+    </net>
+    <net code="16" name="H_NVM_SCL" class="Default">
+      <node ref="U1" pin="4" pinfunction="GPIO4_4" pintype="bidirectional"/>
+      <node ref="U12" pin="2" pinfunction="A1_2" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="H_NVM_SDA" class="Default">
+      <node ref="U1" pin="5" pinfunction="GPIO5_5" pintype="bidirectional"/>
+      <node ref="U12" pin="3" pinfunction="A2_3" pintype="bidirectional"/>
+    </net>
+    <net code="18" name="H_NVM_WP" class="Default">
+      <node ref="U1" pin="6" pinfunction="GPIO6_6" pintype="bidirectional"/>
+      <node ref="U12" pin="4" pinfunction="A3_4" pintype="bidirectional"/>
+    </net>
+    <net code="19" name="H_SENSOR_CS_N" class="Default">
+      <node ref="R122" pin="2" pintype="passive"/>
+      <node ref="U13" pin="7" pinfunction="A6_7" pintype="bidirectional"/>
+    </net>
+    <net code="20" name="H_SENSOR_IRQ_N" class="Default">
+      <node ref="U1" pin="8" pinfunction="GPIO15_8" pintype="bidirectional"/>
+      <node ref="U14" pin="2" pinfunction="A1_2" pintype="bidirectional"/>
+    </net>
+    <net code="21" name="H_SENSOR_MISO" class="Default">
+      <node ref="U1" pin="19" pinfunction="GPIO11_19" pintype="bidirectional"/>
+      <node ref="U13" pin="6" pinfunction="A5_6" pintype="bidirectional"/>
+    </net>
+    <net code="22" name="H_SENSOR_MOSI" class="Default">
+      <node ref="R121" pin="2" pintype="passive"/>
+      <node ref="U13" pin="5" pinfunction="A4_5" pintype="bidirectional"/>
+    </net>
+    <net code="23" name="H_SENSOR_RESET_N" class="Default">
+      <node ref="U1" pin="9" pinfunction="GPIO16_9" pintype="bidirectional"/>
+      <node ref="U14" pin="3" pinfunction="A2_3" pintype="bidirectional"/>
+    </net>
+    <net code="24" name="H_SENSOR_RX" class="Default">
+      <node ref="U1" pin="22" pinfunction="GPIO14_22" pintype="bidirectional"/>
+      <node ref="U13" pin="9" pinfunction="A8_9" pintype="bidirectional"/>
+    </net>
+    <net code="25" name="H_SENSOR_SCK" class="Default">
+      <node ref="R120" pin="2" pintype="passive"/>
+      <node ref="U13" pin="4" pinfunction="A3_4" pintype="bidirectional"/>
+    </net>
+    <net code="26" name="H_SENSOR_SCL" class="Default">
+      <node ref="U1" pin="7" pinfunction="GPIO7_7" pintype="bidirectional"/>
+      <node ref="U13" pin="2" pinfunction="A1_2" pintype="bidirectional"/>
+    </net>
+    <net code="27" name="H_SENSOR_SDA" class="Default">
+      <node ref="U1" pin="12" pinfunction="GPIO8_12" pintype="bidirectional"/>
+      <node ref="U13" pin="3" pinfunction="A2_3" pintype="bidirectional"/>
+    </net>
+    <net code="28" name="H_SENSOR_TX" class="Default">
+      <node ref="R123" pin="2" pintype="passive"/>
+      <node ref="U13" pin="8" pinfunction="A7_8" pintype="bidirectional"/>
+    </net>
+    <net code="29" name="LCD_CS_N" class="Default">
+      <node ref="J2" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U1" pin="34" pinfunction="GPIO41_34" pintype="bidirectional"/>
+    </net>
+    <net code="30" name="LCD_DC" class="Default">
+      <node ref="J2" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="U1" pin="35" pinfunction="GPIO42_35" pintype="bidirectional"/>
+    </net>
+    <net code="31" name="LCD_MOSI" class="Default">
+      <node ref="J2" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="U1" pin="33" pinfunction="GPIO40_33" pintype="bidirectional"/>
+    </net>
+    <net code="32" name="LCD_RESET_N" class="Default">
+      <node ref="J2" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="U1" pin="24" pinfunction="GPIO47_24" pintype="bidirectional"/>
+    </net>
+    <net code="33" name="LCD_SCK" class="Default">
+      <node ref="J2" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="U1" pin="32" pinfunction="GPIO39_32" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="MCU_SENSOR_CS_N" class="Default">
+      <node ref="R122" pin="1" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="GPIO12_20" pintype="bidirectional"/>
+    </net>
+    <net code="35" name="MCU_SENSOR_MOSI" class="Default">
+      <node ref="R121" pin="1" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="GPIO10_18" pintype="bidirectional"/>
+    </net>
+    <net code="36" name="MCU_SENSOR_SCK" class="Default">
+      <node ref="R120" pin="1" pintype="passive"/>
+      <node ref="U1" pin="17" pinfunction="GPIO9_17" pintype="bidirectional"/>
+    </net>
+    <net code="37" name="MCU_SENSOR_TX" class="Default">
+      <node ref="R123" pin="1" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="GPIO13_21" pintype="bidirectional"/>
+    </net>
+    <net code="38" name="NVM_ENABLE" class="Default">
+      <node ref="U7" pin="4" pinfunction="Y_4" pintype="output"/>
+      <node ref="U8" pin="2" pinfunction="A_2" pintype="input"/>
+    </net>
+    <net code="39" name="NVM_OE_N" class="Default">
+      <node ref="R26" pin="2" pintype="passive"/>
+      <node ref="U12" pin="19" pinfunction="OE_N_19" pintype="input"/>
+      <node ref="U8" pin="4" pinfunction="Y_4" pintype="output"/>
+    </net>
+    <net code="40" name="NVM_REQ" class="Default">
+      <node ref="R23" pin="1" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="GPIO18_11" pintype="bidirectional"/>
+      <node ref="U7" pin="2" pinfunction="B_2" pintype="input"/>
+    </net>
+    <net code="41" name="NVM_SCL" class="Default">
+      <node ref="J1" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="R31" pin="2" pintype="passive"/>
+      <node ref="U12" pin="18" pinfunction="B1_18" pintype="bidirectional"/>
+      <node ref="U30" pin="1" pinfunction="IO1_1" pintype="passive"/>
+    </net>
+    <net code="42" name="NVM_SDA" class="Default">
+      <node ref="J1" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="R32" pin="2" pintype="passive"/>
+      <node ref="U12" pin="17" pinfunction="B2_17" pintype="bidirectional"/>
+      <node ref="U30" pin="2" pinfunction="IO2_2" pintype="passive"/>
+    </net>
+    <net code="43" name="NVM_WP" class="Default">
+      <node ref="J1" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="R35" pin="2" pintype="passive"/>
+      <node ref="U12" pin="16" pinfunction="B3_16" pintype="bidirectional"/>
+      <node ref="U31" pin="1" pinfunction="IO1_1" pintype="passive"/>
+    </net>
+    <net code="44" name="PORT_EN" class="Default">
+      <node ref="R25" pin="1" pintype="passive"/>
+      <node ref="U11" pin="3" pinfunction="EN_3" pintype="input"/>
+      <node ref="U6" pin="4" pinfunction="Y_4" pintype="output"/>
+      <node ref="U7" pin="1" pinfunction="A_1" pintype="input"/>
+      <node ref="U9" pin="1" pinfunction="A_1" pintype="input"/>
+    </net>
+    <net code="45" name="PORT_FAULT_N" class="Default">
+      <node ref="R28" pin="2" pintype="passive"/>
+      <node ref="U1" pin="31" pinfunction="GPIO38_31" pintype="bidirectional"/>
+      <node ref="U11" pin="4" pinfunction="FAULT_N_4" pintype="open_collector"/>
+    </net>
+    <net code="46" name="PORT_ILIM" class="Default">
+      <node ref="R29" pin="1" pintype="passive"/>
+      <node ref="U11" pin="5" pinfunction="ILIM_5" pintype="passive"/>
+    </net>
+    <net code="47" name="POWER_AVAILABLE" class="Default">
+      <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R114" pin="1" pintype="passive"/>
+      <node ref="SW4" pin="1" pinfunction="ON_1" pintype="passive"/>
+    </net>
+    <net code="48" name="PRESENT" class="Default">
+      <node ref="U5" pin="4" pinfunction="Y_4" pintype="output"/>
+      <node ref="U6" pin="1" pinfunction="A_1" pintype="input"/>
+    </net>
+    <net code="49" name="PRESENT_N" class="Default">
+      <node ref="J1" pin="8" pinfunction="8_8" pintype="passive"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+      <node ref="U1" pin="38" pinfunction="GPIO2_38" pintype="bidirectional"/>
+      <node ref="U31" pin="2" pinfunction="IO2_2" pintype="passive"/>
+      <node ref="U5" pin="2" pinfunction="A_2" pintype="input"/>
+    </net>
+    <net code="50" name="PWR_REQ" class="Default">
+      <node ref="R22" pin="1" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="GPIO17_10" pintype="bidirectional"/>
+      <node ref="U6" pin="2" pinfunction="B_2" pintype="input"/>
+    </net>
+    <net code="51" name="REG_AUX" class="Default">
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="U4" pin="3" pinfunction="VAUX_3" pintype="passive"/>
+    </net>
+    <net code="52" name="REG_EN" class="Default">
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="SW4" pin="2" pinfunction="COMMON_2" pintype="passive"/>
+      <node ref="U4" pin="14" pinfunction="EN_14" pintype="input"/>
+    </net>
+    <net code="53" name="REG_FB" class="Default">
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="U4" pin="5" pinfunction="FB_5" pintype="input"/>
+    </net>
+    <net code="54" name="REG_L1" class="Default">
+      <node ref="L1" pin="1" pintype="passive"/>
+      <node ref="U4" pin="11" pinfunction="L1_11" pintype="passive"/>
+    </net>
+    <net code="55" name="REG_L2" class="Default">
+      <node ref="L1" pin="2" pintype="passive"/>
+      <node ref="U4" pin="9" pinfunction="L2_9" pintype="passive"/>
+    </net>
+    <net code="56" name="REG_PG" class="Default">
+      <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="PG_2" pintype="open_collector"/>
+    </net>
+    <net code="57" name="SENSOR_CS_N" class="Default">
+      <node ref="J1" pin="14" pinfunction="14_14" pintype="passive"/>
+      <node ref="R36" pin="2" pintype="passive"/>
+      <node ref="U13" pin="13" pinfunction="B6_13" pintype="bidirectional"/>
+      <node ref="U34" pin="2" pinfunction="IO2_2" pintype="passive"/>
+    </net>
+    <net code="58" name="SENSOR_ENABLE" class="Default">
+      <node ref="U10" pin="2" pinfunction="A_2" pintype="input"/>
+      <node ref="U9" pin="4" pinfunction="Y_4" pintype="output"/>
+    </net>
+    <net code="59" name="SENSOR_IRQ_N" class="Default">
+      <node ref="J1" pin="17" pinfunction="17_17" pintype="passive"/>
+      <node ref="R37" pin="2" pintype="passive"/>
+      <node ref="U14" pin="18" pinfunction="B1_18" pintype="bidirectional"/>
+      <node ref="U36" pin="1" pinfunction="IO1_1" pintype="passive"/>
+    </net>
+    <net code="60" name="SENSOR_MISO" class="Default">
+      <node ref="J1" pin="13" pinfunction="13_13" pintype="passive"/>
+      <node ref="U13" pin="14" pinfunction="B5_14" pintype="bidirectional"/>
+      <node ref="U34" pin="1" pinfunction="IO1_1" pintype="passive"/>
+    </net>
+    <net code="61" name="SENSOR_MOSI" class="Default">
+      <node ref="J1" pin="12" pinfunction="12_12" pintype="passive"/>
+      <node ref="U13" pin="15" pinfunction="B4_15" pintype="bidirectional"/>
+      <node ref="U33" pin="2" pinfunction="IO2_2" pintype="passive"/>
+    </net>
+    <net code="62" name="SENSOR_OE_N" class="Default">
+      <node ref="R27" pin="2" pintype="passive"/>
+      <node ref="U10" pin="4" pinfunction="Y_4" pintype="output"/>
+      <node ref="U13" pin="19" pinfunction="OE_N_19" pintype="input"/>
+      <node ref="U14" pin="19" pinfunction="OE_N_19" pintype="input"/>
+    </net>
+    <net code="63" name="SENSOR_REQ" class="Default">
+      <node ref="R24" pin="1" pintype="passive"/>
+      <node ref="U1" pin="23" pinfunction="GPIO21_23" pintype="bidirectional"/>
+      <node ref="U9" pin="2" pinfunction="B_2" pintype="input"/>
+    </net>
+    <net code="64" name="SENSOR_RESET_N" class="Default">
+      <node ref="J1" pin="18" pinfunction="18_18" pintype="passive"/>
+      <node ref="R38" pin="2" pintype="passive"/>
+      <node ref="U14" pin="17" pinfunction="B2_17" pintype="bidirectional"/>
+      <node ref="U36" pin="2" pinfunction="IO2_2" pintype="passive"/>
+    </net>
+    <net code="65" name="SENSOR_RX" class="Default">
+      <node ref="J1" pin="16" pinfunction="16_16" pintype="passive"/>
+      <node ref="U13" pin="11" pinfunction="B8_11" pintype="bidirectional"/>
+      <node ref="U35" pin="2" pinfunction="IO2_2" pintype="passive"/>
+    </net>
+    <net code="66" name="SENSOR_SCK" class="Default">
+      <node ref="J1" pin="11" pinfunction="11_11" pintype="passive"/>
+      <node ref="U13" pin="16" pinfunction="B3_16" pintype="bidirectional"/>
+      <node ref="U33" pin="1" pinfunction="IO1_1" pintype="passive"/>
+    </net>
+    <net code="67" name="SENSOR_SCL" class="Default">
+      <node ref="J1" pin="9" pinfunction="9_9" pintype="passive"/>
+      <node ref="R33" pin="2" pintype="passive"/>
+      <node ref="U13" pin="18" pinfunction="B1_18" pintype="bidirectional"/>
+      <node ref="U32" pin="1" pinfunction="IO1_1" pintype="passive"/>
+    </net>
+    <net code="68" name="SENSOR_SDA" class="Default">
+      <node ref="J1" pin="10" pinfunction="10_10" pintype="passive"/>
+      <node ref="R34" pin="2" pintype="passive"/>
+      <node ref="U13" pin="17" pinfunction="B2_17" pintype="bidirectional"/>
+      <node ref="U32" pin="2" pinfunction="IO2_2" pintype="passive"/>
+    </net>
+    <net code="69" name="SENSOR_TX" class="Default">
+      <node ref="J1" pin="15" pinfunction="15_15" pintype="passive"/>
+      <node ref="U13" pin="12" pinfunction="B7_12" pintype="bidirectional"/>
+      <node ref="U35" pin="1" pinfunction="IO1_1" pintype="passive"/>
+    </net>
+    <net code="70" name="STRAP3_LOW" class="Default">
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="GPIO3_15" pintype="bidirectional"/>
+    </net>
+    <net code="71" name="STRAP45_LOW" class="Default">
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="U1" pin="26" pinfunction="GPIO45_26" pintype="bidirectional"/>
+    </net>
+    <net code="72" name="SYS_RAW" class="Default">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C108" pin="1" pintype="passive"/>
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="U21" pin="5" pinfunction="VDD_5" pintype="power_in"/>
+      <node ref="U3" pin="10" pinfunction="OUT_10" pintype="power_out"/>
+      <node ref="U3" pin="11" pinfunction="OUT_11" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="CE_N_4" pintype="input"/>
+      <node ref="U4" pin="1" pinfunction="PS_SYNC_1" pintype="input"/>
+      <node ref="U4" pin="12" pinfunction="VIN_12" pintype="power_in"/>
+      <node ref="U4" pin="13" pinfunction="VIN_13" pintype="power_in"/>
+    </net>
+    <net code="73" name="USB_5V" class="Default">
+      <node ref="C100" pin="1" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="F1" pin="2" pintype="passive"/>
+      <node ref="R100" pin="1" pintype="passive"/>
+      <node ref="U16" pin="1" pinfunction="IN_1" pintype="power_in"/>
+      <node ref="U18" pin="1" pinfunction="IN_1" pintype="power_in"/>
+    </net>
+    <net code="74" name="USB_ALLOW" class="Default">
+      <node ref="D2" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R102" pin="1" pintype="passive"/>
+      <node ref="U17" pin="4" pinfunction="Y_4" pintype="output"/>
+      <node ref="U18" pin="3" pinfunction="ON_3" pintype="input"/>
+      <node ref="U3" pin="5" pinfunction="EN2_5" pintype="input"/>
+    </net>
+    <net code="75" name="USB_CHG_IN" class="Default">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="U18" pin="5" pinfunction="QOD_5" pintype="passive"/>
+      <node ref="U18" pin="6" pinfunction="OUT_6" pintype="power_out"/>
+      <node ref="U3" pin="13" pinfunction="IN_13" pintype="power_in"/>
+    </net>
+    <net code="76" name="USB_DM" class="Default">
+      <node ref="J4" pin="A7" pinfunction="A7_A7" pintype="passive"/>
+      <node ref="J4" pin="B7" pinfunction="B7_B7" pintype="passive"/>
+      <node ref="U19" pin="7" pinfunction="D_MINUS_7" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="IO2_2" pintype="passive"/>
+    </net>
+    <net code="77" name="USB_DM_LINK" class="Default">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U19" pin="2" pinfunction="1D_MINUS_2" pintype="passive"/>
+    </net>
+    <net code="78" name="USB_DM_MCU" class="Default">
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="GPIO19_13" pintype="bidirectional"/>
+    </net>
+    <net code="79" name="USB_DP" class="Default">
+      <node ref="J4" pin="A6" pinfunction="A6_A6" pintype="passive"/>
+      <node ref="J4" pin="B6" pinfunction="B6_B6" pintype="passive"/>
+      <node ref="U19" pin="8" pinfunction="D_PLUS_8" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="IO1_1" pintype="passive"/>
+    </net>
+    <net code="80" name="USB_DP_LINK" class="Default">
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U19" pin="1" pinfunction="1D_PLUS_1" pintype="passive"/>
+    </net>
+    <net code="81" name="USB_DP_MCU" class="Default">
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="GPIO20_14" pintype="bidirectional"/>
+    </net>
+    <net code="82" name="USB_PGOOD_N" class="Default">
+      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="U1" pin="25" pinfunction="GPIO48_25" pintype="bidirectional"/>
+      <node ref="U3" pin="7" pinfunction="PGOOD_N_7" pintype="open_collector"/>
+    </net>
+    <net code="83" name="USB_SLEW" class="Default">
+      <node ref="C109" pin="1" pintype="passive"/>
+      <node ref="U18" pin="4" pinfunction="CT_4" pintype="passive"/>
+    </net>
+    <net code="84" name="USB_VBUS_RAW" class="Default">
+      <node ref="F1" pin="1" pintype="passive"/>
+      <node ref="J4" pin="A4" pinfunction="A4_A4" pintype="passive"/>
+      <node ref="J4" pin="A9" pinfunction="A9_A9" pintype="passive"/>
+      <node ref="J4" pin="B4" pinfunction="B4_B4" pintype="passive"/>
+      <node ref="J4" pin="B9" pinfunction="B9_B9" pintype="passive"/>
+    </net>
+    <net code="85" name="V3V3" class="Default">
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="C15" pin="1" pintype="passive"/>
+      <node ref="C16" pin="1" pintype="passive"/>
+      <node ref="C17" pin="1" pintype="passive"/>
+      <node ref="C18" pin="1" pintype="passive"/>
+      <node ref="C19" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C20" pin="1" pintype="passive"/>
+      <node ref="C21" pin="1" pintype="passive"/>
+      <node ref="C22" pin="1" pintype="passive"/>
+      <node ref="C24" pin="1" pintype="passive"/>
+      <node ref="C25" pin="1" pintype="passive"/>
+      <node ref="C26" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="R21" pin="1" pintype="passive"/>
+      <node ref="R26" pin="1" pintype="passive"/>
+      <node ref="R27" pin="1" pintype="passive"/>
+      <node ref="R28" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="3V3_2" pintype="power_in"/>
+      <node ref="U10" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+      <node ref="U11" pin="1" pinfunction="IN_1" pintype="power_in"/>
+      <node ref="U12" pin="20" pinfunction="VCC_20" pintype="power_in"/>
+      <node ref="U13" pin="20" pinfunction="VCC_20" pintype="power_in"/>
+      <node ref="U14" pin="20" pinfunction="VCC_20" pintype="power_in"/>
+      <node ref="U4" pin="7" pinfunction="VOUT_7" pintype="power_out"/>
+      <node ref="U4" pin="8" pinfunction="VOUT_8" pintype="passive"/>
+      <node ref="U5" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+      <node ref="U6" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+      <node ref="U7" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+      <node ref="U8" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+      <node ref="U9" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+    </net>
+    <net code="86" name="V3V3_CC" class="Default">
+      <node ref="C101" pin="1" pintype="passive"/>
+      <node ref="C102" pin="1" pintype="passive"/>
+      <node ref="C103" pin="1" pintype="passive"/>
+      <node ref="C104" pin="1" pintype="passive"/>
+      <node ref="R101" pin="1" pintype="passive"/>
+      <node ref="U15" pin="12" pinfunction="VDD_12" pintype="power_in"/>
+      <node ref="U16" pin="5" pinfunction="OUT_5" pintype="power_out"/>
+      <node ref="U17" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+      <node ref="U19" pin="10" pinfunction="VCC_10" pintype="power_in"/>
+    </net>
+    <net code="87" name="VBAT" class="Default">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R111" pin="1" pintype="passive"/>
+      <node ref="R113" pin="1" pintype="passive"/>
+      <node ref="U3" pin="2" pinfunction="BAT_2" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="BAT_3" pintype="passive"/>
+    </net>
+    <net code="88" name="VDD_DAUGHTER" class="Default">
+      <node ref="C23" pin="1" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="R30" pin="1" pintype="passive"/>
+      <node ref="R31" pin="1" pintype="passive"/>
+      <node ref="R32" pin="1" pintype="passive"/>
+      <node ref="R33" pin="1" pintype="passive"/>
+      <node ref="R34" pin="1" pintype="passive"/>
+      <node ref="R35" pin="1" pintype="passive"/>
+      <node ref="R36" pin="1" pintype="passive"/>
+      <node ref="R37" pin="1" pintype="passive"/>
+      <node ref="R38" pin="1" pintype="passive"/>
+      <node ref="U11" pin="6" pinfunction="OUT_6" pintype="power_out"/>
+    </net>
+    <net code="89" name="unconnected-(J2-Pad8)" class="Default">
+      <node ref="J2" pin="8" pinfunction="8_8" pintype="passive+no_connect"/>
+    </net>
+    <net code="90" name="unconnected-(J4-PadA8)" class="Default">
+      <node ref="J4" pin="A8" pinfunction="A8_A8" pintype="passive+no_connect"/>
+    </net>
+    <net code="91" name="unconnected-(J4-PadB8)" class="Default">
+      <node ref="J4" pin="B8" pinfunction="B8_B8" pintype="passive+no_connect"/>
+    </net>
+    <net code="92" name="unconnected-(J5-Pad2)" class="Default">
+      <node ref="J5" pin="2" pinfunction="2_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="93" name="unconnected-(U1-GPIO35-Pad28)" class="Default">
+      <node ref="U1" pin="28" pinfunction="GPIO35_28" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="94" name="unconnected-(U1-GPIO36-Pad29)" class="Default">
+      <node ref="U1" pin="29" pinfunction="GPIO36_29" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="95" name="unconnected-(U1-GPIO37-Pad30)" class="Default">
+      <node ref="U1" pin="30" pinfunction="GPIO37_30" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="96" name="unconnected-(U1-GPIO46-Pad16)" class="Default">
+      <node ref="U1" pin="16" pinfunction="GPIO46_16" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="97" name="unconnected-(U4-FB2-Pad6)" class="Default">
+      <node ref="U4" pin="6" pinfunction="FB2_6" pintype="passive+no_connect"/>
+    </net>
+    <net code="98" name="unconnected-(U5-NC-Pad1)" class="Default">
+      <node ref="U5" pin="1" pinfunction="NC_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="99" name="unconnected-(U8-NC-Pad1)" class="Default">
+      <node ref="U8" pin="1" pinfunction="NC_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="100" name="unconnected-(U10-NC-Pad1)" class="Default">
+      <node ref="U10" pin="1" pinfunction="NC_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="101" name="unconnected-(U12-A4-Pad5)" class="Default">
+      <node ref="U12" pin="5" pinfunction="A4_5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="102" name="unconnected-(U12-A5-Pad6)" class="Default">
+      <node ref="U12" pin="6" pinfunction="A5_6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="103" name="unconnected-(U12-A6-Pad7)" class="Default">
+      <node ref="U12" pin="7" pinfunction="A6_7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="104" name="unconnected-(U12-A7-Pad8)" class="Default">
+      <node ref="U12" pin="8" pinfunction="A7_8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="105" name="unconnected-(U12-A8-Pad9)" class="Default">
+      <node ref="U12" pin="9" pinfunction="A8_9" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="106" name="unconnected-(U12-B4-Pad15)" class="Default">
+      <node ref="U12" pin="15" pinfunction="B4_15" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="107" name="unconnected-(U12-B5-Pad14)" class="Default">
+      <node ref="U12" pin="14" pinfunction="B5_14" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="108" name="unconnected-(U12-B6-Pad13)" class="Default">
+      <node ref="U12" pin="13" pinfunction="B6_13" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="109" name="unconnected-(U12-B7-Pad12)" class="Default">
+      <node ref="U12" pin="12" pinfunction="B7_12" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="110" name="unconnected-(U12-B8-Pad11)" class="Default">
+      <node ref="U12" pin="11" pinfunction="B8_11" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="111" name="unconnected-(U12-NC-Pad1)" class="Default">
+      <node ref="U12" pin="1" pinfunction="NC_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="112" name="unconnected-(U13-NC-Pad1)" class="Default">
+      <node ref="U13" pin="1" pinfunction="NC_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="113" name="unconnected-(U14-A3-Pad4)" class="Default">
+      <node ref="U14" pin="4" pinfunction="A3_4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="114" name="unconnected-(U14-A4-Pad5)" class="Default">
+      <node ref="U14" pin="5" pinfunction="A4_5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="115" name="unconnected-(U14-A5-Pad6)" class="Default">
+      <node ref="U14" pin="6" pinfunction="A5_6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="116" name="unconnected-(U14-A6-Pad7)" class="Default">
+      <node ref="U14" pin="7" pinfunction="A6_7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="117" name="unconnected-(U14-A7-Pad8)" class="Default">
+      <node ref="U14" pin="8" pinfunction="A7_8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="118" name="unconnected-(U14-A8-Pad9)" class="Default">
+      <node ref="U14" pin="9" pinfunction="A8_9" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="119" name="unconnected-(U14-B3-Pad16)" class="Default">
+      <node ref="U14" pin="16" pinfunction="B3_16" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="120" name="unconnected-(U14-B4-Pad15)" class="Default">
+      <node ref="U14" pin="15" pinfunction="B4_15" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="121" name="unconnected-(U14-B5-Pad14)" class="Default">
+      <node ref="U14" pin="14" pinfunction="B5_14" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="122" name="unconnected-(U14-B6-Pad13)" class="Default">
+      <node ref="U14" pin="13" pinfunction="B6_13" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="123" name="unconnected-(U14-B7-Pad12)" class="Default">
+      <node ref="U14" pin="12" pinfunction="B7_12" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="124" name="unconnected-(U14-B8-Pad11)" class="Default">
+      <node ref="U14" pin="11" pinfunction="B8_11" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="125" name="unconnected-(U14-NC-Pad1)" class="Default">
+      <node ref="U14" pin="1" pinfunction="NC_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="126" name="unconnected-(U15-ADDR-Pad5)" class="Default">
+      <node ref="U15" pin="5" pinfunction="ADDR_5" pintype="input+no_connect"/>
+    </net>
+    <net code="127" name="unconnected-(U15-ID-Pad9)" class="Default">
+      <node ref="U15" pin="9" pinfunction="ID_9" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="128" name="unconnected-(U15-OUT2-Pad8)" class="Default">
+      <node ref="U15" pin="8" pinfunction="OUT2_8" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="129" name="unconnected-(U15-OUT3-Pad6)" class="Default">
+      <node ref="U15" pin="6" pinfunction="OUT3_6" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="130" name="unconnected-(U16-EN-Pad3)" class="Default">
+      <node ref="U16" pin="3" pinfunction="EN_3" pintype="input+no_connect"/>
+    </net>
+    <net code="131" name="unconnected-(U16-NC-Pad4)" class="Default">
+      <node ref="U16" pin="4" pinfunction="NC_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="132" name="unconnected-(U17-NC-Pad1)" class="Default">
+      <node ref="U17" pin="1" pinfunction="NC_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="133" name="unconnected-(U19-2D_MINUS-Pad4)" class="Default">
+      <node ref="U19" pin="4" pinfunction="2D_MINUS_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="134" name="unconnected-(U19-2D_PLUS-Pad3)" class="Default">
+      <node ref="U19" pin="3" pinfunction="2D_PLUS_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="135" name="unconnected-(U21-OUTB-Pad6)" class="Default">
+      <node ref="U21" pin="6" pinfunction="OUTB_6" pintype="open_collector+no_connect"/>
+    </net>
+  </nets>
+</export>

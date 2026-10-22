@@ -1,0 +1,26 @@
+ERC report (2026-10-18T22:04:10, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+
+***** Sheet /PROCESSOR / DISPLAY / RECOVERY/
+
+***** Sheet /USB-C / BATTERY POWER PATH/
+
+***** Sheet /3.3 V BUCK-BOOST / SYSTEM POWER/
+
+***** Sheet /DAUGHTER POWER / HARDWARE ENABLE GATING/
+
+***** Sheet /CARD EDGE / SEPARATE NVM AND SENSOR BUSES/
+
+***** Sheet /USB-C PERMISSION / INPUT AND DATA GATING/
+
+***** Sheet /BATTERY STARTUP / EXTERNAL CHARGING ONLY/
+
+ ** ERC messages: 0  Errors 0  Warnings 0
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

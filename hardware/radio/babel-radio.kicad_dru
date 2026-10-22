@@ -1,0 +1,4 @@
+(version 1)
+(rule "No other footprints in antenna envelope"
+  (condition "A.Type == 'Footprint' && A.Reference != 'U1' && A.intersectsArea('Antenna')")
+  (constraint disallow footprint))

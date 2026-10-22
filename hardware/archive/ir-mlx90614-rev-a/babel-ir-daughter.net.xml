@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/johnconn/projects/babel/hardware/ir-daughter/babel-ir-daughter.kicad_sch</source>
+    <date>2026-10-09T18:19:03</date>
+    <tool>Eeschema 10.0.7</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Babel IR daughter - schematic review</title>
+        <company/>
+        <rev>A-draft</rev>
+        <date>2026-10-09</date>
+        <source>babel-ir-daughter.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100 nF / U1</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="C" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f4d9a46d-6dcc-5bac-ad04-8ee7dcc481af</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>100 nF / U2</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="C" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2b48b70f-e981-5482-a6fa-65c791832a62</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>1 uF / port</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="C" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c29c6581-649f-5e0e-bf00-e4bb58cdbf61</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>BABEL PORT / MECHANICAL TBD</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="PORT_20" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f3577bc6-efaf-5a68-b016-1a2cddd8c56d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="7"/>
+            <pin num="9"/>
+            <pin num="11"/>
+            <pin num="13"/>
+            <pin num="15"/>
+            <pin num="17"/>
+            <pin num="19"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="10"/>
+            <pin num="12"/>
+            <pin num="14"/>
+            <pin num="16"/>
+            <pin num="18"/>
+            <pin num="20"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>10k / WP</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="R" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3b21da37-3087-5b62-aa4e-26e20cf52eab</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="R" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e2cde570-e886-5f11-8a37-f27bc4eaa569</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="R" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c50b94a4-090b-5599-b5bf-f6cdf6ced2f8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="R" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c51816f1-3ebf-5e7e-bcf2-4ca813136372</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="R" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>895aabe5-a502-5924-b2e8-8764085660ac</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>GND</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="TP" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>26815224-942f-5831-b7ef-98c847519fd4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>VDD_DAUGHTER</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="TP" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7538663c-78c0-5bf5-9e4c-325f4cf57fb1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>SENSOR_SCL</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="TP" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b15d9480-0860-52b0-bfe5-674d68f959c9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>SENSOR_SDA</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="TP" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0962ecd9-2e71-5e06-b1ad-e9141d073536</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP5">
+      <value>NVM_SCL</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="TP" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>881c5dbf-5e3a-5dba-bbe2-5f1562323cb0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP6">
+      <value>NVM_SDA</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="TP" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>099f9aba-4310-5b7d-81fd-3a3509cfd8bc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP7">
+      <value>NVM_WP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="TP" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>06143329-306a-5275-b17e-600232c92382</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>MLX90614ESF-BCC-000-TU</value>
+      <datasheet>https://www.melexis.com/-/media/files/documents/datasheets/mlx90614-datasheet-melexis.pdf</datasheet>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.melexis.com/-/media/files/documents/datasheets/mlx90614-datasheet-melexis.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="MLX90614_BCC" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>32d773b7-0c0b-5f84-a6e5-8eab17bcdf55</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>24LC256-I/SN / 32 KiB</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/24AA256-24LC256-24FC256-256K-I2C-Serial-EEPROM-DS20001203.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet">https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/24AA256-24LC256-24FC256-256K-I2C-Serial-EEPROM-DS20001203.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Babel_IR" part="24LC256" description=""/>
+      <property name="Sheetname" value="babel-ir-daughter"/>
+      <property name="Sheetfile" value="babel-ir-daughter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b02e0b57-1d1d-5eab-8c8e-aa094376a5e5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="8"/>
+            <pin num="4"/>
+            <pin num="6"/>
+            <pin num="5"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Babel_IR" part="24LC256">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">24LC256</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="A0" type="input"/>
+        <pin num="2" name="A1" type="input"/>
+        <pin num="3" name="A2" type="input"/>
+        <pin num="4" name="VSS" type="power_in"/>
+        <pin num="5" name="SDA" type="bidirectional"/>
+        <pin num="6" name="SCL" type="input"/>
+        <pin num="7" name="WP" type="input"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_IR" part="C">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_IR" part="MLX90614_BCC">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MLX90614_BCC</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="SCL" type="input"/>
+        <pin num="2" name="SDA/PWM" type="bidirectional"/>
+        <pin num="3" name="VDD" type="power_in"/>
+        <pin num="4" name="VSS" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_IR" part="PORT_20">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">PORT_20</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+        <pin num="11" name="11" type="passive"/>
+        <pin num="12" name="12" type="passive"/>
+        <pin num="13" name="13" type="passive"/>
+        <pin num="14" name="14" type="passive"/>
+        <pin num="15" name="15" type="passive"/>
+        <pin num="16" name="16" type="passive"/>
+        <pin num="17" name="17" type="passive"/>
+        <pin num="18" name="18" type="passive"/>
+        <pin num="19" name="19" type="passive"/>
+        <pin num="20" name="20" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_IR" part="R">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Babel_IR" part="TP">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TP</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Babel_IR">
+      <uri>${KIPRJMOD}/Babel_IR.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J1" pin="19" pinfunction="19_19" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J1" pin="20" pinfunction="20_20" pintype="passive"/>
+      <node ref="J1" pin="8" pinfunction="8_8" pintype="passive"/>
+      <node ref="TP1" pin="1" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="VSS_4" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="A0_1" pintype="input"/>
+      <node ref="U2" pin="2" pinfunction="A1_2" pintype="input"/>
+      <node ref="U2" pin="3" pinfunction="A2_3" pintype="input"/>
+      <node ref="U2" pin="4" pinfunction="VSS_4" pintype="power_in"/>
+    </net>
+    <net code="2" name="/NVM_SCL" class="Default">
+      <node ref="J1" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="TP5" pin="1" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="SCL_6" pintype="input"/>
+    </net>
+    <net code="3" name="/NVM_SDA" class="Default">
+      <node ref="J1" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="TP6" pin="1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="SDA_5" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="/NVM_WP" class="Default">
+      <node ref="J1" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="TP7" pin="1" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="WP_7" pintype="input"/>
+    </net>
+    <net code="5" name="/SENSOR_SCL" class="Default">
+      <node ref="J1" pin="9" pinfunction="9_9" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="TP3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="SCL_1" pintype="input"/>
+    </net>
+    <net code="6" name="/SENSOR_SDA" class="Default">
+      <node ref="J1" pin="10" pinfunction="10_10" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="TP4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="SDA/PWM_2" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="/VDD_DAUGHTER" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="TP2" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="VDD_3" pintype="power_in"/>
+      <node ref="U2" pin="8" pinfunction="VCC_8" pintype="power_in"/>
+    </net>
+    <net code="8" name="unconnected-(J1-Pad11)" class="Default">
+      <node ref="J1" pin="11" pinfunction="11_11" pintype="passive+no_connect"/>
+    </net>
+    <net code="9" name="unconnected-(J1-Pad12)" class="Default">
+      <node ref="J1" pin="12" pinfunction="12_12" pintype="passive+no_connect"/>
+    </net>
+    <net code="10" name="unconnected-(J1-Pad13)" class="Default">
+      <node ref="J1" pin="13" pinfunction="13_13" pintype="passive+no_connect"/>
+    </net>
+    <net code="11" name="unconnected-(J1-Pad14)" class="Default">
+      <node ref="J1" pin="14" pinfunction="14_14" pintype="passive+no_connect"/>
+    </net>
+    <net code="12" name="unconnected-(J1-Pad15)" class="Default">
+      <node ref="J1" pin="15" pinfunction="15_15" pintype="passive+no_connect"/>
+    </net>
+    <net code="13" name="unconnected-(J1-Pad16)" class="Default">
+      <node ref="J1" pin="16" pinfunction="16_16" pintype="passive+no_connect"/>
+    </net>
+    <net code="14" name="unconnected-(J1-Pad17)" class="Default">
+      <node ref="J1" pin="17" pinfunction="17_17" pintype="passive+no_connect"/>
+    </net>
+    <net code="15" name="unconnected-(J1-Pad18)" class="Default">
+      <node ref="J1" pin="18" pinfunction="18_18" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

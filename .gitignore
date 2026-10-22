@@ -1,0 +1,16 @@
+# Local KiCad 10.0.7 toolchain (re-extract from the AppImage; ~4 GB)
+AppDir/
+squashfs-root
+kicad-*.AppImage
+
+# KiCad local state and backups
+*.kicad_prl
+*-backups/
+.history/
+fp-info-cache
+_autosave-*
+*.lck
+
+# Generated Python bytecode
+__pycache__/
+*.py[cod]

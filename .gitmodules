@@ -1,0 +1,3 @@
+[submodule "hardware/reference/adafruit-mlx90632"]
+	path = hardware/reference/adafruit-mlx90632
+	url = https://github.com/adafruit/Adafruit-MLX90632-FIR-Remote-Thermal-Temperature-Sensor-PCB.git

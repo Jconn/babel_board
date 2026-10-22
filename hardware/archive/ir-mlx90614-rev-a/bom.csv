@@ -1,0 +1,19 @@
+Reference,Value,Assembly,Footprint,Datasheet
+J1,BABEL PORT / MECHANICAL TBD,FIT,,
+U1,MLX90614ESF-BCC-000-TU,FIT,,https://www.melexis.com/-/media/files/documents/datasheets/mlx90614-datasheet-melexis.pdf
+U2,24LC256-I/SN / 32 KiB,FIT,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/24AA256-24LC256-24FC256-256K-I2C-Serial-EEPROM-DS20001203.pdf
+C1,100 nF / U1,FIT,Capacitor_SMD:C_0603_1608Metric,
+C2,100 nF / U2,FIT,Capacitor_SMD:C_0603_1608Metric,
+C3,1 uF / port,FIT,Capacitor_SMD:C_0603_1608Metric,
+R1,10k / WP,FIT,Resistor_SMD:R_0603_1608Metric,
+R2,4.7k,DNP,Resistor_SMD:R_0603_1608Metric,
+R3,4.7k,DNP,Resistor_SMD:R_0603_1608Metric,
+R4,4.7k,DNP,Resistor_SMD:R_0603_1608Metric,
+R5,4.7k,DNP,Resistor_SMD:R_0603_1608Metric,
+TP1,GND,FIT,TestPoint:TestPoint_Pad_D1.5mm,
+TP2,VDD_DAUGHTER,FIT,TestPoint:TestPoint_Pad_D1.5mm,
+TP3,SENSOR_SCL,FIT,TestPoint:TestPoint_Pad_D1.5mm,
+TP4,SENSOR_SDA,FIT,TestPoint:TestPoint_Pad_D1.5mm,
+TP5,NVM_SCL,FIT,TestPoint:TestPoint_Pad_D1.5mm,
+TP6,NVM_SDA,FIT,TestPoint:TestPoint_Pad_D1.5mm,
+TP7,NVM_WP,FIT,TestPoint:TestPoint_Pad_D1.5mm,
