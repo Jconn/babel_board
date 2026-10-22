@@ -94,6 +94,20 @@ default, saves via `save_routed_board`).
 - Validation: native DRC on both boards (0 violations; parity metadata only,
   92 radio / 11 daughter at the time; daughter 4 after the J2 change) and every check script pass.
 
+## Daughter outline and bottom art (2026-10-21)
+
+User request: soften the T-shaped outline and mark the board as a temperature
+sensor. The two inside corners where the body meets the tongue now have 1 mm
+45-degree chamfers. The chamfer starts 1 mm below the shoulder, about 10 mm
+above the host, at the top of the boot's socket cavity. A bigger taper was
+declined: J2 fills the lower-right corner to the edge. `mechanical/daughter_carrier.scad`
+outline updated to match. B.Silkscreen now carries a thermometer, an IR source
+with radiating arcs, and mirrored text "IR TEMP / SENSOR / MLX90632 / BABEL REV B"
+in the open upper area (over tented vias only). DRC 0/0 under both project
+and OSH Park rules; OSH Park zip regenerated. The bottom view
+([layout-routing-bottom.svg](ir-daughter/layout-routing-bottom.svg)) is now
+mirrored, as seen from below, and includes the bottom silk.
+
 ## OSH Park fabrication files (2026-10-21)
 
 Upload-ready Gerber zips are in [fab/oshpark](fab/oshpark/README.md). Both boards

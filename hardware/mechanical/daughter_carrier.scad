@@ -40,5 +40,5 @@ if(part=="assembly") {
   translate([0,0,tip_z]) color("orange") carrier();
   translate([0,0,tip_z]) color([0,0.5,0,0.5]) rotate([90,0,0])
     linear_extrude(height=pcb_t,center=true)
-      polygon([[-5.885,0],[5.885,0],[5.885,10],[15,10],[15,35],[-15,35],[-15,10],[-5.885,10]]);
+      polygon([[-5.885,0],[5.885,0],[5.885,9],[6.885,10],[15,10],[15,35],[-15,35],[-15,10],[-6.885,10],[-5.885,9]]);
 }
