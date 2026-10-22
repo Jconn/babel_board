@@ -57,10 +57,10 @@ Custom schematic symbols are functional representations, not footprint drawings.
 | Rev | Commit | J1 power | Status |
 | --- | --- | --- | --- |
 | B | d1dbffc | VDD on 3 and 4; 11-18 no-connect | Ordered 2026-10-21 |
-| C | this one | VDD on 3 and 18; 4 and 11-17 no-connect | Current design |
+| C | this one | VDD on 3 and 18; 4 and 11-17 no-connect; 2 mm rounded body corners | Current design |
 
-Everything else (outline, circuit, J2, routing apart from the VDD feed to finger
-18) is the same. Rev B boards are electrically compatible with the current
+Everything else (circuit, J2, tongue, routing apart from the VDD feed to finger
+18) is the same; rev C only rounds the four body corners. Rev B boards are electrically compatible with the current
 (reversible) radio in both orientations: all GND, NVM and sensor-bus contacts
 land on matching nets. The one difference is rev B's second VDD contact, which
 lands on the host's SENSOR_IO2 (contact 4 straight, 17 reversed) and holds it

@@ -88,6 +88,10 @@ default, saves via `save_routed_board`).
   where it crosses y = 80. Silk outside the outline isn't printed. The
   exclusions are in `babel-radio.kicad_pro` with that comment; the library
   footprint is unmodified.
+- **DRC exclusions** (daughter project): the corner of J2's library silk
+  outline falls just outside the 2 mm rounded body corner at (35,35), at two
+  points. Same treatment: excluded with a comment in
+  `babel-ir-daughter.kicad_pro`, footprint unmodified, the fab clips it.
 - Review view: [radio silkscreen](radio/layout-silkscreen.svg) (silk, mask
   openings, outline); daughter silk is in its
   [front copper](ir-daughter/layout-routing.svg) view.
@@ -143,6 +147,12 @@ in the open upper area (over tented vias only). DRC 0/0 under both project
 and OSH Park rules; OSH Park zip regenerated. The bottom view
 ([layout-routing-bottom.svg](ir-daughter/layout-routing-bottom.svg)) is now
 mirrored, as seen from below, and includes the bottom silk.
+
+2026-10-22 (rev C): the four outer body corners are rounded to 2 mm radius
+(arcs centred 2 mm in from each corner). J2's nearest pad stays about 1 mm from
+the new edge; pours refilled; no copper moved. DRC 0/0 with the two J2 silk
+exclusions above. SCAD outline updated to match (not rendered: OpenSCAD is not
+installed here).
 
 ## OSH Park fabrication files (2026-10-21)
 

@@ -5,9 +5,9 @@ Upload-ready Gerber zips, regenerated from the native boards on 2026-10-22
 
 The daughter zip is **rev C**. Rev B (one-way pinout) was ordered 2026-10-21 from
 the commit d1dbffc files; see `../../ir-daughter/README.md` for how the two differ
-and the firmware rule for using rev B cards in the current radio. The rev C copper,
-mask, drill and outline are unchanged from the 2026-10-22 regeneration; only the
-bottom-silk revision text differs.
+and the firmware rule for using rev B cards in the current radio. Rev C also has
+2 mm rounded body corners (outline and bottom pour changed); mask, drill and the
+rest of the copper are unchanged.
 
 | File | Board | OSH Park service | Size | Order |
 | --- | --- | --- | --- | --- |

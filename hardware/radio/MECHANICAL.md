@@ -11,7 +11,7 @@ Revision D, 2026-10-19. These are design inputs, not measured hardware fit.
 - Daughter: odd contacts front, even contacts back at the same physical X.
   Viewed from the back, the order is mirrored. The mating tongue is 11.77 mm
   wide; first/last contact centers are 9 mm apart. The shoulders have 1 mm
-  45-degree chamfers into the tongue (above the socket cavity in the boot). Pads are 0.61 x 4.45 mm,
+  45-degree chamfers into the tongue (above the socket cavity in the boot); the four outer body corners are 2 mm radius. Pads are 0.61 x 4.45 mm,
   starting 1.05 mm back from the tip. No solder paste on fingers.
 - Mating PCB thickness: 1.57 +/-0.15 mm. Samtec specifies a 30 +/-5 degree
   bevel to a 0.61 mm tip and hard-gold fingers (30 microinch specification).

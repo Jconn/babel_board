@@ -5,6 +5,8 @@ $fn = 48;
 tip_z = 0.991; // Samtec MEC1 fully-mated card-tip height above host PCB
 pcb_t = 1.57;
 module along_y(d,h) { rotate([90,0,0]) cylinder(d=d,h=h,center=true); }
+// Daughter body corners are 2 mm radius: quarter-arc points about centre (cx,cz).
+function corner(cx,cz,a0) = [for(a=[a0:15:a0+90]) [cx+2*cos(a),cz+2*sin(a)]];
 
 module boot() {
   difference() {
@@ -41,5 +43,7 @@ if(part=="assembly") {
   translate([0,0,tip_z]) color("orange") carrier();
   translate([0,0,tip_z]) color([0,0.5,0,0.5]) rotate([90,0,0])
     linear_extrude(height=pcb_t,center=true)
-      polygon([[-5.885,0],[5.885,0],[5.885,9],[6.885,10],[15,10],[15,35],[-15,35],[-15,10],[-6.885,10],[-5.885,9]]);
+      polygon(concat([[-5.885,0],[5.885,0],[5.885,9],[6.885,10]],
+        corner(13,12,270),corner(13,33,0),corner(-13,33,90),corner(-13,12,180),
+        [[-6.885,10],[-5.885,9]]));
 }

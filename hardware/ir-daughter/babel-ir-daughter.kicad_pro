@@ -70,7 +70,16 @@
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "silk_edge_clearance|34299846|34520000|a979894d-618b-4059-ba7c-bbc4d6dc4a80|a3b94be0-01d2-49aa-8d89-dbfb21bb17fe",
+          "J2 header outline corner falls outside the 2 mm rounded body corner; the fab clips silk at the edge"
+        ],
+        [
+          "silk_edge_clearance|34500000|34322875|a979894d-618b-4059-ba7c-bbc4d6dc4a80|350155d7-8380-431f-a7f0-1bbb84f7630d",
+          "J2 header outline corner falls outside the 2 mm rounded body corner; the fab clips silk at the edge"
+        ]
+      ],
       "meta": {
         "version": 2
       },
