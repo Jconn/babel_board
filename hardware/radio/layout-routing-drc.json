@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.kicad.org/drc.v1.json",
     "coordinate_units": "mm",
-    "date": "2026-10-21T16:20:17",
+    "date": "2026-10-21T22:52:56",
     "ignored_checks": [
         {
             "description": "Footprint has no courtyard defined",
@@ -26,11 +26,1459 @@
     ],
     "included_severities": [
         "error",
-        "warning"
+        "warning",
+        "exclusion"
     ],
     "kicad_version": "10.0.7",
-    "schematic_parity": [],
+    "schematic_parity": [
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://learn.adafruit.com/adafruit-grayscale-1-5-128x128-oled-display/pinouts')",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 10.0,
+                        "y": 25.0
+                    },
+                    "uuid": "17b6f71d-d86c-42c1-9e7d-d1a044b29db4"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U1",
+                    "pos": {
+                        "x": 30.0,
+                        "y": 72.25
+                    },
+                    "uuid": "cf949465-5295-4427-8af4-78bb7d1ad928"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Missing symbol field 'ManufacturerPartNumber' in footprint",
+            "items": [
+                {
+                    "description": "Footprint D3",
+                    "pos": {
+                        "x": 12.4,
+                        "y": 44.2
+                    },
+                    "uuid": "1196d36e-6f16-425a-95ff-dfc460b304d4"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://gct.co/files/drawings/usb4105.pdf')",
+            "items": [
+                {
+                    "description": "Footprint J4",
+                    "pos": {
+                        "x": 2.5,
+                        "y": 45.0
+                    },
+                    "uuid": "21d1218b-153d-4232-9e50-673f5d88dc4b"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/5702/LP523450JU%20251555.pdf')",
+            "items": [
+                {
+                    "description": "Footprint J5",
+                    "pos": {
+                        "x": 48.0,
+                        "y": 32.0
+                    },
+                    "uuid": "990f6f7e-d2a1-4cfc-8e03-33230f5fad09"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U2",
+                    "pos": {
+                        "x": 8.75,
+                        "y": 45.3
+                    },
+                    "uuid": "11a83b21-ad4e-4e90-9501-d3f0f18f3779"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/bq24074.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U3",
+                    "pos": {
+                        "x": 22.0,
+                        "y": 51.0
+                    },
+                    "uuid": "d3c5aedd-7cf7-4a7f-ae14-aba9c6af185e"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Missing symbol field 'ManufacturerPartNumber' in footprint",
+            "items": [
+                {
+                    "description": "Footprint C9",
+                    "pos": {
+                        "x": 47.4,
+                        "y": 40.0
+                    },
+                    "uuid": "544faeb7-3e85-41ce-8181-74b44ea4505d"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Missing symbol field 'ManufacturerPartNumber' in footprint",
+            "items": [
+                {
+                    "description": "Footprint C10",
+                    "pos": {
+                        "x": 51.2,
+                        "y": 40.0
+                    },
+                    "uuid": "c91f3306-5261-4149-88d3-9a69965158bd"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Missing symbol field 'ManufacturerPartNumber' in footprint",
+            "items": [
+                {
+                    "description": "Footprint C11",
+                    "pos": {
+                        "x": 49.8,
+                        "y": 42.9
+                    },
+                    "uuid": "963aa588-e6a5-4100-ab1c-46c8d6adc57d"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Missing symbol field 'ManufacturerPartNumber' in footprint",
+            "items": [
+                {
+                    "description": "Footprint C12",
+                    "pos": {
+                        "x": 47.4,
+                        "y": 52.6
+                    },
+                    "uuid": "463f30cc-dbdf-4cbf-bfb5-b9cd2501a7c4"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Missing symbol field 'ManufacturerPartNumber' in footprint",
+            "items": [
+                {
+                    "description": "Footprint C13",
+                    "pos": {
+                        "x": 51.2,
+                        "y": 52.6
+                    },
+                    "uuid": "bed2e0c1-a7ec-4077-8a83-cdff8e1fe2fe"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Missing symbol field 'ManufacturerPartNumber' in footprint",
+            "items": [
+                {
+                    "description": "Footprint C14",
+                    "pos": {
+                        "x": 47.4,
+                        "y": 55.0
+                    },
+                    "uuid": "80f3ff39-4c14-4e4e-9024-5f25c76daaeb"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Missing symbol field 'ManufacturerPartNumber' in footprint",
+            "items": [
+                {
+                    "description": "Footprint C15",
+                    "pos": {
+                        "x": 49.8,
+                        "y": 49.1
+                    },
+                    "uuid": "4ab81b2c-0a25-453e-8c7c-3d244b4ddab7"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.coilcraft.com/pdfs/xfl4020.pdf')",
+            "items": [
+                {
+                    "description": "Footprint L1",
+                    "pos": {
+                        "x": 53.2,
+                        "y": 46.0
+                    },
+                    "uuid": "9091020d-371a-4553-85e7-9c0f0d384af6"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tps63070.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U4",
+                    "pos": {
+                        "x": 49.0,
+                        "y": 46.0
+                    },
+                    "uuid": "ee0b9c61-a81a-4412-bbe8-13828cb27746"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U5",
+                    "pos": {
+                        "x": 27.2,
+                        "y": 31.2
+                    },
+                    "uuid": "bd18bba0-b85c-42fc-af19-34f92e0c9c60"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U6",
+                    "pos": {
+                        "x": 34.0,
+                        "y": 31.2
+                    },
+                    "uuid": "dffe233b-b09c-43fa-9a3f-1c7c6d49d3f4"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U7",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 31.2
+                    },
+                    "uuid": "5ab86ee6-162e-4087-910b-cfefac3d2988"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U8",
+                    "pos": {
+                        "x": 27.2,
+                        "y": 35.0
+                    },
+                    "uuid": "4440c843-16a0-4b34-87f5-5ceb2ee389ac"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U9",
+                    "pos": {
+                        "x": 34.0,
+                        "y": 35.0
+                    },
+                    "uuid": "2d9ed603-ea83-4d9a-8a2d-38ee9253ece9"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U10",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 35.0
+                    },
+                    "uuid": "56cf1810-a4d7-4129-a313-51b8357a2446"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tps2553.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U11",
+                    "pos": {
+                        "x": 5.0,
+                        "y": 17.0
+                    },
+                    "uuid": "30e89a1c-7bf1-401e-aec9-697c66fbe4c2"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://suddendocs.samtec.com/prints/mec1-1xx-xx-xx-d-xx-xx-footprint.pdf')",
+            "items": [
+                {
+                    "description": "Footprint J1",
+                    "pos": {
+                        "x": 30.0,
+                        "y": 7.0
+                    },
+                    "uuid": "9ae7c7fe-16a4-4966-b7a0-9c19726b124f"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/sn74cb3q3245.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U12",
+                    "pos": {
+                        "x": 30.1,
+                        "y": 20.3
+                    },
+                    "uuid": "24b77ed5-3630-4af4-b3b6-f273ad861b22"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/sn74cb3q3245.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U13",
+                    "pos": {
+                        "x": 39.3,
+                        "y": 24.1
+                    },
+                    "uuid": "3a7061da-bcba-4d88-a6bd-54df3ec188db"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/sn74cb3q3245.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U14",
+                    "pos": {
+                        "x": 51.5,
+                        "y": 21.5
+                    },
+                    "uuid": "8a68d4b8-78d8-4c4c-be31-26cec46eee2c"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U30",
+                    "pos": {
+                        "x": 21.2,
+                        "y": 15.0
+                    },
+                    "uuid": "3f1a347d-6c43-40b1-875d-28f62214db53"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U31",
+                    "pos": {
+                        "x": 24.4,
+                        "y": 15.0
+                    },
+                    "uuid": "cac33592-7d3c-4b1d-964f-e1870a121e11"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U32",
+                    "pos": {
+                        "x": 27.6,
+                        "y": 15.0
+                    },
+                    "uuid": "5154a706-8970-4cd0-a670-68e010655160"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U33",
+                    "pos": {
+                        "x": 30.8,
+                        "y": 15.0
+                    },
+                    "uuid": "02890874-e429-4590-b6a3-9852bd425620"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U34",
+                    "pos": {
+                        "x": 34.0,
+                        "y": 15.0
+                    },
+                    "uuid": "bf718ea5-e6d2-4121-9165-6894ac7a6bf5"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U35",
+                    "pos": {
+                        "x": 37.2,
+                        "y": 15.0
+                    },
+                    "uuid": "7eba28f9-e536-4571-829d-59337d9c173c"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U36",
+                    "pos": {
+                        "x": 40.4,
+                        "y": 15.0
+                    },
+                    "uuid": "4d79d008-5781-4e11-ab9d-c0f002701bd6"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tusb320lai.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U15",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 37.9
+                    },
+                    "uuid": "1f4ab0ff-647d-4c84-a27b-6c4b66fa6542"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tps709.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U16",
+                    "pos": {
+                        "x": 17.0,
+                        "y": 38.2
+                    },
+                    "uuid": "35a872e9-963f-4a65-87af-88a9d87e93cb"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U17",
+                    "pos": {
+                        "x": 21.8,
+                        "y": 42.0
+                    },
+                    "uuid": "895dc57b-04fa-4cbc-b9fb-cb4cb3cfab86"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tps22810.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U18",
+                    "pos": {
+                        "x": 17.0,
+                        "y": 42.0
+                    },
+                    "uuid": "7ce0d4bb-08cc-4e31-837f-4e4661d0a0d2"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/ts3usb221a.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U19",
+                    "pos": {
+                        "x": 10.1,
+                        "y": 49.5
+                    },
+                    "uuid": "78c1a4c7-087d-4011-9066-7a414c254aab"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U24",
+                    "pos": {
+                        "x": 9.0,
+                        "y": 37.9
+                    },
+                    "uuid": "fb06e392-93ab-4c4d-96c2-088f3f8d405b"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tps3700.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U20",
+                    "pos": {
+                        "x": 30.6,
+                        "y": 44.0
+                    },
+                    "uuid": "4baa3be7-3a5a-478e-a04e-21e182617ea6"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/tps3700.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U21",
+                    "pos": {
+                        "x": 46.6,
+                        "y": 64.0
+                    },
+                    "uuid": "7f892a43-4c13-458d-8d98-b24928bdb0f4"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U22",
+                    "pos": {
+                        "x": 30.6,
+                        "y": 50.6
+                    },
+                    "uuid": "170c624f-3cd1-48da-ae33-3bfddce94952"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.ti.com/lit/ds/symlink/sn74lvc1g06.pdf')",
+            "items": [
+                {
+                    "description": "Footprint U23",
+                    "pos": {
+                        "x": 37.4,
+                        "y": 50.6
+                    },
+                    "uuid": "77a500e9-f844-4775-a78b-f7a1be79c51f"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP1",
+                    "pos": {
+                        "x": 1.4,
+                        "y": 52.3
+                    },
+                    "uuid": "bccb05db-702e-4ee9-95a7-0d445473e720"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP2",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 52.3
+                    },
+                    "uuid": "d22c0817-b3a4-46ff-a4c3-a5a755607adc"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP3",
+                    "pos": {
+                        "x": 6.6,
+                        "y": 52.3
+                    },
+                    "uuid": "0ee6e6bd-caa2-4085-87ac-407a3df45f6a"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP4",
+                    "pos": {
+                        "x": 1.4,
+                        "y": 54.9
+                    },
+                    "uuid": "49fc6716-b18f-44e1-b1e7-20327efcd878"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP5",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 54.9
+                    },
+                    "uuid": "f2134036-0dc1-41a2-8997-926e3a025fc0"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP6",
+                    "pos": {
+                        "x": 6.6,
+                        "y": 54.9
+                    },
+                    "uuid": "97b1a245-a213-4d0a-bc40-c8ef8f68ae91"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP7",
+                    "pos": {
+                        "x": 57.6,
+                        "y": 38.0
+                    },
+                    "uuid": "0df4f1fa-ca7f-4332-8578-830fdbeae02a"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP8",
+                    "pos": {
+                        "x": 57.6,
+                        "y": 40.6
+                    },
+                    "uuid": "5a86c7fa-e78d-40a7-93e0-346a2810fd01"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP9",
+                    "pos": {
+                        "x": 57.6,
+                        "y": 43.2
+                    },
+                    "uuid": "1cb12319-81e7-446e-8545-49350c8271ea"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP10",
+                    "pos": {
+                        "x": 57.6,
+                        "y": 45.8
+                    },
+                    "uuid": "cad6b3ed-78b7-45a0-9e94-7465ba4652d5"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP11",
+                    "pos": {
+                        "x": 1.4,
+                        "y": 57.5
+                    },
+                    "uuid": "2e89778c-3b1b-4111-8359-6c7af0ea5b80"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP12",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 57.5
+                    },
+                    "uuid": "6860b278-ca37-4214-bdc3-e0ccc5db7ed1"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP13",
+                    "pos": {
+                        "x": 6.6,
+                        "y": 57.5
+                    },
+                    "uuid": "101f0d24-5614-41b1-b551-c046886bd98c"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP14",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 10.0
+                    },
+                    "uuid": "36c00445-c6a6-4f51-a85b-1297f1f940e3"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP15",
+                    "pos": {
+                        "x": 5.0,
+                        "y": 10.0
+                    },
+                    "uuid": "2ed07c7c-3ab8-4bc8-b381-a038cbe01b7a"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP16",
+                    "pos": {
+                        "x": 1.4,
+                        "y": 60.1
+                    },
+                    "uuid": "13a5eb81-fd6a-426a-942a-ad6afeb8107c"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP17",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 24.0
+                    },
+                    "uuid": "67347087-6c24-4819-a7a2-59fa5c5e8931"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP18",
+                    "pos": {
+                        "x": 5.0,
+                        "y": 24.0
+                    },
+                    "uuid": "15795382-e96b-4276-8597-5ad8a9927b13"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP19",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 26.6
+                    },
+                    "uuid": "49af8269-49ff-4600-a031-8fda5c508399"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP20",
+                    "pos": {
+                        "x": 5.0,
+                        "y": 26.6
+                    },
+                    "uuid": "d65ab9ef-d367-4874-80ea-fcee26002163"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP21",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 29.2
+                    },
+                    "uuid": "a573b475-64fc-4c47-9833-833eb8fa40f3"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP22",
+                    "pos": {
+                        "x": 5.0,
+                        "y": 29.2
+                    },
+                    "uuid": "fddc695a-6d88-4d91-8a53-e48ae0d18ef9"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP23",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 31.8
+                    },
+                    "uuid": "8bdbaaee-48dd-4319-aa42-ab1063d88a8e"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP24",
+                    "pos": {
+                        "x": 5.0,
+                        "y": 31.8
+                    },
+                    "uuid": "7f43da28-4104-4040-8da2-d14ebb95c9cf"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP25",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 34.4
+                    },
+                    "uuid": "187d7b06-2dc4-4178-98ce-453cc6b69d4b"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP26",
+                    "pos": {
+                        "x": 5.0,
+                        "y": 34.4
+                    },
+                    "uuid": "bb203942-1273-4800-bc4d-aaa8f84d9871"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP27",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 37.0
+                    },
+                    "uuid": "307883b0-7b30-4de1-8d69-221e05612d83"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP28",
+                    "pos": {
+                        "x": 5.0,
+                        "y": 37.0
+                    },
+                    "uuid": "4fb93295-d3ac-4100-902f-470dcdf18295"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP29",
+                    "pos": {
+                        "x": 57.6,
+                        "y": 25.0
+                    },
+                    "uuid": "a8052b58-4989-43d3-a7d6-d0f1e8542d83"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP30",
+                    "pos": {
+                        "x": 57.6,
+                        "y": 27.6
+                    },
+                    "uuid": "08cc5197-12ed-451c-8d6b-aa71951d54a4"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP31",
+                    "pos": {
+                        "x": 57.6,
+                        "y": 30.2
+                    },
+                    "uuid": "a552ef65-8a4c-4929-a39c-e6fe80050479"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP32",
+                    "pos": {
+                        "x": 57.6,
+                        "y": 32.799999
+                    },
+                    "uuid": "1065d1f1-604c-4b00-8ce7-678eb6436d98"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP33",
+                    "pos": {
+                        "x": 57.6,
+                        "y": 48.4
+                    },
+                    "uuid": "26026f33-6e8e-41a5-89ff-d65b09206054"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP34",
+                    "pos": {
+                        "x": 57.6,
+                        "y": 51.0
+                    },
+                    "uuid": "4807153b-c783-4dbd-8b52-a584b3190a4d"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP35",
+                    "pos": {
+                        "x": 57.6,
+                        "y": 53.6
+                    },
+                    "uuid": "5e2c9bf0-b9b0-4489-8506-4e5b1a75fa4f"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP36",
+                    "pos": {
+                        "x": 7.8,
+                        "y": 10.0
+                    },
+                    "uuid": "d1a46c0c-387f-459e-b5e4-6525d6d04c1e"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP37",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 60.1
+                    },
+                    "uuid": "1a191408-db4e-4ab2-b9d9-06c111ad561c"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint TP38",
+                    "pos": {
+                        "x": 54.0,
+                        "y": 38.0
+                    },
+                    "uuid": "3f3ff9ea-3a94-4163-a812-3cff92333888"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint H6",
+                    "pos": {
+                        "x": 48.0,
+                        "y": 7.0
+                    },
+                    "uuid": "0028b9f5-ac84-4818-a70a-9468c61afa14"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint H4",
+                    "pos": {
+                        "x": 56.0,
+                        "y": 76.0
+                    },
+                    "uuid": "05031414-0019-469e-bb43-3ba27def737c"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint H1",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 4.0
+                    },
+                    "uuid": "1c0eaab6-2c3e-44fe-a52f-05ced4a8ff31"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint H5",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 7.0
+                    },
+                    "uuid": "25c159e1-67b6-43b9-b227-39021a18c81c"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint H2",
+                    "pos": {
+                        "x": 56.0,
+                        "y": 4.0
+                    },
+                    "uuid": "628f9301-d159-455c-99b2-86823e5cb623"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint H3",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 76.0
+                    },
+                    "uuid": "6c71f720-43b0-42f7-b7bc-dd697d6e824e"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint H10",
+                    "pos": {
+                        "x": 45.24,
+                        "y": 59.45
+                    },
+                    "uuid": "8587aa9f-51d2-4644-a005-ba651036fce8"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint H8",
+                    "pos": {
+                        "x": 45.24,
+                        "y": 17.54
+                    },
+                    "uuid": "b91b9cab-6705-4f08-a15e-c843bd136847"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint H9",
+                    "pos": {
+                        "x": 14.76,
+                        "y": 59.45
+                    },
+                    "uuid": "ed145b66-55e1-4283-864c-92b65d7ea824"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint H7",
+                    "pos": {
+                        "x": 14.76,
+                        "y": 17.54
+                    },
+                    "uuid": "ed325e2b-b0ee-4680-8588-f22898ee203c"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        }
+    ],
     "source": "babel-radio.kicad_pcb",
     "unconnected_items": [],
-    "violations": []
+    "violations": [
+        {
+            "description": "Footprint 'ESP32-S3-WROOM-1' does not match copy in library 'RF_Module'",
+            "items": [
+                {
+                    "description": "Footprint U1",
+                    "pos": {
+                        "x": 30.0,
+                        "y": 72.25
+                    },
+                    "uuid": "cf949465-5295-4427-8af4-78bb7d1ad928"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "comment": "U1 library outline continues over the intended antenna overhang; silk outside the board is not printed",
+            "description": "Silkscreen clipped by board edge",
+            "excluded": true,
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 80.0
+                    },
+                    "uuid": "f685d875-744d-4ed3-9b65-b725ae75d250"
+                },
+                {
+                    "description": "Segment of U1 on F.Silkscreen",
+                    "pos": {
+                        "x": 20.8,
+                        "y": 85.15
+                    },
+                    "uuid": "2ad6f4d5-9094-4856-8876-a4222f12832f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "comment": "U1 library outline continues over the intended antenna overhang; silk outside the board is not printed",
+            "description": "Silkscreen clipped by board edge",
+            "excluded": true,
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 80.0
+                    },
+                    "uuid": "f685d875-744d-4ed3-9b65-b725ae75d250"
+                },
+                {
+                    "description": "Segment of U1 on F.Silkscreen",
+                    "pos": {
+                        "x": 39.2,
+                        "y": 85.15
+                    },
+                    "uuid": "87ccbc06-4eb5-46a7-8a39-6415971148cf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        }
+    ]
 }

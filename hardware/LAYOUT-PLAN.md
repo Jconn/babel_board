@@ -85,7 +85,8 @@ No enclosure/guide material may obstruct the front 50-degree sensor field of vie
 ## Electrical routing constraints
 
 - General rules: 0.15 mm minimum track/clearance; 0.3 mm finished routing-via drill,
-  0.6 mm diameter; copper-to-edge 0.30 mm except the documented card fingers.
+  0.6 mm diameter; copper-to-edge 0.40 mm (raised from 0.30 for OSH Park's 15 mil keepout) except the
+  documented card fingers.
   WROOM library thermal holes use 0.20 mm drills; confirm filled/tented handling
   with assembly. Radio minimum hole-to-copper clearance is 0.15 mm, accommodating
   the USB connector's 0.194 mm nominal pad-to-alignment-hole clearance.

@@ -8,13 +8,14 @@ regeneration over routed work.** See [shift summary](../SHIFT-SUMMARY-2026-10-20
 
 **Both boards are fully connected with zero DRC violations** after the
 2026-10-21 silkscreen pass. That means 0 unconnected, 0 errors and 0
-warnings. Two documented radio exclusions cover U1 overhang silk; see the
-silkscreen section. "Connected and DRC-clean" is not "fabrication-ready":
+warnings, except one expected radio warning since the OSH Park prep (U1 differs
+from the library: enlarged thermal-via drills). Two documented radio exclusions
+cover U1 overhang silk; see the silkscreen section. "Connected and DRC-clean" is not "fabrication-ready":
 see Next work.
 
 | Board | Track segments | Through vias | Unconnected items | Other DRC findings |
 | --- | ---: | ---: | ---: | --- |
-| Radio | 2257 | 445 | 0 | none (2 documented exclusions) |
+| Radio | 2255 | 445 | 0 | 1 expected U1 library-mismatch warning (2 documented exclusions) |
 | IR daughter | 133 | 26 | 0 | none |
 
 Neither outline expanded. The daughter's test pads were replaced by a bench
@@ -92,6 +93,16 @@ default, saves via `save_routed_board`).
   [front copper](ir-daughter/layout-routing.svg) view.
 - Validation: native DRC on both boards (0 violations; parity metadata only,
   92 radio / 11 daughter at the time; daughter 4 after the J2 change) and every check script pass.
+
+## OSH Park fabrication files (2026-10-21)
+
+Upload-ready Gerber zips are in [fab/oshpark](fab/oshpark/README.md). Both boards
+pass DRC with OSH Park's minimums applied. Changes: copper-to-edge rule
+0.30 -> 0.40 mm on both projects (pours refilled); radio LCD_DC and H_NVM_SDA
+right-edge B.Cu runs moved 0.05 mm inboard; radio U1 thermal-via drills
+0.20 -> 0.30 mm (board copy only, so DRC shows one expected
+`lib_footprint_mismatch` on U1; kicad-cli ignores exclusions for it);
+daughter ground-pour clearance 0.15 -> 0.16 mm.
 
 ## Daughter bench header (2026-10-21)
 

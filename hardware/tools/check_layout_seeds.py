@@ -12,8 +12,8 @@ HW=Path(__file__).resolve().parents[1]
 # matching .kicad_pro. Catch that regression before trusting a routed board.
 project=json.loads((HW/'radio'/'babel-radio.kicad_pro').read_text())
 rules=project['board']['design_settings']['rules']
-for rule,want in {'min_clearance':.15,'min_copper_edge_clearance':.3,
-                  'min_hole_clearance':.15,'min_through_hole_diameter':.2,
+for rule,want in {'min_clearance':.15,'min_copper_edge_clearance':.4,
+                  'min_hole_clearance':.15,'min_through_hole_diameter':.254,
                   'min_track_width':.15,'min_via_diameter':.6}.items():
     assert rules[rule]==want, (rule,rules[rule],want)
 classes={c['name']:c for c in project['net_settings']['classes']}
