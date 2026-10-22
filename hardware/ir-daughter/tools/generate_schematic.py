@@ -43,6 +43,8 @@ memory = [(1,"A0","input",-12.7,5.08,0),
           (8,"VCC","power_in",0,12.7,270)]
 connector = [(n,str(n),"passive",-15.24 if n % 2 else 15.24,
               11.43-((n-1)//2)*2.54,0 if n % 2 else 180) for n in range(1,21)]
+header = [(n,str(n),"passive",-7.62 if n % 2 else 7.62,
+           3.81-((n-1)//2)*2.54,0 if n % 2 else 180) for n in range(1,9)]
 passive = [(1,"~","passive",0,3.81,270),(2,"~","passive",0,-3.81,90)]
 definitions = {}
 pins = {}
@@ -50,10 +52,10 @@ pins = {}
 
 def symbol(name, reference, pinlist, body):
     pins[name] = pinlist
-    pintext = ''.join(f'''(pin {typ} line (at {x} {y} {angle}) (length {0 if name in ('TP','PWR_FLAG') else 2.54})
+    pintext = ''.join(f'''(pin {typ} line (at {x} {y} {angle}) (length {0 if name == 'PWR_FLAG' else 2.54})
         (name {Q(label)} {effects()}) (number {Q(num)} {effects()}))'''
         for num,label,typ,x,y,angle in pinlist)
-    definitions[name] = f'''(symbol {Q(name)} (pin_names (offset 0.508) {'(hide yes)' if name == 'PORT_20' else ''})
+    definitions[name] = f'''(symbol {Q(name)} (pin_names (offset 0.508) {'(hide yes)' if name in ('PORT_20','HEADER_2x4') else ''})
       (in_bom yes) (on_board yes)
       {prop('Reference',reference)} {prop('Value',name)}
       {prop('Footprint','',hidden=True)} {prop('Datasheet','',hidden=True)}
@@ -70,7 +72,7 @@ symbol('24LC256','U',memory,rect(10.16,10.16))
 symbol('PORT_20','J',connector,rect(12.7,15.24))
 symbol('R','R',passive,rect(1.016,1.27))
 symbol('C','C',passive,''.join(f'(polyline (pts (xy -2.54 {y}) (xy 2.54 {y})) (stroke (width 0.254) (type default)) (fill (type none)))' for y in [-1.27,1.27]))
-symbol('TP','TP',[(1,'~','passive',0,0,90)],'(circle (center 0 1.27) (radius 1.27) (stroke (width 0.254) (type default)) (fill (type none)))')
+symbol('HEADER_2x4','J',header,rect(5.08,5.08))
 symbol('PWR_FLAG','#FLG',[(1,'~','power_out',0,0,90)],'(polyline (pts (xy 0 0) (xy 0 2.54) (xy -1.27 3.81) (xy 0 5.08) (xy 1.27 3.81) (xy 0 2.54)) (stroke (width 0.254) (type default)) (fill (type none)))')
 
 items=[]
@@ -99,9 +101,11 @@ def text(value,x,y,size=1.1):
 def place(kind,ref,value,x,y,nets,dnp=False,footprint='',datasheet=''):
     instance=UID(ref)
     # Keep power names hidden; draw them with explicitly connected net labels.
-    properties=prop('Reference',ref,x+4,y-1.5,ref.startswith('#'),True)+prop('Value',value,x+4,y+1.5,ref.startswith('#') or kind=='TP',True)
+    properties=prop('Reference',ref,x+4,y-1.5,ref.startswith('#'),True)+prop('Value',value,x+4,y+1.5,ref.startswith('#'),True)
     if kind in ('MLX90632','24LC256','PORT_20'):
         properties=prop('Reference',ref,x,y-26)+prop('Value',value,x,y-23)
+    if kind == 'HEADER_2x4':
+        properties=prop('Reference',ref,x,y-6.5)+prop('Value',value,x,y+6.5)
     properties+=prop('Footprint',footprint,x,y,True)+prop('Datasheet',datasheet,x,y,True)
     items.append(f'''(symbol (lib_id {Q('Babel_IR:'+kind)}) (at {x} {y} 0) (unit 1)
        (in_bom {'no' if ref.startswith('#') else 'yes'}) (on_board {'no' if ref.startswith('#') else 'yes'}) (dnp {'yes' if dnp else 'no'})
@@ -157,9 +161,11 @@ for ref,val,x,net,dnp in [('R1','10k / WP',121.92,'NVM_WP',False),
                          ('R5','4.7k',243.84,'NVM_SDA',True)]:
     place('R',ref,val,x,133.35,{1:V,2:net},dnp=dnp,footprint='Resistor_SMD:R_0603_1608Metric')
 text('R2-R5 DNP: host provides connector-side pull-ups to switched VDD.\nPopulate only for bench use after checking total pull-up load / rise time.',112,146)
-text('06 / TEST ACCESS',15,160,1.3)
-for i,net in enumerate([G,V,'SENSOR_SCL','SENSOR_SDA','NVM_SCL','NVM_SDA','NVM_WP'],1):
-    place('TP',f'TP{i}',net,15.24+(i-1)*22.86,175.26,{1:net},footprint='TestPoint:TestPoint_Pad_D1.5mm')
+text('06 / BENCH HEADER',15,160,1.3)
+place('HEADER_2x4','J2','2x4 2.54mm / bench',40.64,167.64,
+      {1:G,2:V,3:'SENSOR_SCL',4:'SENSOR_SDA',5:'NVM_SCL',6:'NVM_SDA',7:'NVM_WP',8:G},
+      footprint='Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical')
+text('J2: 0.1 in header for wiring an external I2C host (bench bring-up).\nPin 2 takes 3.3 V only. Fit R2-R5 or host-side pull-ups.\nBench boards only: leave J2 unfitted when mated to the radio.',75,162)
 place('PWR_FLAG','#FLG01','PWR_FLAG',243.84,158.75,{1:V})
 place('PWR_FLAG','#FLG02','PWR_FLAG',269.24,158.75,{1:G})
 text('Host owns current limiting, signal isolation and safe hot-swap sequencing.\nPower flags document external supply; they are not protection devices.',15,190,1)

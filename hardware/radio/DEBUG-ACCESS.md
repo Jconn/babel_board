@@ -6,8 +6,9 @@ outline is unchanged. No new headers or mounting holes were added. Existing
 connectors, switches and component positions are retained; additions occupy
 unused front-side space outside the OLED footprint and keyed boot.
 
-The daughter retains its seven test pads. Its two I2C buses and write-protect
-pad provide the downstream comparison for the new host-side pads.
+The daughter's seven test pads became a 2x4 0.1 in bench header, J2 (see the
+[daughter README](../ir-daughter/README.md#bench-header-j2)). Its two I2C buses and
+write-protect pin provide the downstream comparison for the host-side pads.
 
 ## Where to probe
 

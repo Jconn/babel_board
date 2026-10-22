@@ -28,7 +28,7 @@ print('PASS project fabrication constraints and power/USB routing presets')
 def near(a,b): assert abs(a-b)<0.00001,(a,b)
 def mm(v): return k.ToMM(v)
 boards={}
-for folder,name,count,layers in [('radio','babel-radio',179,4),('ir-daughter','babel-ir-daughter',19,2)]:
+for folder,name,count,layers in [('radio','babel-radio',179,4),('ir-daughter','babel-ir-daughter',13,2)]:
     b=k.LoadBoard(str(HW/folder/(name+'.kicad_pcb')));boards[folder]=b
     doc=ET.parse(HW/folder/(name+'.net.xml'))
     fps={f.GetReference():f for f in b.GetFootprints()}

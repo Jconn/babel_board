@@ -42,7 +42,7 @@ and Babel software are licensed separately.
 | BSS138 level shifting and 10k pull-up array | Omit level shifting for the 3.3 V-only bus. Host supplies normal bus pull-ups; daughter R2/R3 remain optional DNP bench pads. |
 | Address-select jumper/header | Omit, retaining 10k pulldown for default address 0x3A. Only one daughter board is attached. |
 | Power LED and enable jumper | Omit to avoid unnecessary power/heat. Host reports attachment state. |
-| Driver storage | Add U2 EEPROM at 0x50 on the separate NVM bus, default write protection, decoupling, and test pads. |
+| Driver storage | Add U2 EEPROM at 0x50 on the separate NVM bus, default write protection, decoupling, and a bench header (J2). |
 
 This is an adaptation of the sensor circuit and footprint, not a completed
 conversion of the entire routed Adafruit PCB. Their board layout remains

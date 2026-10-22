@@ -34,7 +34,9 @@ holes are anchored.
   capacitors with adequate voltage rating; exact purchasing parts remain open.
 - R2–R5 are **not populated**. The normal host supplies connector-side bus
   pull-ups to switched daughter power. These pads allow bench pull-ups if needed.
-- Seven test pads expose power, ground, both buses, and write protection.
+- J2 is a 2x4 0.1 in through-hole bench header (replaced the seven test pads).
+  It brings out power, ground, both buses and write protection, so a dev board can
+  drive the daughter with Dupont jumpers. See [Bench header](#bench-header-j2).
 - J1 pin 8 is the host's active-low presence signal, grounded on the daughter.
   Unused SPI/UART/IRQ/reset contacts are explicitly marked no-connect.
 
@@ -42,6 +44,28 @@ Pin assignments checked against the
 [Melexis datasheet, revision 13](https://www.melexis.com/-/media/files/documents/datasheets/mlx90632-datasheet-melexis.pdf)
 and [Microchip DS20001203Y](https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/24AA256-24LC256-24FC256-256K-I2C-Serial-EEPROM-DS20001203.pdf).
 Custom schematic symbols are functional representations, not footprint drawings.
+
+## Bench header (J2)
+
+For interim bring-up without the radio, wire J2 to any 3.3 V microcontroller
+board (for example an ESP32 dev board). Pin 1 is bottom-left, marked by the silk
+corner; the pinout is also printed on the board beside the header.
+
+| Pin | Signal | Pin | Signal |
+| --- | --- | --- | --- |
+| 1 | GND | 2 | VDD_DAUGHTER, 3.3 V in |
+| 3 | SENSOR_SCL (S.SCL) | 4 | SENSOR_SDA (S.SDA) |
+| 5 | NVM_SCL (E.SCL) | 6 | NVM_SDA (E.SDA) |
+| 7 | NVM_WP (E.WP) | 8 | GND (spare) |
+
+Pin 2 takes 3.3 V only, with no protection on the daughter: power everything off
+before connecting or disconnecting. The buses have no pull-ups unless R2-R5
+(4.7k) are fitted or the host provides them; the ESP32's internal ~45k pull-ups
+are too weak. Sensor 0x3A, EEPROM 0x50; the two buses can share one host I2C
+port. R1 holds WP high (writes blocked): drive pin 7 low to write the EEPROM.
+
+**Bench boards only.** A fitted header does not fit the host boot or carrier.
+Leave J2 unfitted on boards that mate with the radio.
 
 ## Host dependencies
 

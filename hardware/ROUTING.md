@@ -15,9 +15,10 @@ see Next work.
 | Board | Track segments | Through vias | Unconnected items | Other DRC findings |
 | --- | ---: | ---: | ---: | --- |
 | Radio | 2257 | 445 | 0 | none (2 documented exclusions) |
-| IR daughter | 140 | 36 | 0 | none |
+| IR daughter | 133 | 26 | 0 | none |
 
-Neither outline expanded. One footprint moved this day: pull-up R28 (see
+Neither outline expanded. The daughter's test pads were replaced by a bench
+header (see [Daughter bench header](#daughter-bench-header-2026-10-21)). One radio footprint moved this day: pull-up R28 (see
 the sixth-shift notes). One power trunk changed
 layer (VBAT, see the fourth-shift notes). PCB expansion is explicitly
 authorized if needed. Preserve mechanical anchors and update the outline,
@@ -74,12 +75,10 @@ default, saves via `save_routed_board`).
 - Radio: 127 refs at 1.0 mm, 11 at 0.8 mm. **Hidden on silk (no room in
   solid clusters): C24, R106, R113, R34**; they remain on F.Fab.
   Daughter: all 13 at 1.0 mm.
-- **Probe-pad grids** (test pads within 3.2 mm of another; 37 radio, 6
-  daughter): "TPnn" at 0.8 mm is wider than the 2.6 mm pitch, so the
+- **Probe-pad grids** (radio test pads within 3.2 mm of another; 37):
+  "TPnn" at 0.8 mm is wider than the 2.6 mm pitch, so the
   reference is hidden and a number-only label ("19" = TP19) sits beside the
-  pad, below where it fits. Standalone pads keep full references. On the
-  daughter, "6" has to sit left of TP6 (edge below/right, TP5 above), next
-  to TP7's pad; the 4/5/6 column reads correctly but check that one by eye.
+  pad, below where it fits. Standalone pads keep full references.
   These numbers are board text, not footprint fields: rerun the tool if a
   test pad moves.
 - Mounting-hole references (radio H1-H10, daughter H1-H2) are hidden.
@@ -92,7 +91,42 @@ default, saves via `save_routed_board`).
   openings, outline); daughter silk is in its
   [front copper](ir-daughter/layout-routing.svg) view.
 - Validation: native DRC on both boards (0 violations; parity metadata only,
-  92 radio / 11 daughter as before) and every check script pass.
+  92 radio / 11 daughter at the time; daughter 4 after the J2 change) and every check script pass.
+
+## Daughter bench header (2026-10-21)
+
+User request: replace the daughter's seven 1.5 mm SMD test pads with a
+through-hole header for interim bring-up from an ESP32 dev board.
+
+- **J2, 2x4 0.1 in header** (`PinHeader_2x04_P2.54mm_Vertical`), pin 1 at
+  (25.5, 33.14), rotated 90 degrees so pin 1 is bottom-left and odd pins form
+  the lower row. Pins: 1 GND, 2 VDD_DAUGHTER, 3/4 SENSOR_SCL/SDA,
+  5/6 NVM_SCL/SDA, 7 NVM_WP, 8 spare GND. A 1x7 row does not fit: the
+  sensor zone (y < 25) leaves a 10 mm band, and the carrier holes block both
+  edges. Schematic changed in `tools/generate_schematic.py` (which still
+  reproduced the committed schematic byte-for-byte before the edit);
+  `verify_netlist.py` and `check_layout_seeds.py` (13 components) updated.
+- R2-R5 (DNP bench pull-ups) moved from y 29.0 to y 26.9 to make room.
+- Copper: all signal-net tracks ripped (the five bus nets), plus GND/VDD
+  copper that clashed with the new pads, then dangling stubs. A GND via
+  inside J2 pin 1 was removed (hole-to-hole). Rerouted with `grid_route.py`
+  **one net at a time with re-export between nets**: its occupancy keeps
+  only earlier routes' centrelines, so a single multi-net pass let later nets
+  crowd earlier ones (9 exact-check rejects). Per-net passes had 0 rejects.
+  Carrier holes got a 2.45 mm copper keepout in the router export.
+- Silk: pinout legend (board text, F.Silkscreen) above the header;
+  `place_silk.py` rerun around it. DRC 0/0; parity metadata only (4: U1/U2
+  datasheet fields, H1/H2 not in schematic).
+- **Bench boards only:** a fitted header does not fit the host boot or the
+  carrier. Leave J2 unfitted on daughters that mate with the radio.
+
+**Open mechanical finding (pre-existing, not caused by this change).**
+In `mechanical/daughter_carrier.scad` the boot's upper guide slot is 2.2 mm
+wide (PCB +/-0.785 mm, so 0.3 mm front clearance). It spans about z = 10 to
+16 mm above the host, which covers daughter y = 30 to 35. U2 (SOIC, 1.75 mm),
+R1 and C3 sit there on the front, so they would hit the boot. Fix the boot
+(front relief pocket over that band) or the placement before printing the
+coupon. `check_placement.py` does not model this envelope.
 
 ## Sixth shift (2026-10-21): radio 2 -> 0 unconnected
 

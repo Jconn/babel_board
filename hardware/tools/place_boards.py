@@ -102,17 +102,15 @@ RADIO = {
 
 # Daughter: sensor/optical zone (x5..35, y10..25) holds only U1 and C1.
 # EEPROM, pull-ups and port capacitor sit by the card tongue; front side only,
-# carrier behind. Test pads at the body edges, clear of carrier holes H1/H2.
+# carrier behind. J2 is a 2x4 bench header (pin 1 bottom-left), clear of carrier holes H1/H2.
 DAUGHTER = {
     'C1': (16.6, 15.6, 270),
     'U2': (13.0, 30.0, 0), 'C2': (17.6, 28.0, 90), 'R1': (20.5, 30.6, 0),
     'C3': (20.5, 33.5, 0), 'R6': (21.2, 26.6, 0),
     # R2..R5 are DNP bench pull-ups.
-    'R2': (24.0, 29.0, 90), 'R3': (25.7, 29.0, 90),
-    'R4': (27.4, 29.0, 90), 'R5': (29.1, 29.0, 90),
-    'TP1': (6.8, 27.5, 0), 'TP2': (6.8, 30.5, 0), 'TP3': (6.8, 33.4, 0),
-    'TP4': (33.2, 27.5, 0), 'TP5': (33.2, 30.5, 0), 'TP6': (33.2, 33.4, 0),
-    'TP7': (30.0, 33.4, 0),
+    'R2': (24.0, 26.9, 90), 'R3': (25.7, 26.9, 90),
+    'R4': (27.4, 26.9, 90), 'R5': (29.1, 26.9, 90),
+    'J2': (25.5, 33.14, 90),
 }
 
 BOARDS = {
