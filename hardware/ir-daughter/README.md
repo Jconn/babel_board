@@ -39,7 +39,8 @@ holes are anchored.
   drive the daughter with Dupont jumpers. See [Bench header](#bench-header-j2).
 - J1 pin 8 is the host's active-low presence signal, grounded on the daughter.
   VDD is on contacts 3 and 18 (tied), so either insertion direction powers it; the
-  host mirrors contact n onto 21-n. Contact 4 (IRQ) and 11-17 are no-connect.
+  host mirrors contact n onto 21-n. The host's general lines SENSOR_IO0/IO1 carry
+  this board's I2C SCL/SDA. Contact 4 (host SENSOR_IO2) and 11-17 are no-connect.
 
 Pin assignments checked against the
 [Melexis datasheet, revision 13](https://www.melexis.com/-/media/files/documents/datasheets/mlx90632-datasheet-melexis.pdf)

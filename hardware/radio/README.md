@@ -149,19 +149,32 @@ its contact n on socket contact 21-n, so each mirrored pair carries one net:
 | 1 / 20 | GND | 6 / 15 | NVM_SDA |
 | 2 / 19 | GND | 7 / 14 | NVM_WP |
 | 3 / 18 | VDD_DAUGHTER | 8 / 13 | PRESENT_N |
-| 4 / 17 | SENSOR_IRQ_N | 9 / 12 | SENSOR_SCL |
-| 5 / 16 | NVM_SCL | 10 / 11 | SENSOR_SDA |
+| 4 / 17 | SENSOR_IO2 | 9 / 12 | SENSOR_IO0 |
+| 5 / 16 | NVM_SCL | 10 / 11 | SENSOR_IO1 |
 
-The cost is the SPI, UART and RESET contacts: daughters are I2C (plus an
-open-drain IRQ) only. Removed with them: U14, C26, R36/R38 (CS_N/RESET_N
+The cost is the dedicated SPI, UART and RESET contacts. What remains for the
+sensor is three general lines, SENSOR_IO0-2, each an ESP32-S3 GPIO (7, 8, 15)
+routed through the GPIO matrix, the U13 bus switch and one ESD channel, so the
+protocol is the firmware's choice:
+
+| Daughter interface | IO0 | IO1 | IO2 |
+| --- | --- | --- | --- |
+| I2C + interrupt | SCL | SDA | IRQ (open-drain, active low) |
+| UART | host TX | host RX | spare / IRQ |
+| 3-wire SPI | SCK | SDIO (bidirectional) | CS |
+| Read-only SPI | SCK | MISO | CS |
+
+Full 4-wire SPI (separate MOSI and MISO) does not fit. IO0/IO1 keep 4.7k and
+IO2 10k pull-ups to VDD_DAUGHTER: harmless for push-pull SPI/UART (about 0.7 mA
+while a 4.7k line is low), and they hold an SPI chip select inactive by default.
+Removed with the dedicated contacts: U14, C26, R36/R38 (CS_N/RESET_N
 pull-ups), R120..R123 (0-ohm tuning sites), U34..U36 (ESD), and the ESP32
 assignments of GPIO9-14 and GPIO16, which are now free. Retired references are
 not reused. A daughter should tie each pair it uses (or leave the mirror
 contact open, as the IR daughter does for 4 and 11-17); it must never put a
 different net on n and 21-n. `tools/verify_netlist.py` asserts the symmetry.
 
-U13 isolates sensor SCL, SDA and IRQ behind one enable; its other channels are
-unused. EEPROM isolation (U12) remains independent.
+U13 isolates SENSOR_IO0-2 behind one enable; its other channels are unused. EEPROM isolation (U12) remains independent.
 
 The switches do not recover a stuck I2C bus. Host transactions need deadlines
 and recovery; EEPROM isolation is independent of sensor isolation. The rail's

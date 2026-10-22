@@ -146,7 +146,7 @@ place('R','R6','10k / ADDR',182.88,63.5,{1:'SENSOR_ADDR',2:G},
 place('24LC256','U2','24LC256-I/SN / 32 KiB',228.6,60.96,
       {1:G,2:G,3:G,4:G,5:'NVM_SDA',6:'NVM_SCL',7:'NVM_WP',8:V},
       footprint='Package_SO:SOIC-8_3.9x4.9mm_P1.27mm',datasheet=EEP)
-text('Pin 8 = PRESENT_N, strapped to GND. VDD on 3 and 18.\nHost mirrors n/21-n: works either way round.\nPins 4 (IRQ_N) and 11-17 unused on this board.\nMEC1 NP: odd front / even back; 1.57mm PCB.\nPower OFF to swap. See radio/MECHANICAL.md.',15,86)
+text('Pin 8 = PRESENT_N, strapped to GND. VDD on 3 and 18.\nHost mirrors n/21-n: works either way round.\nPin 4 (host SENSOR_IO2) and 11-17 unused here.\nMEC1 NP: odd front / even back; 1.57mm PCB.\nPower OFF to swap. See radio/MECHANICAL.md.',15,86)
 text('I2C address 0x3A; ADDR pulled low by R6.\n50 deg FOV; preserve optical clearance.\nPlace C1 close to U1 pins 2/3. EP to GND.\nTemperature calculations run in host Wasm driver.',115,86)
 text('A0-A2 low: address 0x50.\nSeparate NVM bus; WP high protects writes.\n32 KiB is provisional until Wasm build measured.\nNo runtime data logging in driver EEPROM.',210,86)
 

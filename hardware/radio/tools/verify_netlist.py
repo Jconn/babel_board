@@ -28,17 +28,17 @@ def mapping(ref,pins):
     for number,net in pins.items(): pin(ref,number,net)
 
 mapping('U1',{1:'GND',2:'V3V3',3:'CHIP_EN',40:'GND',41:'GND',
-    4:'H_NVM_SCL',5:'H_NVM_SDA',6:'H_NVM_WP',7:'H_SENSOR_SCL',12:'H_SENSOR_SDA',
-    8:'H_SENSOR_IRQ_N',
+    4:'H_NVM_SCL',5:'H_NVM_SDA',6:'H_NVM_WP',7:'H_SENSOR_IO0',12:'H_SENSOR_IO1',
+    8:'H_SENSOR_IO2',
     10:'PWR_REQ',11:'NVM_REQ',23:'SENSOR_REQ',38:'PRESENT_N',31:'PORT_FAULT_N',
     13:'USB_DM_MCU',14:'USB_DP_MCU',15:'STRAP3_LOW',26:'STRAP45_LOW',27:'BOOT_N',
     32:'LCD_SCK',33:'LCD_MOSI',34:'LCD_CS_N',35:'LCD_DC',24:'LCD_RESET_N',
     39:'BUTTON_N',25:'USB_PGOOD_N',36:'DEBUG_RX',37:'DEBUG_TX'})
 # GPIO9-14/16 freed when the SPI/UART/RESET contacts left the connector.
 assert {f'U1.{x}' for x in [16,28,29,30, 9,17,18,19,20,21,22]} <= nc
-port=['GND','GND','VDD_DAUGHTER','SENSOR_IRQ_N','NVM_SCL','NVM_SDA','NVM_WP',
-      'PRESENT_N','SENSOR_SCL','SENSOR_SDA','SENSOR_SDA','SENSOR_SCL','PRESENT_N',
-      'NVM_WP','NVM_SDA','NVM_SCL','SENSOR_IRQ_N','VDD_DAUGHTER','GND','GND']
+port=['GND','GND','VDD_DAUGHTER','SENSOR_IO2','NVM_SCL','NVM_SDA','NVM_WP',
+      'PRESENT_N','SENSOR_IO0','SENSOR_IO1','SENSOR_IO1','SENSOR_IO0','PRESENT_N',
+      'NVM_WP','NVM_SDA','NVM_SCL','SENSOR_IO2','VDD_DAUGHTER','GND','GND']
 mapping('J1',dict(enumerate(port,1)))
 # Reversible insertion: a reversed card puts its contact n on socket contact 21-n.
 assert all(port[n-1]==port[20-n] for n in range(1,21))
@@ -53,7 +53,9 @@ for net in daughter.findall('./nets/net'):
     for node in net.findall('node'):
         if node.attrib['ref']!='J1' or 'no_connect' in node.attrib.get('pintype',''): continue
         number=int(node.attrib['pin']); want='GND' if number==8 else port[number-1]
-        assert net.attrib['name'].lstrip('/')==want,(number,want)
+        # The daughter names the general sensor lines by its own use of them (I2C here).
+        name={'SENSOR_SCL':'SENSOR_IO0','SENSOR_SDA':'SENSOR_IO1','SENSOR_IRQ_N':'SENSOR_IO2'}.get(net.attrib['name'].lstrip('/'),net.attrib['name'].lstrip('/'))
+        assert name==want,(number,want)
 
 mapping('U3',{1:'CHG_TS_FIXED',2:'VBAT',3:'VBAT',4:'CHARGE_DISABLE',5:'USB_ALLOW',6:'GND',
     7:'USB_PGOOD_N',8:'GND',9:'CHG_N',10:'SYS_RAW',11:'SYS_RAW',12:'CHG_ILIM',13:'USB_CHG_IN',14:'CHG_TMR',15:'GND',16:'CHG_ISET',17:'GND'})
@@ -69,12 +71,12 @@ mapping('U8',{2:'NVM_ENABLE',4:'NVM_OE_N'})
 mapping('U9',{1:'PORT_EN',2:'SENSOR_REQ',4:'SENSOR_ENABLE'})
 mapping('U10',{2:'SENSOR_ENABLE',4:'SENSOR_OE_N'})
 for ref in ['U5','U6','U7','U8','U9','U10']: mapping(ref,{3:'GND',5:'V3V3'})
-for ref,oe,names in [('U12','NVM_OE_N',port[4:7]),('U13','SENSOR_OE_N',['SENSOR_SCL','SENSOR_SDA','SENSOR_IRQ_N'])]:
+for ref,oe,names in [('U12','NVM_OE_N',port[4:7]),('U13','SENSOR_OE_N',['SENSOR_IO0','SENSOR_IO1','SENSOR_IO2'])]:
     mapping(ref,{10:'GND',19:oe,20:'V3V3'})
     for i,name in enumerate(names): mapping(ref,{i+2:'H_'+name,18-i:name})
     assert f'{ref}.1' in nc
-for ref,net in [('R31','NVM_SCL'),('R32','NVM_SDA'),('R33','SENSOR_SCL'),('R34','SENSOR_SDA'),
-                ('R35','NVM_WP'),('R37','SENSOR_IRQ_N')]:
+for ref,net in [('R31','NVM_SCL'),('R32','NVM_SDA'),('R33','SENSOR_IO0'),('R34','SENSOR_IO1'),
+                ('R35','NVM_WP'),('R37','SENSOR_IO2')]:
     mapping(ref,{1:'VDD_DAUGHTER',2:net})
 assert {f'U13.{n}' for n in [5,6,7,8,9,11,12,13,14,15]} <= nc
 mapping('R8',{1:'USB_DP_LINK',2:'USB_DP_MCU'});mapping('R9',{1:'USB_DM_LINK',2:'USB_DM_MCU'})
@@ -110,9 +112,9 @@ for ref, a, b in [('R100','USB_5V','CC_VBUS_DET'),('R101','V3V3_CC','CC_HIGH_N')
 mapping('D1',{1:'POWER_AVAILABLE',2:'BAT_OK'});mapping('D2',{1:'POWER_AVAILABLE',2:'USB_ALLOW'})
 mapping('SW4',{1:'POWER_AVAILABLE',2:'REG_EN',3:'GND'})
 mapping('U24',{1:'CC1',2:'CC2',3:'GND'})
-for i,pair in enumerate([('NVM_SCL','NVM_SDA'),('NVM_WP','PRESENT_N'),('SENSOR_SCL','SENSOR_SDA')]):
+for i,pair in enumerate([('NVM_SCL','NVM_SDA'),('NVM_WP','PRESENT_N'),('SENSOR_IO0','SENSOR_IO1')]):
     mapping(f'U{30+i}',{1:pair[0],2:pair[1],3:'GND'})
-mapping('U33',{1:'SENSOR_IRQ_N',3:'GND'}); assert 'U33.2' in nc
+mapping('U33',{1:'SENSOR_IO2',3:'GND'}); assert 'U33.2' in nc
 parts={c.attrib['ref']:c for c in xml.findall('./components/comp')}
 assert 'R6' not in parts and 'R7' not in parts  # No duplicate CC pulldowns.
 # Retired with the SPI/UART/RESET contacts; their numbers stay unused.
@@ -153,7 +155,7 @@ mapping('C22',{1:'V3V3_PORT_IN',2:'GND'})
 for i,net in enumerate(['GND','USB_5V','USB_CHG_IN','VBAT','SYS_RAW','CHG_N',
     'GND','V3V3','REG_EN','REG_PG','PACK_NTC','TEMP_OK','CHARGE_DISABLE',
     'VDD_DAUGHTER','PORT_EN','USB_ALLOW','H_NVM_SCL','H_NVM_SDA','H_NVM_WP',
-    'H_SENSOR_SCL','H_SENSOR_SDA','NVM_OE_N','SENSOR_OE_N','PORT_FAULT_N',
+    'H_SENSOR_IO0','H_SENSOR_IO1','NVM_OE_N','SENSOR_OE_N','PORT_FAULT_N',
     'PRESENT_N','GND','V3V3_CC','CC_HIGH_N','USB_PGOOD_N','BAT_OK',
     'POWER_AVAILABLE','GND','GND','GND','V3V3_REG','GND','GND','GND'],1):
     pin(f'TP{i}',1,net)

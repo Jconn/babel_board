@@ -88,8 +88,10 @@ satisfy rather than silently relaxing them. The manifest API major must match
 the header. Reject unsupported schemas/settings;
 do not silently select another bus. Define SPI/UART-specific schema fields before
 adding those daughter-board types. The current radio connector (2026-10-22) is
-mirrored for reversible insertion and carries only I2C plus an open-drain IRQ, so
-this host must reject `spi` and `uart` manifests.
+mirrored for reversible insertion and gives the sensor three general lines,
+SENSOR_IO0-2 (I2C SCL/SDA/IRQ, UART TX/RX, or 3-wire/read-only SPI SCK/data/CS).
+A manifest must fit in those three lines; reject one that needs more, such as
+4-wire SPI.
 
 Proposed Wasm exports, shown as C declarations:
 

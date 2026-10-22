@@ -106,7 +106,8 @@ No enclosure/guide material may obstruct the front 50-degree sensor field of vie
   no branches/stubs, short narrow escapes only, avoid layer changes. P/N suffixes
   in current net names are not KiCad automatic-pair names; use manual matched
   routing or explicit pair naming during layout, preserving schematic parity.
-- Start I2C at 100 kHz (the connector is I2C plus IRQ only). The 400 kHz I2C option
+- Start I2C at 100 kHz, SPI at 1 MHz, UART at 115200 on the SENSOR_IO0-2 lines
+  (I2C, UART or 3-wire SPI; see radio README). The 400 kHz I2C option
   requires a measured rise-time/capacitance budget (about 75 pF for 4.7k pull-ups).
 - USB design allocation: 750 mA aggregate 3.3 V (500 host, 120 OLED, 100 daughter,
   30 logic), subject to measurement. Charging may reduce through DPPM.

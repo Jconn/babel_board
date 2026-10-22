@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/johnconn/projects/babel/hardware/radio/babel-radio.kicad_sch</source>
-    <date>2026-10-22T14:48:00</date>
+    <date>2026-10-22T15:23:45</date>
     <tool>Eeschema 10.0.7</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -3713,7 +3713,7 @@
       </units>
     </comp>
     <comp ref="TP20">
-      <value>H_SENSOR_SCL</value>
+      <value>H_SENSOR_IO0</value>
       <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
       <fields>
         <field name="Footprint">TestPoint:TestPoint_Pad_D1.0mm</field>
@@ -3734,7 +3734,7 @@
       </units>
     </comp>
     <comp ref="TP21">
-      <value>H_SENSOR_SDA</value>
+      <value>H_SENSOR_IO1</value>
       <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
       <fields>
         <field name="Footprint">TestPoint:TestPoint_Pad_D1.0mm</field>
@@ -4858,19 +4858,19 @@
       <node ref="U1" pin="6" pinfunction="GPIO6_6" pintype="bidirectional"/>
       <node ref="U12" pin="4" pinfunction="A3_4" pintype="bidirectional"/>
     </net>
-    <net code="24" name="H_SENSOR_IRQ_N" class="Default">
-      <node ref="U1" pin="8" pinfunction="GPIO15_8" pintype="bidirectional"/>
-      <node ref="U13" pin="4" pinfunction="A3_4" pintype="bidirectional"/>
-    </net>
-    <net code="25" name="H_SENSOR_SCL" class="Default">
+    <net code="24" name="H_SENSOR_IO0" class="Default">
       <node ref="TP20" pin="1" pinfunction="PROBE_1" pintype="passive"/>
       <node ref="U1" pin="7" pinfunction="GPIO7_7" pintype="bidirectional"/>
       <node ref="U13" pin="2" pinfunction="A1_2" pintype="bidirectional"/>
     </net>
-    <net code="26" name="H_SENSOR_SDA" class="Default">
+    <net code="25" name="H_SENSOR_IO1" class="Default">
       <node ref="TP21" pin="1" pinfunction="PROBE_1" pintype="passive"/>
       <node ref="U1" pin="12" pinfunction="GPIO8_12" pintype="bidirectional"/>
       <node ref="U13" pin="3" pinfunction="A2_3" pintype="bidirectional"/>
+    </net>
+    <net code="26" name="H_SENSOR_IO2" class="Default">
+      <node ref="U1" pin="8" pinfunction="GPIO15_8" pintype="bidirectional"/>
+      <node ref="U13" pin="4" pinfunction="A3_4" pintype="bidirectional"/>
     </net>
     <net code="27" name="LCD_CS_N" class="Default">
       <node ref="J2" pin="5" pinfunction="5_5" pintype="passive"/>
@@ -5016,37 +5016,37 @@
       <node ref="U10" pin="2" pinfunction="A_2" pintype="input"/>
       <node ref="U9" pin="4" pinfunction="Y_4" pintype="output"/>
     </net>
-    <net code="54" name="SENSOR_IRQ_N" class="Default">
-      <node ref="J1" pin="17" pinfunction="17_17" pintype="passive"/>
-      <node ref="J1" pin="4" pinfunction="4_4" pintype="passive"/>
-      <node ref="R37" pin="2" pintype="passive"/>
-      <node ref="U13" pin="16" pinfunction="B3_16" pintype="bidirectional"/>
-      <node ref="U33" pin="1" pinfunction="IO1_1" pintype="passive"/>
-    </net>
-    <net code="55" name="SENSOR_OE_N" class="Default">
-      <node ref="R27" pin="2" pintype="passive"/>
-      <node ref="TP23" pin="1" pinfunction="PROBE_1" pintype="passive"/>
-      <node ref="U10" pin="4" pinfunction="Y_4" pintype="output"/>
-      <node ref="U13" pin="19" pinfunction="OE_N_19" pintype="input"/>
-    </net>
-    <net code="56" name="SENSOR_REQ" class="Default">
-      <node ref="R24" pin="1" pintype="passive"/>
-      <node ref="U1" pin="23" pinfunction="GPIO21_23" pintype="bidirectional"/>
-      <node ref="U9" pin="2" pinfunction="B_2" pintype="input"/>
-    </net>
-    <net code="57" name="SENSOR_SCL" class="Default">
+    <net code="54" name="SENSOR_IO0" class="Default">
       <node ref="J1" pin="12" pinfunction="12_12" pintype="passive"/>
       <node ref="J1" pin="9" pinfunction="9_9" pintype="passive"/>
       <node ref="R33" pin="2" pintype="passive"/>
       <node ref="U13" pin="18" pinfunction="B1_18" pintype="bidirectional"/>
       <node ref="U32" pin="1" pinfunction="IO1_1" pintype="passive"/>
     </net>
-    <net code="58" name="SENSOR_SDA" class="Default">
+    <net code="55" name="SENSOR_IO1" class="Default">
       <node ref="J1" pin="10" pinfunction="10_10" pintype="passive"/>
       <node ref="J1" pin="11" pinfunction="11_11" pintype="passive"/>
       <node ref="R34" pin="2" pintype="passive"/>
       <node ref="U13" pin="17" pinfunction="B2_17" pintype="bidirectional"/>
       <node ref="U32" pin="2" pinfunction="IO2_2" pintype="passive"/>
+    </net>
+    <net code="56" name="SENSOR_IO2" class="Default">
+      <node ref="J1" pin="17" pinfunction="17_17" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="R37" pin="2" pintype="passive"/>
+      <node ref="U13" pin="16" pinfunction="B3_16" pintype="bidirectional"/>
+      <node ref="U33" pin="1" pinfunction="IO1_1" pintype="passive"/>
+    </net>
+    <net code="57" name="SENSOR_OE_N" class="Default">
+      <node ref="R27" pin="2" pintype="passive"/>
+      <node ref="TP23" pin="1" pinfunction="PROBE_1" pintype="passive"/>
+      <node ref="U10" pin="4" pinfunction="Y_4" pintype="output"/>
+      <node ref="U13" pin="19" pinfunction="OE_N_19" pintype="input"/>
+    </net>
+    <net code="58" name="SENSOR_REQ" class="Default">
+      <node ref="R24" pin="1" pintype="passive"/>
+      <node ref="U1" pin="23" pinfunction="GPIO21_23" pintype="bidirectional"/>
+      <node ref="U9" pin="2" pinfunction="B_2" pintype="input"/>
     </net>
     <net code="59" name="STRAP3_LOW" class="Default">
       <node ref="R10" pin="1" pintype="passive"/>

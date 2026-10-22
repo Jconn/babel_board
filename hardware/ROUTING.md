@@ -122,9 +122,13 @@ SENSOR_SDA 10/11). SPI, UART and RESET left the connector.
   reversed-key-blocking arithmetic.
 - DRC: radio 0 unconnected, only the expected U1 library mismatch (+2 documented
   exclusions); daughter 0/0. Both pass OSH Park's rules; zips regenerated.
-- Not changed: `architecture.md` still says the main board should support SPI and
-  UART daughters. The mirrored connector is I2C-only; `board-contract-v0.md`
-  now says this host must reject spi/uart manifests.
+- Correction (same day): the connector is not I2C-only. The three sensor lines
+  are plain ESP32 GPIOs behind a passive bus switch, renamed SENSOR_IO0-2
+  (H_SENSOR_IO0-2 on the MCU side) from SENSOR_SCL/SDA/IRQ_N. They carry I2C +
+  IRQ, UART, or 3-wire/read-only SPI; only 4-wire SPI does not fit. Rename only:
+  no copper moved (214 tracks/vias and 23 pads retagged); the IR daughter keeps
+  its own SENSOR_SCL/SDA names and the radio verifier maps them. The contract
+  and README now describe the three general lines.
 
 ## Daughter outline and bottom art (2026-10-21)
 

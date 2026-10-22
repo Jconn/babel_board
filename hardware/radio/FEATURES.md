@@ -20,7 +20,7 @@ not claims of tested hardware. No PCB is routed and no fabrication release exist
 | Low battery | Main-rail startup supervised at roughly 3.33 V | No latched cutoff; near-empty behavior requires testing |
 | Daughter port | Samtec MEC1-110-02-L-D-NP-A; 20 contacts, mirrored so a card works either way round; 3.3 V, 100 mA continuous | Mating patterns and reversible carrier/boot CAD defined; physical fit pending |
 | Discovery | Separate EEPROM I2C and write protection | Schematic; host firmware pending |
-| Sensor interfaces | Separate sensor I2C plus open-drain interrupt (SPI/UART/reset dropped for reversibility) | Grouped isolation |
+| Sensor interfaces | Three general sensor lines (SENSOR_IO0-2): I2C + IRQ, UART, or 3-wire/read-only SPI; no 4-wire SPI | Grouped isolation; protocol set by firmware |
 | Daughter changes | Hardware removal gating retained; turn SW4 OFF before changing modules | Hot swapping is a future qualification target, not yet supported |
 | First daughter | Adafruit-derived MLX90632 IR sensor plus EEPROM | Daughter schematic checked; not routed |
 | Protection | Daughter current limit, USB data/CC and daughter-signal ESD, VBUS fuse/TVS | Static coordination documented; system tests pending |
