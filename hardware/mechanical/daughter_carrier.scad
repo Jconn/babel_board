@@ -13,11 +13,12 @@ module boot() {
     translate([-8.2,-4.9,-.1]) cube([16.4,9.8,10.1]);
     translate([-6.2,-1.1,0]) cube([12.4,2.2,16.1]);
     translate([-15.5,-1.1,10]) cube([31,2.2,6.1]);
-    // Asymmetric rear key slot: reversed carrier has no matching front slot.
-    translate([-12.9,-4.4,-.1]) cube([3.8,2.8,16.2]);
+    // Key slots front and rear (180-degree images): the J1 pinout is mirrored, so a
+    // reversed card is allowed. The key still guides the card before contact.
+    for(s=[1,-1]) scale([s,s,1]) translate([-12.9,-4.4,-.1]) cube([3.8,2.8,16.2]);
     for(x=[-18,18]) translate([x,0,-.1]) cylinder(d=2.2,h=16.2);
-    // Rear M2 nylon clamp screw; thread/tap only this boot wall, not the PCB.
-    translate([-11,-5.4,13]) along_y(1.6,2);
+    // M2 nylon clamp screw on whichever side the key sits; thread/tap only the boot wall, not the PCB.
+    for(s=[1,-1]) scale([s,s,1]) translate([-11,-5.4,13]) along_y(1.6,2);
   }
 }
 module carrier() {

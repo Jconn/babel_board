@@ -139,11 +139,29 @@ Removal/fault: clear sensor/NVM requests and power, cancel transactions, invalid
 readings, and require a fresh attachment/retry sequence. Disable internal MCU
 pull-ups before disconnecting. WP and reset controls are open-drain.
 
-Revision D retains all sensor signals behind one enable (U13/U14); unused sensor
-interfaces are high impedance at the MCU but **not individually disconnected**
-while the selected bus operates. This is the prototype policy, not the earlier
-per-interface isolation proposal. Firmware must own/configure every pin and keep
-unused interfaces high impedance. EEPROM isolation remains independent.
+### Reversible daughter connector (2026-10-22)
+
+J1 is wired so a daughter works inserted either way round. A reversed card puts
+its contact n on socket contact 21-n, so each mirrored pair carries one net:
+
+| Contacts | Net | Contacts | Net |
+| --- | --- | --- | --- |
+| 1 / 20 | GND | 6 / 15 | NVM_SDA |
+| 2 / 19 | GND | 7 / 14 | NVM_WP |
+| 3 / 18 | VDD_DAUGHTER | 8 / 13 | PRESENT_N |
+| 4 / 17 | SENSOR_IRQ_N | 9 / 12 | SENSOR_SCL |
+| 5 / 16 | NVM_SCL | 10 / 11 | SENSOR_SDA |
+
+The cost is the SPI, UART and RESET contacts: daughters are I2C (plus an
+open-drain IRQ) only. Removed with them: U14, C26, R36/R38 (CS_N/RESET_N
+pull-ups), R120..R123 (0-ohm tuning sites), U34..U36 (ESD), and the ESP32
+assignments of GPIO9-14 and GPIO16, which are now free. Retired references are
+not reused. A daughter should tie each pair it uses (or leave the mirror
+contact open, as the IR daughter does for 4 and 11-17); it must never put a
+different net on n and 21-n. `tools/verify_netlist.py` asserts the symmetry.
+
+U13 isolates sensor SCL, SDA and IRQ behind one enable; its other channels are
+unused. EEPROM isolation (U12) remains independent.
 
 The switches do not recover a stuck I2C bus. Host transactions need deadlines
 and recovery; EEPROM isolation is independent of sensor isolation. The rail's
@@ -151,14 +169,13 @@ and recovery; EEPROM isolation is independent of sensor isolation. The rail's
 TPS2553 fault reporting is to firmware; no fault latch is provided. Verify
 auto-retry, voltage collapse, signal back-powering and removal transients.
 
-USB data, CC and all fourteen card-edge signal contacts now have ESD devices.
+USB data, CC and every card-edge signal net (seven nets, one channel each; mirrored contacts share it) have ESD devices.
 VBUS now has a 1.5 A fuse and SMBJ6.0A TVS; U18 is TPS22810DBVR with a 27 nF
 slew-control capacitor. The higher-voltage switch replaces TPS22919 so the
 TVS clamp is not applied to a 6 V-rated switch. U2 is now ground-referenced
 TPD2E2U06 rather than USBLC6-2. Protection coordination and physical ESD return
 paths still need review and measurement; this is not sustained overvoltage protection.
-IC ratings do not constitute system-level ESD qualification. R120..R123 are
-populated 0-ohm source-series tuning sites for host-driven SPI/UART signals.
+IC ratings do not constitute system-level ESD qualification.
 
 ## Selected display and mechanical integration
 

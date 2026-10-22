@@ -15,8 +15,8 @@ see Next work.
 
 | Board | Track segments | Through vias | Unconnected items | Other DRC findings |
 | --- | ---: | ---: | ---: | --- |
-| Radio | 2255 | 445 | 0 | 1 expected U1 library-mismatch warning (2 documented exclusions) |
-| IR daughter | 133 | 26 | 0 | none |
+| Radio | 1930 | 399 | 0 | 1 expected U1 library-mismatch warning (2 documented exclusions) |
+| IR daughter | 142 | 32 | 0 | none |
 
 Neither outline expanded. The daughter's test pads were replaced by a bench
 header (see [Daughter bench header](#daughter-bench-header-2026-10-21)). One radio footprint moved this day: pull-up R28 (see
@@ -93,6 +93,38 @@ default, saves via `save_routed_board`).
   [front copper](ir-daughter/layout-routing.svg) view.
 - Validation: native DRC on both boards (0 violations; parity metadata only,
   92 radio / 11 daughter at the time; daughter 4 after the J2 change) and every check script pass.
+
+## Reversible daughter connector (2026-10-22)
+
+User design goal: a daughter must work inserted either way round. A reversed
+card puts contact n on socket contact 21-n, so J1 is now mirrored: each pair
+(n, 21-n) carries one net (GND 1/20 and 2/19, VDD 3/18, SENSOR_IRQ_N 4/17,
+NVM_SCL 5/16, NVM_SDA 6/15, NVM_WP 7/14, PRESENT_N 8/13, SENSOR_SCL 9/12,
+SENSOR_SDA 10/11). SPI, UART and RESET left the connector.
+
+- Schematics: both generators edited (each first confirmed to reproduce the
+  committed schematic byte-for-byte). Radio: U14, C26, R36, R38, R120-R123 and
+  U34-U36 removed; references not reused (auto-numbering skips them, so no other
+  part renumbered); GPIO9-14/16 now unassigned; U13 carries SCL/SDA/IRQ; U33
+  protects IRQ (channel 2 spare). Daughter: VDD on 3 and 18, contact 4 open.
+  ERC clean on both; `verify_netlist.py` (radio) asserts port[n] == port[21-n]
+  and that the IR daughter's contacts agree in both orientations.
+- Radio PCB: pads retagged from the new netlist, removed parts and dead-net
+  copper deleted, pf router (RIP_NETS = the eight changed signal nets, seed 6,
+  PFMUL 1.4, HFAC 0.4) completed 9/9 nets conflict-free on the first run
+  (VDD_DAUGHTER branch to J1.18 at 0.3 mm). Stubs left by removed parts were
+  cleared; SENSOR_OE_N was ripped and rerouted after that cleanup cut its trunk.
+- Daughter PCB: VDD routed to finger 18 (three vias, kept off the card tip:
+  router keepout below y = 43.9); the new bottom-layer segment split the ground
+  pour, so a short GND stitch was added.
+- Mechanical: the boot has mirrored key slots and clamp-screw holes on both faces.
+  `check_layout_seeds.py` now checks the mirrored slot instead of the old
+  reversed-key-blocking arithmetic.
+- DRC: radio 0 unconnected, only the expected U1 library mismatch (+2 documented
+  exclusions); daughter 0/0. Both pass OSH Park's rules; zips regenerated.
+- Not changed: `architecture.md` still says the main board should support SPI and
+  UART daughters. The mirrored connector is I2C-only; `board-contract-v0.md`
+  now says this host must reject spi/uart manifests.
 
 ## Daughter outline and bottom art (2026-10-21)
 

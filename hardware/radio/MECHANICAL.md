@@ -3,8 +3,8 @@
 Revision D, 2026-10-19. These are design inputs, not measured hardware fit.
 
 - Host socket: Samtec MEC1-110-02-L-D-NP-A, vertical, 1 mm pitch, twenty contacts.
-  **NP is mandatory**: the polarized ten-position-per-row version removes
-  contacts 13/14 for its key, conflicting with our full twenty-signal contract.
+  **NP is mandatory**: the polarized version removes contacts 13/14 for its key
+  (they carry PRESENT_N/NVM_WP) and would block the reversible insertion.
 - Host pattern: two rows, 7.061 mm center spacing; pads 0.610 x 1.880 mm;
   odd numbers on the positive-Y row. Alignment holes follow the asymmetric
   A-option drawing. Do not substitute the polarized or right-angle socket.
@@ -19,9 +19,12 @@ Revision D, 2026-10-19. These are design inputs, not measured hardware fit.
   hand-chamfered tip and a thickness check (see LAYOUT-PLAN.md, Fabrication
   sourcing). That trades insertion life for a cheap, fast build. The hard-gold
   spec is deferred until Babel moves toward a product.
-- The NP socket is not an orientation key or a retention latch. A keyed carrier
-  must block reversed insertion before electrical contact and retain the card;
-  its CAD is now in ../mechanical/daughter_carrier.scad. Analytical clearance
+- Reversed insertion is allowed by design: the J1 pinout is mirrored (contact n
+  and 21-n share a net; see radio README). The NP socket is not a retention latch.
+  The carrier and boot (../mechanical/daughter_carrier.scad) guide and retain the
+  card; the boot has key slots on both faces so the carrier fits either way round.
+  A reversed daughter faces the other way, so its sensor looks out over the
+  radio's top edge instead of across the board. Analytical clearance
   checks pass; rendering/print/fit tests remain open. Do not operate loose cards.
 - Equal-length contacts do not provide guaranteed ground-first/presence-last
   sequencing. Prototype module changes require system power OFF. Keep the

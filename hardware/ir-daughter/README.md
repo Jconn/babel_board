@@ -38,7 +38,8 @@ holes are anchored.
   It brings out power, ground, both buses and write protection, so a dev board can
   drive the daughter with Dupont jumpers. See [Bench header](#bench-header-j2).
 - J1 pin 8 is the host's active-low presence signal, grounded on the daughter.
-  Unused SPI/UART/IRQ/reset contacts are explicitly marked no-connect.
+  VDD is on contacts 3 and 18 (tied), so either insertion direction powers it; the
+  host mirrors contact n onto 21-n. Contact 4 (IRQ) and 11-17 are no-connect.
 
 Pin assignments checked against the
 [Melexis datasheet, revision 13](https://www.melexis.com/-/media/files/documents/datasheets/mlx90632-datasheet-melexis.pdf)
@@ -90,8 +91,8 @@ hole positions have been selected yet.
 J1 now uses the shared MEC1 NP twenty-contact card-edge footprint, mating with
 the radio's MEC1-110-02-L-D-NP-A socket. See
 [mechanical contract](../radio/MECHANICAL.md) for front/back numbering, board
-thickness and the prototype-versus-release finger finish. Physical mating and external
-orientation key/retention remain unverified. Turn system power OFF before changes.
+thickness and the prototype-versus-release finger finish. The card may be inserted
+either way round. Physical mating and carrier retention remain unverified. Turn system power OFF before changes.
 U1 has a local Adafruit-derived footprint; review its stencil and assembly
 requirements before release. Standard footprint libraries are supplied in AppDir;
 all assigned patterns still require dimensional review before fabrication.

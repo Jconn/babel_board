@@ -1,7 +1,7 @@
 # OSH Park bare-board order (2026-10-21)
 
-Upload-ready Gerber zips, generated from the native boards at the commit that
-added this folder. Bare boards only: no assembly, no stencil.
+Upload-ready Gerber zips, regenerated from the native boards on 2026-10-22
+(reversible connector). Bare boards only: no assembly, no stencil.
 
 | File | Board | OSH Park service | Size | Order |
 | --- | --- | --- | --- | --- |

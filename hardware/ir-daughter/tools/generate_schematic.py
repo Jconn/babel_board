@@ -136,7 +136,7 @@ text('01 / HOST PORT',15,26,1.3)
 text('02 / IR SENSOR',115,26,1.3)
 text('03 / DRIVER MEMORY',210,26,1.3)
 place('PORT_20','J1','MEC1 NP / 20 GOLD FINGERS',50.8,62.23,
-      {1:G,2:G,3:V,4:V,5:'NVM_SCL',6:'NVM_SDA',7:'NVM_WP',8:G,9:'SENSOR_SCL',10:'SENSOR_SDA',19:G,20:G},
+      {1:G,2:G,3:V,5:'NVM_SCL',6:'NVM_SDA',7:'NVM_WP',8:G,9:'SENSOR_SCL',10:'SENSOR_SDA',18:V,19:G,20:G},
       footprint='Babel:MEC1_110_02_NP_Card')
 place('MLX90632','U1','MLX90632SLD-DCB-000-RE',139.7,60.96,
       {1:'SENSOR_SDA',2:V,3:G,4:'SENSOR_SCL',5:'SENSOR_ADDR',6:G},
@@ -146,7 +146,7 @@ place('R','R6','10k / ADDR',182.88,63.5,{1:'SENSOR_ADDR',2:G},
 place('24LC256','U2','24LC256-I/SN / 32 KiB',228.6,60.96,
       {1:G,2:G,3:G,4:G,5:'NVM_SDA',6:'NVM_SCL',7:'NVM_WP',8:V},
       footprint='Package_SO:SOIC-8_3.9x4.9mm_P1.27mm',datasheet=EEP)
-text('Pin 8 = PRESENT_N, strapped to GND.\nPins 11-18 unused on this sensor board.\nMEC1 NP: odd front / even back; 1.57mm PCB.\nPower OFF to swap. See radio/MECHANICAL.md.',15,86)
+text('Pin 8 = PRESENT_N, strapped to GND. VDD on 3 and 18.\nHost mirrors n/21-n: works either way round.\nPins 4 (IRQ_N) and 11-17 unused on this board.\nMEC1 NP: odd front / even back; 1.57mm PCB.\nPower OFF to swap. See radio/MECHANICAL.md.',15,86)
 text('I2C address 0x3A; ADDR pulled low by R6.\n50 deg FOV; preserve optical clearance.\nPlace C1 close to U1 pins 2/3. EP to GND.\nTemperature calculations run in host Wasm driver.',115,86)
 text('A0-A2 low: address 0x50.\nSeparate NVM bus; WP high protects writes.\n32 KiB is provisional until Wasm build measured.\nNo runtime data logging in driver EEPROM.',210,86)
 

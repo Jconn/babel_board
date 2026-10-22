@@ -117,8 +117,7 @@ p=page('host','PROCESSOR / DISPLAY / RECOVERY',[
     'Display: Adafruit 4741 SSD1327 OLED module, 128x128 grayscale. Cut module J1/J2 jumpers for SPI.',
     'J3 is 3.3 V UART recovery; VTREF is sense only. Native USB is on GPIO19/20. Antenna keepout required.'
 ])
-signals={0:'BOOT_N',1:'BUTTON_N',2:'PRESENT_N',3:'STRAP3_LOW',4:'H_NVM_SCL',5:'H_NVM_SDA',6:'H_NVM_WP',7:'H_SENSOR_SCL',8:'H_SENSOR_SDA',9:'H_SENSOR_SCK',10:'H_SENSOR_MOSI',11:'H_SENSOR_MISO',12:'H_SENSOR_CS_N',13:'H_SENSOR_TX',14:'H_SENSOR_RX',15:'H_SENSOR_IRQ_N',16:'H_SENSOR_RESET_N',17:'PWR_REQ',18:'NVM_REQ',19:'USB_DM_MCU',20:'USB_DP_MCU',21:'SENSOR_REQ',38:'PORT_FAULT_N',39:'LCD_SCK',40:'LCD_MOSI',41:'LCD_CS_N',42:'LCD_DC',43:'DEBUG_TX',44:'DEBUG_RX',45:'STRAP45_LOW',47:'LCD_RESET_N',48:'USB_PGOOD_N'}
-for gpio in (9,10,12,13): signals[gpio]=signals[gpio].replace('H_','MCU_')
+signals={0:'BOOT_N',1:'BUTTON_N',2:'PRESENT_N',3:'STRAP3_LOW',4:'H_NVM_SCL',5:'H_NVM_SDA',6:'H_NVM_WP',7:'H_SENSOR_SCL',8:'H_SENSOR_SDA',15:'H_SENSOR_IRQ_N',17:'PWR_REQ',18:'NVM_REQ',19:'USB_DM_MCU',20:'USB_DP_MCU',21:'SENSOR_REQ',38:'PORT_FAULT_N',39:'LCD_SCK',40:'LCD_MOSI',41:'LCD_CS_N',42:'LCD_DC',43:'DEBUG_TX',44:'DEBUG_RX',45:'STRAP45_LOW',47:'LCD_RESET_N',48:'USB_PGOOD_N'}
 add(p,'WROOM','U1','ESP32-S3-WROOM-1-N8R8',
     {1:G,2:V,3:'CHIP_EN',40:G,41:G,**{pin:signals.get(gpio) for pin,gpio in gpio_by_pin.items()}},
     'RF_Module:ESP32-S3-WROOM-1',ESP)
@@ -200,23 +199,30 @@ add(p,'TPS2553','U11','TPS2553DBVR',{1:V,2:G,3:'PORT_EN',4:'PORT_FAULT_N',5:'POR
 r(p,'226k 1%','PORT_ILIM',G);c(p,'1uF / input',V);c(p,'1uF / output',D);r(p,'10k / discharge',D,G)
 
 p=page('port_bus','CARD EDGE / SEPARATE NVM AND SENSOR BUSES',[
-    'J1: MEC1-110-02-L-D-NP-A, all 20 contacts populated. NP version requires external orientation key and retention.',
-    'U12 isolates NVM. U13/U14 isolate all sensor signals as one group. Unused sensor interfaces must stay high-Z.',
+    'J1: MEC1-110-02-L-D-NP-A. Mirrored pinout: contact n and 21-n carry the same net, so a card works either way round.',
+    'U12 isolates NVM. U13 isolates sensor SCL/SDA/IRQ as one group. I2C-only daughters; no SPI/UART/RESET contacts.',
     'All daughter-facing pull-ups reference VDD_DAUGHTER; MCU internal pull-ups must be off before isolation.',
-    'NVM_WP and SENSOR_RESET_N are open-drain host controls. IRQ_N is open-drain from daughter.',
+    'NVM_WP is an open-drain host control. IRQ_N is open-drain from daughter (contacts 4/17).',
     'Host I2C pull-ups are 4.7k. IR daughter optional pull-ups remain DNP. Qualify capacitance and rise time.',
     'TPD2E2U06 arrays protect connector signals. Stuck-bus recovery is firmware; system ESD still needs testing.'
 ])
-port={1:G,2:G,3:D,4:D,5:'NVM_SCL',6:'NVM_SDA',7:'NVM_WP',8:'PRESENT_N',9:'SENSOR_SCL',10:'SENSOR_SDA',11:'SENSOR_SCK',12:'SENSOR_MOSI',13:'SENSOR_MISO',14:'SENSOR_CS_N',15:'SENSOR_TX',16:'SENSOR_RX',17:'SENSOR_IRQ_N',18:'SENSOR_RESET_N',19:G,20:G}
+# Reversed insertion puts card contact n on socket contact 21-n, so each mirrored pair shares one net.
+half={1:G,2:G,3:D,4:'SENSOR_IRQ_N',5:'NVM_SCL',6:'NVM_SDA',7:'NVM_WP',8:'PRESENT_N',9:'SENSOR_SCL',10:'SENSOR_SDA'}
+port={**half,**{21-n:net for n,net in half.items()}}
 add(p,'CONN20','J1','MEC1-110-02-L-D-NP-A',port,'Babel:MEC1_110_02_NP_A_Socket',ds='https://suddendocs.samtec.com/prints/mec1-1xx-xx-xx-d-xx-xx-footprint.pdf')
-groups=[('U12','NVM_OE_N',['NVM_SCL','NVM_SDA','NVM_WP']),('U13','SENSOR_OE_N',['SENSOR_SCL','SENSOR_SDA','SENSOR_SCK','SENSOR_MOSI','SENSOR_MISO','SENSOR_CS_N','SENSOR_TX','SENSOR_RX']),('U14','SENSOR_OE_N',['SENSOR_IRQ_N','SENSOR_RESET_N'])]
+groups=[('U12','NVM_OE_N',['NVM_SCL','NVM_SDA','NVM_WP']),('U13','SENSOR_OE_N',['SENSOR_SCL','SENSOR_SDA','SENSOR_IRQ_N'])]
 for ref,oe,names in groups:
     nets={10:G,19:oe,20:V}
     for i,name in enumerate(names): nets[i+2]='H_'+name; nets[18-i]=name
     add(p,'BUS8',ref,'SN74CB3Q3245PWR',nets,'Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm',TI+'sn74cb3q3245.pdf')
     c(p,'100nF / '+ref,V)
+# C26 retired with U14 (SPI/UART/RESET contacts removed). Preserve other references.
+counts['C']+=1
 for net in ['NVM_SCL','NVM_SDA','SENSOR_SCL','SENSOR_SDA']: r(p,'4.7k',D,net)
-for net in ['NVM_WP','SENSOR_CS_N','SENSOR_IRQ_N','SENSOR_RESET_N']: r(p,'10k',D,net)
+# R36/R38 (SENSOR_CS_N/SENSOR_RESET_N pull-ups) retired. Preserve other references.
+for net in ['NVM_WP',None,'SENSOR_IRQ_N',None]:
+    if net: r(p,'10k',D,net)
+    else: counts['R']+=1
 
 # Explicit reference block for the revision B power-policy additions.
 def rr(pg,ref,value,a,b):
@@ -337,15 +343,11 @@ for comp in components:
         comp['mpn']='TMK107BBJ106MA-T'
         comp['fp']='Capacitor_SMD:C_0603_1608Metric'
 
-# Source-series tuning sites, default shorts. Do not add these to I2C blindly.
-for ref,name in zip(('R120','R121','R122','R123'),('SENSOR_SCK','SENSOR_MOSI','SENSOR_CS_N','SENSOR_TX')):
-    rr('host',ref,'0R / source tuning near U1','MCU_'+name,'H_'+name)
 # Ground-referenced, low-capacitance connector ESD. Layout/system testing required.
 esd_pairs=[('U24','usb_policy','CC1','CC2')]
-edge_signals=['NVM_SCL','NVM_SDA','NVM_WP','PRESENT_N','SENSOR_SCL','SENSOR_SDA',
-              'SENSOR_SCK','SENSOR_MOSI','SENSOR_MISO','SENSOR_CS_N','SENSOR_TX',
-              'SENSOR_RX','SENSOR_IRQ_N','SENSOR_RESET_N']
-esd_pairs += [(f'U{30+i}','port_bus',*edge_signals[2*i:2*i+2]) for i in range(7)]
+# One channel per net: mirrored contacts share it. U33 channel 2 is spare; U34-U36 retired.
+edge_signals=['NVM_SCL','NVM_SDA','NVM_WP','PRESENT_N','SENSOR_SCL','SENSOR_SDA','SENSOR_IRQ_N',None]
+esd_pairs += [(f'U{30+i}','port_bus',*edge_signals[2*i:2*i+2]) for i in range(4)]
 for ref,pg,a,b in esd_pairs:
     add(pg,'ESD2',ref,'TPD2E2U06DCKR',{1:a,2:b,3:G},'Package_TO_SOT_SMD:SOT-323_SC-70',TI+'tpd2e2u06.pdf')
 

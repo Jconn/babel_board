@@ -42,19 +42,20 @@ fasteners or cable crossing in this region. OLED ends at y61.99 and battery at
 y63, leaving more than 15 mm to the antenna region. Plastic housing and the user's
 hand still need RF testing. Follow Espressif's module keepout, not a chip-RF layout.
 
-## Keyed carrier and retention
+## Carrier and retention
 
 `mechanical/daughter_carrier.scad` defines the host boot and daughter carrier.
 Host boot envelope is x9..51, y1..13 on the radio, mounted at (12,7)/(48,7).
-The rear key leads the daughter tip by 0.5 mm. In the reversed orientation it
-hits the solid boot face while the electrical tip is still above the socket.
-Correctly inserted, the key bottoms 0.491 mm above the host, not on the PCB.
+The carrier key leads the daughter tip by 0.5 mm and enters a boot key slot before
+the tip reaches the socket. The boot has mirrored slots on both faces: the J1
+pinout is symmetric, so the card may go in either way round. Fully inserted, the
+key bottoms 0.491 mm above the host, not on the PCB.
 Carrier mounting holes are asymmetrical: (-10,23) and (10,27) relative to the
 card tip, preventing the carrier being attached reversed. No copper near them.
-Use a rear M2 nylon clamp screw for prototype retention; select its length so it
+Use the M2 nylon clamp screw on the key's side for prototype retention; select its length so it
 only bears on the plastic key, never the daughter PCB. The connector sets seating
 depth; the boot is not a depth stop. Print a mating coupon before fabrication to
-check tolerances, full seating, reversed-insertion blocking and clamp retention.
+check tolerances, full seating in both orientations and clamp retention.
 No enclosure/guide material may obstruct the front 50-degree sensor field of view.
 
 ## Placement and routing order
@@ -105,7 +106,7 @@ No enclosure/guide material may obstruct the front 50-degree sensor field of vie
   no branches/stubs, short narrow escapes only, avoid layer changes. P/N suffixes
   in current net names are not KiCad automatic-pair names; use manual matched
   routing or explicit pair naming during layout, preserving schematic parity.
-- Start I2C at 100 kHz, SPI at 1 MHz, UART at 115200. The 400 kHz I2C option
+- Start I2C at 100 kHz (the connector is I2C plus IRQ only). The 400 kHz I2C option
   requires a measured rise-time/capacitance budget (about 75 pF for 4.7k pull-ups).
 - USB design allocation: 750 mA aggregate 3.3 V (500 host, 120 OLED, 100 daughter,
   30 logic), subject to measurement. Charging may reduce through DPPM.

@@ -29,17 +29,19 @@ def mapping(ref,pins):
 
 mapping('U1',{1:'GND',2:'V3V3',3:'CHIP_EN',40:'GND',41:'GND',
     4:'H_NVM_SCL',5:'H_NVM_SDA',6:'H_NVM_WP',7:'H_SENSOR_SCL',12:'H_SENSOR_SDA',
-    17:'MCU_SENSOR_SCK',18:'MCU_SENSOR_MOSI',19:'H_SENSOR_MISO',20:'MCU_SENSOR_CS_N',
-    21:'MCU_SENSOR_TX',22:'H_SENSOR_RX',8:'H_SENSOR_IRQ_N',9:'H_SENSOR_RESET_N',
+    8:'H_SENSOR_IRQ_N',
     10:'PWR_REQ',11:'NVM_REQ',23:'SENSOR_REQ',38:'PRESENT_N',31:'PORT_FAULT_N',
     13:'USB_DM_MCU',14:'USB_DP_MCU',15:'STRAP3_LOW',26:'STRAP45_LOW',27:'BOOT_N',
     32:'LCD_SCK',33:'LCD_MOSI',34:'LCD_CS_N',35:'LCD_DC',24:'LCD_RESET_N',
     39:'BUTTON_N',25:'USB_PGOOD_N',36:'DEBUG_RX',37:'DEBUG_TX'})
-assert {f'U1.{x}' for x in [16,28,29,30]} <= nc
-port=['GND','GND','VDD_DAUGHTER','VDD_DAUGHTER','NVM_SCL','NVM_SDA','NVM_WP',
-      'PRESENT_N','SENSOR_SCL','SENSOR_SDA','SENSOR_SCK','SENSOR_MOSI','SENSOR_MISO',
-      'SENSOR_CS_N','SENSOR_TX','SENSOR_RX','SENSOR_IRQ_N','SENSOR_RESET_N','GND','GND']
+# GPIO9-14/16 freed when the SPI/UART/RESET contacts left the connector.
+assert {f'U1.{x}' for x in [16,28,29,30, 9,17,18,19,20,21,22]} <= nc
+port=['GND','GND','VDD_DAUGHTER','SENSOR_IRQ_N','NVM_SCL','NVM_SDA','NVM_WP',
+      'PRESENT_N','SENSOR_SCL','SENSOR_SDA','SENSOR_SDA','SENSOR_SCL','PRESENT_N',
+      'NVM_WP','NVM_SDA','NVM_SCL','SENSOR_IRQ_N','VDD_DAUGHTER','GND','GND']
 mapping('J1',dict(enumerate(port,1)))
+# Reversible insertion: a reversed card puts its contact n on socket contact 21-n.
+assert all(port[n-1]==port[20-n] for n in range(1,21))
 # Selected Jauch 251555 pack drawing: red / yellow NTC / black.
 mapping('J5',{1:'VBAT',2:'PACK_NTC',3:'GND'})
 # Babel adapter header, NOT the module's physical pin numbering.
@@ -67,13 +69,14 @@ mapping('U8',{2:'NVM_ENABLE',4:'NVM_OE_N'})
 mapping('U9',{1:'PORT_EN',2:'SENSOR_REQ',4:'SENSOR_ENABLE'})
 mapping('U10',{2:'SENSOR_ENABLE',4:'SENSOR_OE_N'})
 for ref in ['U5','U6','U7','U8','U9','U10']: mapping(ref,{3:'GND',5:'V3V3'})
-for ref,oe,names in [('U12','NVM_OE_N',port[4:7]),('U13','SENSOR_OE_N',port[8:16]),('U14','SENSOR_OE_N',port[16:18])]:
+for ref,oe,names in [('U12','NVM_OE_N',port[4:7]),('U13','SENSOR_OE_N',['SENSOR_SCL','SENSOR_SDA','SENSOR_IRQ_N'])]:
     mapping(ref,{10:'GND',19:oe,20:'V3V3'})
     for i,name in enumerate(names): mapping(ref,{i+2:'H_'+name,18-i:name})
     assert f'{ref}.1' in nc
 for ref,net in [('R31','NVM_SCL'),('R32','NVM_SDA'),('R33','SENSOR_SCL'),('R34','SENSOR_SDA'),
-                ('R35','NVM_WP'),('R36','SENSOR_CS_N'),('R37','SENSOR_IRQ_N'),('R38','SENSOR_RESET_N')]:
+                ('R35','NVM_WP'),('R37','SENSOR_IRQ_N')]:
     mapping(ref,{1:'VDD_DAUGHTER',2:net})
+assert {f'U13.{n}' for n in [5,6,7,8,9,11,12,13,14,15]} <= nc
 mapping('R8',{1:'USB_DP_LINK',2:'USB_DP_MCU'});mapping('R9',{1:'USB_DM_LINK',2:'USB_DM_MCU'})
 mapping('U2',{1:'USB_DP',2:'USB_DM',3:'GND'})
 mapping('F1',{1:'USB_VBUS_RAW',2:'USB_5V'})
@@ -106,15 +109,14 @@ for ref, a, b in [('R100','USB_5V','CC_VBUS_DET'),('R101','V3V3_CC','CC_HIGH_N')
     ('R114','POWER_AVAILABLE','GND')]: mapping(ref,{1:a,2:b})
 mapping('D1',{1:'POWER_AVAILABLE',2:'BAT_OK'});mapping('D2',{1:'POWER_AVAILABLE',2:'USB_ALLOW'})
 mapping('SW4',{1:'POWER_AVAILABLE',2:'REG_EN',3:'GND'})
-for ref,name in zip(('R120','R121','R122','R123'),('SENSOR_SCK','SENSOR_MOSI','SENSOR_CS_N','SENSOR_TX')):
-    mapping(ref,{1:'MCU_'+name,2:'H_'+name})
 mapping('U24',{1:'CC1',2:'CC2',3:'GND'})
-for i,pair in enumerate([('NVM_SCL','NVM_SDA'),('NVM_WP','PRESENT_N'),('SENSOR_SCL','SENSOR_SDA'),
-                        ('SENSOR_SCK','SENSOR_MOSI'),('SENSOR_MISO','SENSOR_CS_N'),
-                        ('SENSOR_TX','SENSOR_RX'),('SENSOR_IRQ_N','SENSOR_RESET_N')]):
+for i,pair in enumerate([('NVM_SCL','NVM_SDA'),('NVM_WP','PRESENT_N'),('SENSOR_SCL','SENSOR_SDA')]):
     mapping(f'U{30+i}',{1:pair[0],2:pair[1],3:'GND'})
+mapping('U33',{1:'SENSOR_IRQ_N',3:'GND'}); assert 'U33.2' in nc
 parts={c.attrib['ref']:c for c in xml.findall('./components/comp')}
 assert 'R6' not in parts and 'R7' not in parts  # No duplicate CC pulldowns.
+# Retired with the SPI/UART/RESET contacts; their numbers stay unused.
+assert not {'U14','C26','R36','R38','R120','R121','R122','R123','U34','U35','U36'} & set(parts)
 assert parts['U3'].findtext('value')=='BQ24079RGTR / 4.1V'
 assert parts['U18'].findtext('value')=='TPS22810DBVR'
 assert parts['U23'].findtext('value')=='SN74LVC1G06DBVR'  # Open drain, not push-pull.
@@ -155,5 +157,5 @@ for i,net in enumerate(['GND','USB_5V','USB_CHG_IN','VBAT','SYS_RAW','CHG_N',
     'PRESENT_N','GND','V3V3_CC','CC_HIGH_N','USB_PGOOD_N','BAT_OK',
     'POWER_AVAILABLE','GND','GND','GND','V3V3_REG','GND','GND','GND'],1):
     pin(f'TP{i}',1,net)
-assert len(parts)==179
+assert len(parts)==168
 print('PASS: 38 radio probe pads and three removable power links; regulator FB remains upstream.')

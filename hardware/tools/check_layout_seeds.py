@@ -28,7 +28,7 @@ print('PASS project fabrication constraints and power/USB routing presets')
 def near(a,b): assert abs(a-b)<0.00001,(a,b)
 def mm(v): return k.ToMM(v)
 boards={}
-for folder,name,count,layers in [('radio','babel-radio',179,4),('ir-daughter','babel-ir-daughter',13,2)]:
+for folder,name,count,layers in [('radio','babel-radio',168,4),('ir-daughter','babel-ir-daughter',13,2)]:
     b=k.LoadBoard(str(HW/folder/(name+'.kicad_pcb')));boards[folder]=b
     doc=ET.parse(HW/folder/(name+'.net.xml'))
     fps={f.GetReference():f for f in b.GetFootprints()}
@@ -119,8 +119,11 @@ for ref,x,y in [('H1',10,22),('H2',30,18)]:
 # Analytical design envelope checks, not a substitute for CAD collision/fit tests.
 assert 79-63>=15 and 79-61.99>=15
 assert .991-.5>0
-assert 16+.5-9.04>7 # reversed key strikes boot before tip can contact socket
+# Reversible insertion: J1 pinout is mirrored (n == 21-n) and the boot has key
+# slots on both faces, so the carrier key enters either way round.
+scad=(HW/'mechanical'/'daughter_carrier.scad').read_text()
+assert 'for(s=[1,-1]) scale([s,s,1]) translate([-12.9,-4.4,-.1]) cube([3.8,2.8,16.2]);' in scad
 assert -3.5 > -4.5 > -5.5 > -6
 assert 6>=5.8
-print('PASS anchor/thickness contract and analytical antenna, battery barrier, reverse-key clearances')
+print('PASS anchor/thickness contract and analytical antenna, battery barrier, reversible key slots')
 print('NOT tested: physical mating, SCAD mesh collisions, routing, thermal/USB/RF or charging performance')

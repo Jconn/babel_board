@@ -87,7 +87,9 @@ frequency, startup delay, rate, and power. Reject requirements the host cannot
 satisfy rather than silently relaxing them. The manifest API major must match
 the header. Reject unsupported schemas/settings;
 do not silently select another bus. Define SPI/UART-specific schema fields before
-adding those daughter-board types.
+adding those daughter-board types. The current radio connector (2026-10-22) is
+mirrored for reversible insertion and carries only I2C plus an open-drain IRQ, so
+this host must reject `spi` and `uart` manifests.
 
 Proposed Wasm exports, shown as C declarations:
 

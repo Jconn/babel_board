@@ -18,13 +18,12 @@ not claims of tested hardware. No PCB is routed and no fabrication release exist
 | Safety timer | Nominal 9.53 h fast charge, 57.2 min precharge; neither disabled | Tolerances/dynamic extensions documented; completion tests pending |
 | Main power switch | Turns main rail/display/radio off; charging can remain active | Schematic; not a physical battery disconnect |
 | Low battery | Main-rail startup supervised at roughly 3.33 V | No latched cutoff; near-empty behavior requires testing |
-| Daughter port | Samtec MEC1-110-02-L-D-NP-A; 20 contacts; 3.3 V, 100 mA continuous | Mating patterns and keyed-carrier CAD defined; physical fit pending |
+| Daughter port | Samtec MEC1-110-02-L-D-NP-A; 20 contacts, mirrored so a card works either way round; 3.3 V, 100 mA continuous | Mating patterns and reversible carrier/boot CAD defined; physical fit pending |
 | Discovery | Separate EEPROM I2C and write protection | Schematic; host firmware pending |
-| Sensor interfaces | Separate sensor I2C, SPI, UART, interrupt and reset contacts | Grouped isolation; unused pins must be high impedance |
+| Sensor interfaces | Separate sensor I2C plus open-drain interrupt (SPI/UART/reset dropped for reversibility) | Grouped isolation |
 | Daughter changes | Hardware removal gating retained; turn SW4 OFF before changing modules | Hot swapping is a future qualification target, not yet supported |
 | First daughter | Adafruit-derived MLX90632 IR sensor plus EEPROM | Daughter schematic checked; not routed |
 | Protection | Daughter current limit, USB data/CC and daughter-signal ESD, VBUS fuse/TVS | Static coordination documented; system tests pending |
-| Signal tuning | Four source-series resistor sites, default 0 ohms | Included for SPI/UART bring-up |
 
 Not included: USB PD/higher input voltages, USB host/OTG, USB-A fallback,
 color/touch display, per-interface sensor hardware isolation, a fuel gauge,
@@ -35,8 +34,8 @@ guaranteed real-time Wasm execution, or a cumulative charging-time watchdog.
 Start EEPROM and sensor I2C at 100 kHz. Qualify 400 kHz only when the full
 bus capacitance/rise time is measured; 4.7k pull-ups at 1% allow roughly 75 pF
 for a 300 ns RC rise-time budget (including switch, ESD and all traces/devices).
-This is a design budget, not a measured board value. Start SPI at 1 MHz and UART
-at 115200 baud; faster operation needs waveform and driver qualification.
+This is a design budget, not a measured board value. Faster operation needs
+waveform and driver qualification.
 Never advertise the switch's analog bandwidth as a guaranteed protocol rate.
 
 ## Release gates
