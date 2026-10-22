@@ -130,7 +130,7 @@ MLX='https://www.melexis.com/-/media/files/documents/datasheets/mlx90632-datashe
 EEP='https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/24AA256-24LC256-24FC256-256K-I2C-Serial-EEPROM-DS20001203.pdf'
 V='VDD_DAUGHTER'
 G='GND'
-text('BABEL / IR DAUGHTER / REV B - ADAFRUIT MLX90632 ADAPTATION',12,14,1.8)
+text('BABEL / IR DAUGHTER / REV C - ADAFRUIT MLX90632 ADAPTATION',12,14,1.8)
 text('3.3 V from protected host port. No local MCU. Portable Wasm stored in separate EEPROM.',12,19)
 text('01 / HOST PORT',15,26,1.3)
 text('02 / IR SENSOR',115,26,1.3)
@@ -175,7 +175,7 @@ lib='(kicad_symbol_lib (version 20241209) (generator "babel")\n'+ '\n'.join(defi
 (ROOT/'Babel_IR.kicad_sym').write_text(lib)
 cached='\n'.join(s.replace('(symbol '+Q(n), '(symbol '+Q('Babel_IR:'+n),1) for n,s in definitions.items())
 sheet=f'''(kicad_sch (version 20250114) (generator "eeschema") (uuid {Q(UID('sheet'))})
- (paper "A4") (title_block (title "Babel IR daughter - Adafruit adaptation") (date "2026-10-17") (rev "B-draft"))
+ (paper "A4") (title_block (title "Babel IR daughter - Adafruit adaptation") (date "2026-10-17") (rev "C-draft"))
  (lib_symbols {cached})
  {''.join(items)})\n'''
 (ROOT/(NAME+'.kicad_sch')).write_text(sheet)

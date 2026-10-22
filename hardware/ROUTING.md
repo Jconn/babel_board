@@ -138,7 +138,7 @@ sensor. The two inside corners where the body meets the tongue now have 1 mm
 above the host, at the top of the boot's socket cavity. A bigger taper was
 declined: J2 fills the lower-right corner to the edge. `mechanical/daughter_carrier.scad`
 outline updated to match. B.Silkscreen now carries a thermometer, an IR source
-with radiating arcs, and mirrored text "IR TEMP / SENSOR / MLX90632 / BABEL REV B"
+with radiating arcs, and mirrored text "IR TEMP / SENSOR / MLX90632 / BABEL REV B" (REV C since the 2026-10-22 pinout change)
 in the open upper area (over tented vias only). DRC 0/0 under both project
 and OSH Park rules; OSH Park zip regenerated. The bottom view
 ([layout-routing-bottom.svg](ir-daughter/layout-routing-bottom.svg)) is now

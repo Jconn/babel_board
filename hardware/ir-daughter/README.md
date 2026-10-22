@@ -1,4 +1,9 @@
-# Babel IR daughter board — revision B schematic draft
+# Babel IR daughter board — revision C
+
+Revision C (2026-10-22) is the reversible-connector board: VDD on contacts 3 and
+18, contact 4 freed. Revision B (commit d1dbffc, ordered from OSH Park 2026-10-21)
+has the old one-way pinout with VDD on contacts 3 and 4; see
+[Revision history](#revision-history). Bottom silk reads "BABEL REV C".
 
 Adapted from Adafruit's MLX90632 breakout, with attribution and circuit changes
 documented in [ADAPTATION.md](ADAPTATION.md).
@@ -46,6 +51,22 @@ Pin assignments checked against the
 [Melexis datasheet, revision 13](https://www.melexis.com/-/media/files/documents/datasheets/mlx90632-datasheet-melexis.pdf)
 and [Microchip DS20001203Y](https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/24AA256-24LC256-24FC256-256K-I2C-Serial-EEPROM-DS20001203.pdf).
 Custom schematic symbols are functional representations, not footprint drawings.
+
+## Revision history
+
+| Rev | Commit | J1 power | Status |
+| --- | --- | --- | --- |
+| B | d1dbffc | VDD on 3 and 4; 11-18 no-connect | Ordered 2026-10-21 |
+| C | this one | VDD on 3 and 18; 4 and 11-17 no-connect | Current design |
+
+Everything else (outline, circuit, J2, routing apart from the VDD feed to finger
+18) is the same. Rev B boards are electrically compatible with the current
+(reversible) radio in both orientations: all GND, NVM and sensor-bus contacts
+land on matching nets. The one difference is rev B's second VDD contact, which
+lands on the host's SENSOR_IO2 (contact 4 straight, 17 reversed) and holds it
+at 3.3 V through the U13 bus switch. **With a rev B card fitted, firmware must
+leave the ESP32 SENSOR_IO2 GPIO as an input**: driving it low would short the
+daughter supply into that pin. Rev C cards do not have this restriction.
 
 ## Bench header (J2)
 

@@ -1,4 +1,4 @@
-# Adafruit MLX90632 adaptation — Babel revision B
+# Adafruit MLX90632 adaptation — Babel revision C
 
 2026-10-17. This is a Babel adaptation of **Adafruit MLX90632 FIR Remote Thermal
 Temperature Sensor - Medical Grade STEMMA QT / Qwiic PCB**, designed by

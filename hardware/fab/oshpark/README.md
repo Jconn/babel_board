@@ -3,10 +3,16 @@
 Upload-ready Gerber zips, regenerated from the native boards on 2026-10-22
 (reversible connector). Bare boards only: no assembly, no stencil.
 
+The daughter zip is **rev C**. Rev B (one-way pinout) was ordered 2026-10-21 from
+the commit d1dbffc files; see `../../ir-daughter/README.md` for how the two differ
+and the firmware rule for using rev B cards in the current radio. The rev C copper,
+mask, drill and outline are unchanged from the 2026-10-22 regeneration; only the
+bottom-silk revision text differs.
+
 | File | Board | OSH Park service | Size | Order |
 | --- | --- | --- | --- | --- |
 | `babel-radio-oshpark.zip` | Radio, 4 layers | 4 Layer Prototype | 60 x 80 mm (7.44 sq in) | 6 (multiples of 3) |
-| `babel-ir-daughter-oshpark.zip` | IR daughter, 2 layers | 2 Layer Prototype | 30 x 35 mm bounding box | 6 (multiples of 3) |
+| `babel-ir-daughter-revC-oshpark.zip` | IR daughter rev C, 2 layers | 2 Layer Prototype | 30 x 35 mm bounding box | 6 (multiples of 3) |
 
 Zip contents use OSH Park's extensions: GTL/GBL copper, G2L = In1 (GND plane),
 G3L = In2 (3.3 V plane), GTS/GBS mask, GTO/GBO silk, GKO outline, XLN drill

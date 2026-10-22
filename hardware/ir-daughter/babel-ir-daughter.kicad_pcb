@@ -3014,7 +3014,7 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "BABEL REV B"
+	(gr_text "BABEL REV C"
 		(at 15 17.9 0)
 		(layer "B.SilkS")
 		(uuid "63dc5c29-4503-4fb3-9223-ec9910505836")
