@@ -1,0 +1,13 @@
+Reference,Value,Assembly,Footprint,Datasheet
+J1,MEC1 NP / 20 GOLD FINGERS,FIT,Babel:MEC1_110_02_NP_Card,
+U1,MLX90614ESF-BCC-000-TU,FIT,Package_TO_SOT_THT:TO-39-4,https://www.melexis.com/-/media/files/documents/datasheets/mlx90614-datasheet-melexis.pdf
+U2,24LC256-I/SN / 32 KiB,FIT,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/24AA256-24LC256-24FC256-256K-I2C-Serial-EEPROM-DS20001203.pdf
+C1,100 nF / U1,FIT,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,
+C2,100 nF / U2,FIT,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,
+C3,1 uF / port,FIT,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,
+R1,10k / WP,FIT,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,
+R2,4.7k,DNP,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,
+R3,4.7k,DNP,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,
+R4,4.7k,DNP,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,
+R5,4.7k,DNP,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,
+J2,2x4 2.54mm / bench,FIT,Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical,

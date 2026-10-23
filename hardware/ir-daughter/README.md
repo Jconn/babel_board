@@ -5,6 +5,9 @@ Revision C (2026-10-22) is the reversible-connector board: VDD on contacts 3 and
 has the old one-way pinout with VDD on contacts 3 and 4; see
 [Revision history](#revision-history). Bottom silk reads "BABEL REV C".
 
+For a version you can build with a soldering iron (through-hole MLX90614, same
+connector), see [../ir-th-daughter](../ir-th-daughter/README.md).
+
 Adapted from Adafruit's MLX90632 breakout, with attribution and circuit changes
 documented in [ADAPTATION.md](ADAPTATION.md).
 The whole daughter project is open hardware under **CC BY-SA 3.0**; see [LICENSE](LICENSE). Original Eagle files and license

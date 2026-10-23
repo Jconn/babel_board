@@ -98,6 +98,28 @@ default, saves via `save_routed_board`).
 - Validation: native DRC on both boards (0 violations; parity metadata only,
   92 radio / 11 daughter at the time; daughter 4 after the J2 change) and every check script pass.
 
+## IR TH daughter: hand-solder board (2026-10-22)
+
+New project `ir-th-daughter/` (rev A): a copy of the rev C daughter PCB with
+U1 replaced by a TO-39 MLX90614 (`Package_TO_SOT_THT:TO-39-4`, can centred at
+(20,16) like the MLX90632), R6 removed, and all passives on 0805 hand-solder
+footprints. Outline, J1, J2, H1/H2, GND pour and bottom art carried over.
+New placement: C1 (26,15) beside U1 pins 3/4, C2 (18,27.6), R1/C3 at x 20.5,
+R2-R5 at y 26.9 on a 2.1 mm pitch. Routed with `grid_route.py` one net at a
+time (re-export between nets) in the order VDD, NVM_WP, NVM_SDA, NVM_SCL,
+SENSOR_SCL, SENSOR_SDA, GND. GND fingers 19/20 were then boxed in: a
+hand-placed stub (via at (24.5,38.4), B.Cu up to J2.1) was added, and the two
+sensor lines rerouted around it, SCL first. The pour cannot reach the fingers
+because the card-edge footprint has a no-pour area there.
+- H1/H2 are pads on both copper layers, so the export's carrier-boss keepout
+  (written for F-less pads) missed them. One C1 GND run came 0.2 mm from H2's
+  hole; it was replaced by a drop at x 27.2 to a via into the B.Cu pour.
+  Nearest copper to either boss is now 2.65 mm (boss radius 2.25).
+- References placed with `tools/place_silk.py`; bottom art moved around the
+  TO-39 leads (text block centred x 10.6, thermometer 2 mm right).
+- DRC 0/0 with the same two J2 silk-corner exclusions as the rev C daughter;
+  netlist verifier passes. OSH Park zip in `fab/oshpark/`.
+
 ## Reversible daughter connector (2026-10-22)
 
 User design goal: a daughter must work inserted either way round. A reversed

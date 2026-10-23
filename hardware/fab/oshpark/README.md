@@ -9,10 +9,15 @@ and the firmware rule for using rev B cards in the current radio. Rev C also has
 2 mm rounded body corners (outline and bottom pour changed); mask, drill and the
 rest of the copper are unchanged.
 
+The IR TH daughter (`../../ir-th-daughter`) is a separate hand-solder board with
+the same host interface and outline; it uses the same OSH Park rules (DRC 0/0)
+and adds 0.7 mm plated holes for the TO-39 sensor leads.
+
 | File | Board | OSH Park service | Size | Order |
 | --- | --- | --- | --- | --- |
 | `babel-radio-oshpark.zip` | Radio, 4 layers | 4 Layer Prototype | 60 x 80 mm (7.44 sq in) | 6 (multiples of 3) |
 | `babel-ir-daughter-revC-oshpark.zip` | IR daughter rev C, 2 layers | 2 Layer Prototype | 30 x 35 mm bounding box | 6 (multiples of 3) |
+| `babel-ir-th-daughter-revA-oshpark.zip` | IR TH daughter rev A (hand-solder, MLX90614), 2 layers | 2 Layer Prototype | 30 x 35 mm bounding box | 6 (multiples of 3) |
 
 Zip contents use OSH Park's extensions: GTL/GBL copper, G2L = In1 (GND plane),
 G3L = In2 (3.3 V plane), GTS/GBS mask, GTO/GBO silk, GKO outline, XLN drill
