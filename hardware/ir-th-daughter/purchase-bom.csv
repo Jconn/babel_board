@@ -1,11 +1,12 @@
-Section,Refs,Qty per board,Buy qty,Description,Manufacturer,MPN,Notes
-Board,U1,1,3,"IR thermometer, TO-39, 3 V, 35 deg FOV",Melexis,MLX90614ESF-BCC-000-TU,"Must be a -B (3 V) part. MLX90614ESF-BAA-000-TU (90 deg FOV) fits the same footprint. About $22-26 each in single units."
-Board,U2,1,5,"256 Kbit I2C EEPROM, SOIC-8",Microchip,24LC256-I/SN,"24AA256-I/SN or 24FC256-I/SN also work at 3.3 V."
-Board,"C1, C2",2,10,"100 nF 50 V X7R ceramic, 0805",Samsung,CL21B104KBCNNNC,Any 0805 X7R 100 nF >= 16 V.
-Board,C3,1,10,"1 uF 25 V X7R ceramic, 0805",Samsung,CL21B105KAFNNNE,Any 0805 X7R 1 uF >= 10 V.
-Board,R1,1,10,"10 k 1% resistor, 0805",Yageo,RC0805FR-0710KL,Any 0805 10 k.
-Board,R2-R5,4,20,"4.7 k 1% resistor, 0805",Yageo,RC0805FR-074K7L,"DNP for cards used in the radio; fit all four on bench cards wired to the dev board."
-Board,J2,1,1,"2.54 mm male header, 2x40 breakaway (cut to 2x4)",Sullins,PRPC040DAAN-RC,"One strip makes many 2x4 pieces. Fit J2 only on bench cards."
-Bench,-,-,1,"ESP32-S3 dev board, WROOM-1 N8R8 (same module as the radio)",Espressif,ESP32-S3-DEVKITC-1-N8R8,"Not the -1U variant (external antenna). Also sold by Adafruit (product 5336)."
-Bench,-,-,1,"USB cable for the dev board",-,-,"Match the board's ports (check the listing; recent revisions use USB-C)."
-Bench,-,-,1,"Female-female Dupont jumper wires, 10-20 cm",-,-,"Six wires per card: GND, 3V3, SCL, SDA, WP and a spare GND."
+Section,Refs,Qty per board,Buy qty,Description,Manufacturer,MPN,Source,Unit price USD (approx),Line total USD (approx),Notes
+Board,U1,1,3,"IR thermometer, TO-39, 3 V, 35 deg FOV",Melexis,MLX90614ESF-BCC-000-TU,Digi-Key (or Mouser),25.97,77.91,"Must be a -B (3 V) part. MLX90614ESF-BAA-000-TU (90 deg FOV) fits the same footprint."
+Board,U2,1,5,"256 Kbit I2C EEPROM, SOIC-8",Microchip,24LC256-I/SN,Digi-Key,0.65,3.25,"24AA256-I/SN or 24FC256-I/SN also work at 3.3 V."
+Board,"C1, C2",2,10,"100 nF 50 V X7R ceramic, 0805",Samsung,CL21B104KBCNNNC,Digi-Key,0.10,1.00,Any 0805 X7R 100 nF >= 16 V.
+Board,C3,1,10,"1 uF 25 V X7R ceramic, 0805",Samsung,CL21B105KAFNNNE,Digi-Key,0.12,1.20,Any 0805 X7R 1 uF >= 10 V.
+Board,R1,1,10,"10 k 1% resistor, 0805",Yageo,RC0805FR-0710KL,Digi-Key,0.10,1.00,Any 0805 10 k.
+Board,R2-R5,4,20,"4.7 k 1% resistor, 0805",Yageo,RC0805FR-074K7L,Digi-Key,0.06,1.20,"DNP for cards used in the radio; fit all four on bench cards wired to the dev board."
+Board,J2,1,1,"2.54 mm male header, 2x40 breakaway (cut to 2x4)",Sullins,PRPC040DAAN-RC,Digi-Key,2.50,2.50,"One strip makes many 2x4 pieces. Fit J2 only on bench cards."
+Bench,-,-,1,"ESP32-S3 dev board, WROOM-1 N8R8 (same module as the radio)",Espressif,ESP32-S3-DEVKITC-1-N8R8,Digi-Key (1965-ESP32-S3-DEVKITC-1-N8R8-ND),15.00,15.00,"Not the -1U variant (external antenna). Also sold by Adafruit (product 5336)."
+Bench,-,-,1,"USB cable for the dev board",-,-,Any (Digi-Key / Amazon),5.00,5.00,"Match the board's ports (check the listing; recent revisions use USB-C)."
+Bench,-,-,1,"Female-female Dupont jumper wires, 20 x 6 in",Adafruit,266,Digi-Key or Adafruit,2.00,2.00,"Six wires per card: GND, 3V3, SCL, SDA, WP and a spare GND."
+Total,,,,,,,,,110.06,"Approximate, before shipping and tax. Prices are single-unit snapshots; confirm in the cart."
