@@ -46,6 +46,10 @@ change.
 
 ## Assembly by hand
 
+What to buy (three boards plus spares, and the ESP32-S3 bench kit):
+[purchase-bom.csv](purchase-bom.csv). `bom.csv` is the generated design BOM.
+
+
 1. Start with the smallest parts: U2 (tack one corner pin, check alignment,
    then the rest), then the 0805 passives. Leave R2-R5 off unless this card
    will run on a bench host without pull-ups.
