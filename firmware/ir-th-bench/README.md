@@ -29,9 +29,9 @@ Requires ESP-IDF v5.3 or newer (the `esp_driver_i2c` component).
 
 ```sh
 sudo apt install git wget flex bison gperf python3 python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
-mkdir -p ~/esp && cd ~/esp
-git clone -b v5.5 --recursive https://github.com/espressif/esp-idf.git
-cd esp-idf && ./install.sh esp32s3
+git clone -b v5.5 --recursive https://github.com/espressif/esp-idf.git ~/projects/esp-idf
+export IDF_TOOLS_PATH=~/projects/esp-idf-tools   # keep the toolchain beside the repo
+~/projects/esp-idf/install.sh esp32s3
 sudo usermod -aG dialout $USER   # serial port access; log out and back in
 ```
 
@@ -40,7 +40,8 @@ sudo usermod -aG dialout $USER   # serial port access; log out and back in
 Plug the USB cable into the DevKitC port labelled **UART**.
 
 ```sh
-. ~/esp/esp-idf/export.sh        # every new shell
+export IDF_TOOLS_PATH=~/projects/esp-idf-tools
+. ~/projects/esp-idf/export.sh   # every new shell
 cd firmware/ir-th-bench
 idf.py set-target esp32s3        # first time only
 idf.py -p /dev/ttyUSB0 flash monitor
