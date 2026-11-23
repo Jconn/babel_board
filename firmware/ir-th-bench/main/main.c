@@ -93,8 +93,36 @@ static void scan(i2c_master_bus_handle_t bus, const char *name, uint16_t expect)
     printf("%s (expect 0x%02x)\n", found ? "" : " nothing", expect);
 }
 
+// Before the buses start: R2-R5 (4.7k) beat the ESP32's ~45k internal pulls,
+// so a powered, wired line reads high with either internal pull.
+static void line_check(void)
+{
+    static const struct { int gpio; const char *name; } lines[] = {
+        { SENSOR_SCL_GPIO, "J2.3 sensor SCL" }, { SENSOR_SDA_GPIO, "J2.4 sensor SDA" },
+        { NVM_SCL_GPIO, "J2.5 NVM SCL" },       { NVM_SDA_GPIO, "J2.6 NVM SDA" },
+        { NVM_WP_GPIO, "J2.7 NVM WP" },
+    };
+    printf("\nLine check (pulled-down read, pulled-up read):\n");
+    for (int i = 0; i < sizeof lines / sizeof lines[0]; i++) {
+        int g = lines[i].gpio;
+        gpio_reset_pin(g);
+        gpio_set_direction(g, GPIO_MODE_INPUT);
+        gpio_set_pull_mode(g, GPIO_PULLDOWN_ONLY);
+        vTaskDelay(pdMS_TO_TICKS(5));
+        int lo = gpio_get_level(g);
+        gpio_set_pull_mode(g, GPIO_PULLUP_ONLY);
+        vTaskDelay(pdMS_TO_TICKS(5));
+        int hi = gpio_get_level(g);
+        gpio_set_pull_mode(g, GPIO_FLOATING);
+        printf("  GPIO%-2d %-16s %d %d  %s\n", g, lines[i].name, lo, hi,
+               lo && hi ? "pulled high (ok)" : !lo && !hi ? "held LOW" : "floating (no pull-up reached)");
+    }
+}
+
 void app_main(void)
 {
+    line_check();
+
     gpio_set_level(NVM_WP_GPIO, 1);
     gpio_set_direction(NVM_WP_GPIO, GPIO_MODE_OUTPUT);
 
