@@ -1,15 +1,21 @@
 // Bench bring-up for the IR TH daughter (MLX90614 + 24LC256) through J2.
-// J2 3+5 (SCL) -> GPIO9, J2 4+6 (SDA) -> GPIO8, J2 2 -> 3V3, J2 1 -> GND.
+// GPIOs match the radio (hardware/radio/gpio-map.csv) so the code carries over:
+// sensor bus J2.3 SCL -> GPIO7, J2.4 SDA -> GPIO8; NVM bus J2.5 SCL -> GPIO4,
+// J2.6 SDA -> GPIO5, J2.7 WP -> GPIO6; J2.2 -> 3V3, J2.1 -> GND.
 // Pull-ups are R2-R5 on the daughter; the ESP32's internal ones stay off.
 
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "driver/gpio.h"
 #include "driver/i2c_master.h"
 #include "esp_log.h"
 
-#define SDA_GPIO    8
-#define SCL_GPIO    9
+#define SENSOR_SCL_GPIO 7
+#define SENSOR_SDA_GPIO 8
+#define NVM_SCL_GPIO    4
+#define NVM_SDA_GPIO    5
+#define NVM_WP_GPIO     6  // high = write-protected (R1 also pulls it high)
 #define BUS_HZ      100000  // MLX90614 is SMBus: 100 kHz max
 #define MLX_ADDR    0x5A
 #define EEPROM_ADDR 0x50
@@ -59,31 +65,48 @@ static void print_temp(const char *name, esp_err_t err, uint16_t raw)
     }
 }
 
-void app_main(void)
+static i2c_master_bus_handle_t new_bus(int sda, int scl)
 {
-    i2c_master_bus_config_t bus_cfg = {
+    i2c_master_bus_config_t cfg = {
         .i2c_port = -1,
-        .sda_io_num = SDA_GPIO,
-        .scl_io_num = SCL_GPIO,
+        .sda_io_num = sda,
+        .scl_io_num = scl,
         .clk_source = I2C_CLK_SRC_DEFAULT,
         .glitch_ignore_cnt = 7,
         .flags.enable_internal_pullup = false,
     };
     i2c_master_bus_handle_t bus;
-    ESP_ERROR_CHECK(i2c_new_master_bus(&bus_cfg, &bus));
+    ESP_ERROR_CHECK(i2c_new_master_bus(&cfg, &bus));
+    return bus;
+}
 
-    vTaskDelay(pdMS_TO_TICKS(300));  // MLX90614 needs ~250 ms after power-up
-
-    printf("\nI2C scan (SDA=GPIO%d, SCL=GPIO%d):\n", SDA_GPIO, SCL_GPIO);
+static void scan(i2c_master_bus_handle_t bus, const char *name, uint16_t expect)
+{
+    printf("%s bus scan:", name);
     int found = 0;
     for (uint16_t a = 0x08; a < 0x78; a++) {
         if (i2c_master_probe(bus, a, 50) == ESP_OK) {
-            printf("  0x%02x%s\n", a,
-                   a == MLX_ADDR ? "  MLX90614" : a == EEPROM_ADDR ? "  24LC256" : "");
+            printf(" 0x%02x", a);
             found++;
         }
     }
-    printf("%d device(s); expect 0x50 and 0x5a\n\n", found);
+    printf("%s (expect 0x%02x)\n", found ? "" : " nothing", expect);
+}
+
+void app_main(void)
+{
+    gpio_set_level(NVM_WP_GPIO, 1);
+    gpio_set_direction(NVM_WP_GPIO, GPIO_MODE_OUTPUT);
+
+    i2c_master_bus_handle_t sensor_bus = new_bus(SENSOR_SDA_GPIO, SENSOR_SCL_GPIO);
+    i2c_master_bus_handle_t nvm_bus = new_bus(NVM_SDA_GPIO, NVM_SCL_GPIO);
+
+    vTaskDelay(pdMS_TO_TICKS(300));  // MLX90614 needs ~250 ms after power-up
+
+    printf("\n");
+    scan(sensor_bus, "sensor", MLX_ADDR);
+    scan(nvm_bus, "NVM", EEPROM_ADDR);
+    printf("\n");
 
     i2c_device_config_t mlx_cfg = {
         .dev_addr_length = I2C_ADDR_BIT_LEN_7,
@@ -93,8 +116,8 @@ void app_main(void)
     i2c_device_config_t eeprom_cfg = mlx_cfg;
     eeprom_cfg.device_address = EEPROM_ADDR;
     i2c_master_dev_handle_t mlx, eeprom;
-    ESP_ERROR_CHECK(i2c_master_bus_add_device(bus, &mlx_cfg, &mlx));
-    ESP_ERROR_CHECK(i2c_master_bus_add_device(bus, &eeprom_cfg, &eeprom));
+    ESP_ERROR_CHECK(i2c_master_bus_add_device(sensor_bus, &mlx_cfg, &mlx));
+    ESP_ERROR_CHECK(i2c_master_bus_add_device(nvm_bus, &eeprom_cfg, &eeprom));
 
     // Read-only EEPROM check: a blank 24LC256 reads 0xff.
     uint8_t addr[2] = { 0x00, 0x00 };

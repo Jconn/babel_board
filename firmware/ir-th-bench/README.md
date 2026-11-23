@@ -7,13 +7,19 @@ temperatures twice a second with PEC checking.
 
 ## Wiring (power off)
 
+The GPIOs match the radio's map (`hardware/radio/gpio-map.csv`), with the two
+buses kept separate as on the radio, so this code carries over.
+
 | J2 pin | Signal | DevKitC |
 | --- | --- | --- |
 | 1 | GND | GND |
 | 2 | VDD | 3V3 (never 5V) |
-| 3 + 5 | sensor SCL + EEPROM SCL | GPIO9 |
-| 4 + 6 | sensor SDA + EEPROM SDA | GPIO8 |
-| 7 | EEPROM WP | open (write-protected) |
+| 3 | sensor SCL | GPIO7 |
+| 4 | sensor SDA | GPIO8 |
+| 5 | EEPROM SCL | GPIO4 |
+| 6 | EEPROM SDA | GPIO5 |
+| 7 | EEPROM WP | GPIO6 (driven high: write-protected) |
+| 8 | GND | spare |
 
 R2-R5 must be fitted on the daughter; the firmware leaves the ESP32 pull-ups off.
 
@@ -43,6 +49,6 @@ idf.py -p /dev/ttyUSB0 flash monitor
 Exit the monitor with `Ctrl+]`. If `/dev/ttyUSB0` is missing, check
 `ls /dev/ttyUSB* /dev/ttyACM*`.
 
-Expected output: `0x50  24LC256` and `0x5a  MLX90614` in the scan, sixteen
+Expected output: `0x5a` on the sensor bus and `0x50` on the NVM bus, sixteen
 `ff` bytes from a blank EEPROM, then a temperature line every 0.5 s. The
 object temperature should rise when a finger is held in front of the can.
