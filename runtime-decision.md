@@ -6,7 +6,8 @@ because native host/ABI coupling conflicts with portability across board revisio
 
 ## Architectural commitments
 
-- Store portable `.wasm` modules with a manifest in daughter-board NVM.
+- Store a WAMR AOT module with a manifest in daughter-board NVM (changed from
+  portable `.wasm` on 2026-11-24; see below).
 - Expose a small, versioned Babel API for complete bus transactions, events,
   timing services, and measurement delivery. Do not expose host OS structures,
   raw register addresses, or MCU pin numbers as the driver contract.
@@ -30,11 +31,31 @@ metering, but excludes AOT/JIT from that mechanism. An instruction cap is not a
 wall-clock deadline or a bound on native host calls.
 [WAMR build configuration](https://github.com/wasm-micro-runtime/wasm-micro-runtime/blob/main/doc/build_wamr.md#instruction-metering).
 
-AOT remains an option if performance requires it and the target supports it.
-If used, keep `.wasm` as the canonical daughter artifact and define a separate
-compilation/provisioning path for target-specific artifacts. Do not assume a
-small MCU can run the AOT compiler. Any host cache must be keyed by module hash,
-target, runtime/compiler configuration, and Babel API compatibility.
+## Update 2026-11-24: AOT-only daughter images (user decision)
+
+Daughter EEPROM images now carry a **WAMR AOT module only**, compiled on a PC
+with `wamrc` for the host's target. This replaces "portable `.wasm` canonical,
+interpreter first". The host firmware is built AOT-only (no interpreter).
+
+Consequences, accepted with the decision:
+
+- An image runs only on the target and WAMR version it was compiled for. The
+  manifest records both (`aot_target`, `wamr_version`); the host refuses a
+  mismatch before loading. Changing the host chip or upgrading WAMR means
+  rebuilding and reprogramming every daughter image.
+- The `.wasm` remains the build intermediate in the repo, so an image can be
+  regenerated for another target, but it is not stored on the daughter.
+- WAMR's instruction metering covers the interpreter only, so AOT drivers have
+  no instruction cap. A driver that loops forever hangs the host thread until a
+  watchdog acts; execution limits for AOT are still open.
+
+First result (2026-11-24, ESP32-S3 DevKitC + IR TH daughter rev A, WAMR 2.4.6,
+wasi-sdk 34, `wamrc --target=xtensa --cpu=esp32s3` built against Espressif's
+`xtensa_release_18.1.2` LLVM): the MLX90614 driver is 996 bytes of `.wasm` and
+2,980 bytes of AOT; the whole image is 4,004 bytes (12% of the 24LC256). The
+host loads it from the EEPROM, links `babel_v1`, and reads the sensor every
+500 ms. Corrupt images and WAMR-version mismatches are refused before
+programming. See `firmware/babel-host/README.md`.
 
 Restrict memory growth and allocation during timing-critical work. Validate all
 guest pointers, lengths, handles, and allowed bus addresses in native imports.
@@ -69,4 +90,5 @@ Next experiment:
    sensor, then assess worst-case behavior and hardware offload needs.
 5. Freeze storage capacity and the initial API only after these results.
 
-No WAMR integration or timing qualification has been completed yet.
+WAMR AOT integration runs on the bench (2026-11-24, above). Steps 2-5, BLE
+coexistence and timing qualification have not been done.

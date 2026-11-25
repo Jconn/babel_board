@@ -1,7 +1,7 @@
 CONFIG_IDF_TARGET="esp32s3"
 # WAMR AOT code runs from heap memory allocated with MALLOC_CAP_EXEC.
 # CONFIG_ESP_SYSTEM_MEMPROT_FEATURE is not set
-CONFIG_ESP_MAIN_TASK_STACK_SIZE=16384
+# The host runs on a 16 KiB pthread (WAMR needs pthread_self), not the main task.
 # AOT only: no interpreter, no libc or threads for drivers.
 CONFIG_WAMR_ENABLE_AOT=y
 # CONFIG_WAMR_ENABLE_INTERP is not set

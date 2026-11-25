@@ -8,6 +8,7 @@
 //                           "PROG ACK <total>"; then program, verify and start it.
 // Replies start with the command word, so a script can pick them out of the log.
 
+#include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -24,6 +25,7 @@
 #define CMD_LINE_MAX      96
 #define CHUNK         256
 #define CHUNK_TIMEOUT 2000  // ms
+#define HOST_STACK    16384
 
 static babel_image_t image;
 static bool have_image;
@@ -168,14 +170,13 @@ static void handle(char *line)
     }
 }
 
-void app_main(void)
+// WAMR on ESP-IDF calls pthread_self(), so everything that touches the
+// runtime runs on a pthread rather than the main task.
+static void *host_main(void *arg)
 {
-    uart_driver_install(CONSOLE_UART, 4096, 0, 0, NULL, 0);
-    printf("\nbabel-host: ESP32-S3 + WAMR AOT, babel_v1\n");
-
     if (nvm_init() != ESP_OK || !driver_host_init()) {
         printf("fault: host init failed\n");
-        return;
+        return NULL;
     }
     discover_and_start();
     printf("babel: ready\n");
@@ -201,5 +202,19 @@ void app_main(void)
             printf("fault: driver trapped; stopped\n");
             driver_stop();
         }
+    }
+}
+
+void app_main(void)
+{
+    uart_driver_install(CONSOLE_UART, 4096, 0, 0, NULL, 0);
+    printf("\nbabel-host: ESP32-S3 + WAMR AOT, babel_v1\n");
+
+    pthread_attr_t attr;
+    pthread_attr_init(&attr);
+    pthread_attr_setstacksize(&attr, HOST_STACK);
+    pthread_t t;
+    if (pthread_create(&t, &attr, host_main, NULL) != 0) {
+        printf("fault: could not start the host thread\n");
     }
 }

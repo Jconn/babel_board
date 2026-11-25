@@ -24,7 +24,7 @@ partial image. No automatic rollback is promised.
 | --- | ---: | --- |
 | 0x0000 | 64 bytes | Commit/header page |
 | 0x0040 | 960 bytes | UTF-8 JSON manifest area, padded with 0xFF |
-| 0x0400 | 28,672 bytes | Binary portable Wasm module area, padded with 0xFF |
+| 0x0400 | 28,672 bytes | Module area (format 3: WAMR AOT file), padded with 0xFF |
 | 0x7400 | 3,072 bytes | Reserved; driver updater preserves this region |
 
 Header integers are little-endian; I2C address bytes remain high-byte first.
@@ -32,13 +32,20 @@ Header integers are little-endian; I2C address bytes remain high-byte first.
 | Header offset | Encoding | Meaning |
 | --- | --- | --- |
 | 0 | 8 bytes | Magic `BABELW01` |
-| 8 | uint16 | Format version = 2 |
+| 8 | uint16 | Format version = 3 (WAMR AOT module; 2 was portable Wasm) |
 | 10 | uint16 | Driver API version = 1 |
 | 12 | uint16 | Manifest length, 1–960 |
 | 14 | uint16 | Reserved = 0 |
 | 16 | uint32 | Module length, 8–28,672 |
 | 20 | 32 bytes | SHA-256 of header bytes 0–19 followed by exact manifest and module bytes |
 | 52 | 12 bytes | Reserved = 0 |
+
+Format 3 (2026-11-24) stores a WAMR AOT module instead of portable Wasm; the
+layout is otherwise unchanged. Its manifest must add `"runtime": "wamr-aot"`,
+`"aot_target"` (e.g. `"xtensa-esp32s3"`) and `"wamr_version"` (e.g. `"2.4.6"`),
+and the host rejects any mismatch with its own target and WAMR build. The
+manifest is stored as compact JSON exactly as hashed. Implemented by
+`firmware/tools/babel_image.py` and `firmware/babel-host`.
 
 Padding is excluded from the digest. A loader checks fixed fields and lengths
 before allocating or reading payloads, then checks reserved bytes, digest, manifest
@@ -92,6 +99,16 @@ mirrored for reversible insertion and gives the sensor three general lines,
 SENSOR_IO0-2 (I2C SCL/SDA/IRQ, UART TX/RX, or 3-wire/read-only SPI SCK/data/CS).
 A manifest must fit in those three lines; reject one that needs more, such as
 4-wire SPI.
+
+The first implemented manifest, for the format-3 MLX90614 driver, is
+`firmware/drivers/mlx90614/manifest.json`; the `wasm32-babel` example above
+is the earlier format-2 form.
+
+The first implementation of `babel_v1` (2026-11-24) is
+`firmware/drivers/include/babel_v1.h`: `i2c_transfer` (write then read, each up
+to 64 bytes, only to manifest addresses), `delay_ms` (clamped to 1 s),
+`submit` (channel id, float) and `log`. Error codes: -1 argument, -2 address
+not declared, -3 bus, -4 too many measurements in one poll.
 
 Proposed Wasm exports, shown as C declarations:
 
