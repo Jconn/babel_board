@@ -1,0 +1,19 @@
+{
+  "board_type": "babel.ir.mlx90614",
+  "board_revision": 1,
+  "driver_version": "0.1.0",
+  "runtime": "wamr-aot",
+  "aot_target": "xtensa-esp32s3",
+  "wamr_version": "2.4.6",
+  "babel_api_major": 1,
+  "required_capabilities": ["i2c.transfer.v1"],
+  "name": "IR thermometer (MLX90614, TO-39)",
+  "interface": {"kind": "i2c", "frequency_hz": 100000, "addresses": [90]},
+  "power_ma": 3,
+  "startup_ms": 250,
+  "sample_period_ms": 500,
+  "channels": [
+    {"id": 0, "name": "object_temperature", "unit": "degC"},
+    {"id": 1, "name": "ambient_temperature", "unit": "degC"}
+  ]
+}
