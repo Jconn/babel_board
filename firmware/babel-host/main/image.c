@@ -6,7 +6,9 @@
 #include "cJSON.h"
 #include "mbedtls/sha256.h"
 #include "wasm_export.h"
+#include "esp_timer.h"
 #include "nvm.h"
+#include "trace.h"
 
 #define MAGIC          "BABELW01"
 #define FORMAT_VERSION 3
@@ -146,6 +148,15 @@ static img_status_t parse_manifest(const char *json, babel_image_t *img, char *w
             }
         }
     }
+    TRACE("board %s, \"%s\", driver %s\n", img->board_type, img->name, img->driver_version);
+    TRACE("runtime wamr-aot for %s, WAMR %s (host runs %s): match\n", AOT_TARGET, ver, want_ver);
+    TRACE("i2c at %lu Hz, %d allowed address(es), first 0x%02x\n", (unsigned long)img->i2c_hz,
+          img->n_addrs, img->addrs[0]);
+    for (int i = 0; i < img->n_ch; i++) {
+        TRACE("channel %d: %s [%s]\n", img->ch[i].id, img->ch[i].name, img->ch[i].unit);
+    }
+    TRACE("startup %lu ms, sample period %lu ms\n", (unsigned long)img->startup_ms,
+          (unsigned long)img->sample_period_ms);
     cJSON_Delete(m);
     return IMG_OK;
 
@@ -161,10 +172,13 @@ static img_status_t load(const source_t *src, babel_image_t *img, char *why, siz
     char *manifest = NULL;
     uint8_t *module = NULL;
 
+    SECTION("1. Read the daughter EEPROM (24LC256 at 0x50, NVM bus)");
+    TRACE("reading header page 0x0000, 64 bytes\n");
     if (!src_read(src, 0, h, sizeof h)) {
         snprintf(why, why_len, "could not read the header");
         return src->buf ? IMG_INVALID : IMG_IO;
     }
+    trace_hex("header:", h, sizeof h);
     bool blank = true;
     for (int i = 0; i < 8; i++) {
         blank &= h[i] == 0xff;
@@ -198,11 +212,14 @@ static img_status_t load(const source_t *src, babel_image_t *img, char *why, siz
         }
     }
 
+    TRACE("magic BABELW01, format %u (WAMR AOT), API %u, manifest %u bytes, module %lu bytes\n",
+          fmt, api, mlen, (unsigned long)modlen);
     manifest = malloc(mlen + 1);
     module = malloc(modlen);
     if (!manifest || !module) {
         FAIL("out of memory");
     }
+    int64_t t0 = esp_timer_get_time();
     if (!src_read(src, MANIFEST_ADDR, manifest, mlen) || !src_read(src, MODULE_ADDR, module, modlen)) {
         free(manifest);
         free(module);
@@ -210,6 +227,9 @@ static img_status_t load(const source_t *src, babel_image_t *img, char *why, siz
         return src->buf ? IMG_INVALID : IMG_IO;
     }
     manifest[mlen] = '\0';
+    TRACE("read manifest 0x%04x-0x%04x and module 0x%04x-0x%04x in %lld ms\n", MANIFEST_ADDR,
+          MANIFEST_ADDR + mlen - 1, MODULE_ADDR, (unsigned)(MODULE_ADDR + modlen - 1),
+          (esp_timer_get_time() - t0) / 1000);
 
     uint8_t digest[32];
     mbedtls_sha256_context sha;
@@ -223,6 +243,8 @@ static img_status_t load(const source_t *src, babel_image_t *img, char *why, siz
     if (memcmp(digest, h + 20, 32) != 0) {
         FAIL("SHA-256 mismatch: image is corrupt or partly written");
     }
+    SECTION("2. Verify the image");
+    trace_hex("sha256 computed = stored:", digest, 32);
     if (strlen(manifest) != mlen) {
         FAIL("manifest contains a NUL byte");
     }
@@ -230,6 +252,9 @@ static img_status_t load(const source_t *src, babel_image_t *img, char *why, siz
         FAIL("module is not a WAMR AOT file");
     }
 
+    TRACE("module starts with \\0aot: a WAMR AOT file\n");
+    SECTION("3. Parse the manifest");
+    TRACE("%s\n", manifest);
     img_status_t st = parse_manifest(manifest, img, why, why_len);
     free(manifest);
     manifest = NULL;

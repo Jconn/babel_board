@@ -38,8 +38,27 @@ its manifest declares.
 | Command | Effect |
 | --- | --- |
 | `INFO` | Describe the image and whether the driver runs |
+| `TRACE` | Reload the driver, narrating every step (see above) |
 | `ERASE` | Invalidate the header page (provisioning mode) |
 | `PROG <len> <sha256>` | Receive an image in 256-byte chunks, validate it in RAM, program it (header invalidated first, payload written and verified, header written last, WP released only while writing), then load and start it |
+
+## Watching it load: `babel_trace.py`
+
+```sh
+tools/babel_trace.py              # add --samples N for more data lines
+```
+
+Resets the board, sends `TRACE`, and prints the reload step by step:
+
+1. Read the daughter EEPROM: header page hex dump, lengths, read time.
+2. Verify the image: SHA-256 computed and stored.
+3. Parse the manifest: board, WAMR target/version match, I2C address, channels.
+4. Load the AOT module into WAMR (about 1.5 ms).
+5. Link each import to its `babel_v1` native, with its signature.
+6. Instantiate and find the three exports.
+7. Start the driver, showing its I2C traffic.
+8. Run: the first two polls with every I2C transfer and `submit` call, then
+   plain measurement lines.
 
 ## Toolchain
 

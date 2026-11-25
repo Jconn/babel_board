@@ -3,6 +3,7 @@
 //
 // Serial commands (one line each, from firmware/tools/babel_prog.py):
 //   INFO                    describe the daughter image
+//   TRACE                   reload the driver, narrating every step
 //   ERASE                   invalidate the header (provisioning mode)
 //   PROG <len> <sha256hex>  receive an image in 256-byte chunks, each answered
 //                           "PROG ACK <total>"; then program, verify and start it.
@@ -20,12 +21,16 @@
 #include "driver_host.h"
 #include "image.h"
 #include "nvm.h"
+#include "trace.h"
 
 #define CONSOLE_UART  UART_NUM_0
 #define CMD_LINE_MAX      96
 #define CHUNK         256
 #define CHUNK_TIMEOUT 2000  // ms
 #define HOST_STACK    16384
+
+bool g_trace;
+int g_trace_polls;
 
 static babel_image_t image;
 static bool have_image;
@@ -76,6 +81,7 @@ static void discover_and_start(void)
     period_ms = image.sample_period_ms;
     if (driver_start(&image)) {
         printf("driver started\n");
+        SECTION("8. Run: babel_driver_poll() every sample period");
     } else {
         printf("fault: driver did not start\n");
     }
@@ -162,6 +168,12 @@ static void handle(char *line)
         esp_err_t err = nvm_invalidate();
         printf(err == ESP_OK ? "ERASE OK header invalidated, provisioning mode\n" : "ERASE FAIL %s\n",
                esp_err_to_name(err));
+    } else if (strcmp(line, "TRACE") == 0) {
+        printf("TRACE reloading the daughter driver step by step\n");
+        g_trace = true;
+        g_trace_polls = 2;
+        discover_and_start();
+        g_trace = false;
     } else if (strcmp(line, "INFO") == 0) {
         printf("INFO %s\n", driver_running() ? "driver running" : "no driver running");
         describe();

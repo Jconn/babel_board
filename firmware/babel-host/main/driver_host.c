@@ -8,7 +8,9 @@
 #include "driver/i2c_master.h"
 #include "esp_rom_sys.h"
 #include "wasm_export.h"
+#include "esp_timer.h"
 #include "pins.h"
+#include "trace.h"
 
 // babel_v1 error codes (see firmware/drivers/include/babel_v1.h).
 #define BABEL_OK        0
@@ -62,6 +64,17 @@ static int32_t n_i2c_transfer(wasm_exec_env_t e, int32_t addr, const uint8_t *wr
     } else {
         err = i2c_master_receive(dev, rd, rd_len, XFER_TIMEOUT);
     }
+    if (g_trace_polls > 0) {
+        printf("    i2c 0x%02lx  write", (long)addr);
+        for (uint32_t i = 0; i < wr_len; i++) {
+            printf(" %02x", wr[i]);
+        }
+        printf("  read");
+        for (uint32_t i = 0; i < rd_len; i++) {
+            printf(" %02x", rd[i]);
+        }
+        printf("  %s\n", err == ESP_OK ? "ok" : esp_err_to_name(err));
+    }
     return err == ESP_OK ? BABEL_OK : BABEL_E_BUS;
 }
 
@@ -91,6 +104,9 @@ static int32_t n_submit(wasm_exec_env_t e, int32_t channel, float value)
     }
     if (n_staged >= img.n_ch) {
         return BABEL_E_FULL;
+    }
+    if (g_trace_polls > 0) {
+        printf("    submit channel %ld = %.2f\n", (long)channel, value);
     }
     staged[n_staged].ch = channel;
     staged[n_staged].value = value;
@@ -208,6 +224,11 @@ static bool check_imports(void)
             printf("driver rejected: import babel_v1.%s has the wrong signature\n", im.name);
             return false;
         }
+        for (size_t k = 0; k < sizeof natives / sizeof natives[0]; k++) {
+            if (strcmp(im.name, natives[k].symbol) == 0) {
+                TRACE("import babel_v1.%-13s %-10s -> host native, linked\n", im.name, natives[k].signature);
+            }
+        }
     }
     return true;
 }
@@ -226,6 +247,7 @@ static wasm_function_inst_t entry(const char *name)
         printf("driver rejected: export %s does not return i32\n", name);
         return NULL;
     }
+    TRACE("export %-20s () -> i32  found\n", name);
     return f;
 }
 
@@ -245,20 +267,36 @@ bool driver_start(const babel_image_t *image)
 {
     char err[128];
     img = *image;
+    uint32_t maj, min, pat;
+    wasm_runtime_get_version(&maj, &min, &pat);
 
+    SECTION("4. Load the AOT module into WAMR");
+    TRACE("WAMR %lu.%lu.%lu, AOT only, target xtensa-esp32s3\n", (unsigned long)maj,
+          (unsigned long)min, (unsigned long)pat);
+    TRACE("wasm_runtime_load(%lu bytes): relocates the Xtensa code into executable RAM\n",
+          (unsigned long)image->module_len);
+    int64_t t0 = esp_timer_get_time();
     module = wasm_runtime_load(image->module, image->module_len, err, sizeof err);
     if (!module) {
         printf("driver rejected: AOT load failed: %s\n", err);
         goto fail;
     }
+    TRACE("loaded in %lld us\n", esp_timer_get_time() - t0);
+
+    SECTION("5. Link imports to the babel_v1 host API");
     if (!check_imports()) {
         goto fail;
     }
+
+    SECTION("6. Instantiate and find the driver entry points");
+    t0 = esp_timer_get_time();
     inst = wasm_runtime_instantiate(module, WASM_STACK, 0, err, sizeof err);
     if (!inst) {
         printf("driver rejected: instantiate failed: %s\n", err);
         goto fail;
     }
+    TRACE("instantiated in %lld us: 64 KiB linear memory, %d-byte stack\n",
+          esp_timer_get_time() - t0, WASM_STACK);
     if (!(f_start = entry("babel_driver_start")) || !(f_poll = entry("babel_driver_poll"))
         || !(f_stop = entry("babel_driver_stop"))) {
         goto fail;
@@ -273,15 +311,26 @@ bool driver_start(const babel_image_t *image)
         goto fail;
     }
 
+    SECTION("7. Start the driver");
+    TRACE("sensor bus up: GPIO%d SCL, GPIO%d SDA, %lu Hz; driver may reach 0x%02x only\n",
+          PIN_SENSOR_SCL, PIN_SENSOR_SDA, (unsigned long)img.i2c_hz, img.addrs[0]);
+    TRACE("waiting startup_ms = %lu, then calling babel_driver_start()\n", (unsigned long)img.startup_ms);
     vTaskDelay(pdMS_TO_TICKS(img.startup_ms));
+    if (g_trace) {
+        g_trace_polls++;  // show the start call's I2C traffic too
+    }
     int32_t ret;
     if (!call(f_start, "babel_driver_start", &ret)) {
         goto fail;
+    }
+    if (g_trace) {
+        g_trace_polls--;
     }
     if (ret != 0) {
         printf("babel_driver_start returned %ld\n", (long)ret);
         goto fail;
     }
+    TRACE("babel_driver_start() returned 0\n");
     return true;
 
 fail:
@@ -293,7 +342,17 @@ bool driver_poll(void)
 {
     int32_t ret;
     n_staged = 0;
-    if (!call(f_poll, "babel_driver_poll", &ret)) {
+    if (g_trace_polls > 0) {
+        printf("  babel_driver_poll():\n");
+    }
+    bool ok = call(f_poll, "babel_driver_poll", &ret);
+    if (g_trace_polls > 0) {
+        g_trace_polls--;
+        if (ok) {
+            printf("    returned %ld -> publish:\n  ", (long)ret);
+        }
+    }
+    if (!ok) {
         return false;
     }
     if (ret < 0) {
